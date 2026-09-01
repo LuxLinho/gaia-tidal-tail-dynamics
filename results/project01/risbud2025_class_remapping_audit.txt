@@ -1,0 +1,64 @@
+Project 01 — Risbud2025 -> Jadhav2025 class-remapping diagnostic
+========================================================================
+
+Transition matrix:
+  rows = Risbud original class
+  columns = Jadhav class
+
+  C: C=754, L=51, T=78
+  L: C=42, L=76, T=0
+  T: C=40, L=0, T=237
+
+Total sources: 1278
+Class matches: 1067
+Class mismatches: 211
+Mismatch fraction: 0.1651
+
+Mismatch transitions:
+  C -> L: 51
+  C -> T: 78
+  L -> C: 42
+  L -> T: 0
+  T -> C: 40
+  T -> L: 0
+
+Jadhav orbital-coordinate diagnostics by transition:
+
+  C -> C:
+    distAlongO: n=754, median=0.000, min=-9.920, max=9.920
+    distFromO:  n=754, median=5.215, min=0.240, max=22.930
+    r3d:        n=754, median=7.080, min=0.380, max=23.390
+
+  C -> L:
+    distAlongO: n=51, median=11.330, min=10.390, max=19.840
+    distFromO:  n=51, median=5.960, min=1.290, max=17.870
+    r3d:        n=51, median=14.440, min=10.790, max=21.890
+
+  C -> T:
+    distAlongO: n=78, median=-14.170, min=-24.090, max=-10.390
+    distFromO:  n=78, median=9.975, min=1.200, max=19.770
+    r3d:        n=78, median=18.670, min=11.490, max=24.480
+
+  L -> C:
+    distAlongO: n=42, median=1.650, min=-3.310, max=9.920
+    distFromO:  n=42, median=31.490, min=14.610, max=59.410
+    r3d:        n=42, median=31.510, min=17.530, max=59.500
+
+  L -> L:
+    distAlongO: n=76, median=22.435, min=10.390, max=100.070
+    distFromO:  n=76, median=33.130, min=1.150, max=109.110
+    r3d:        n=76, median=39.440, min=20.730, max=143.350
+
+  T -> C:
+    distAlongO: n=40, median=-5.435, min=-9.920, max=-1.890
+    distFromO:  n=40, median=30.650, min=21.460, max=62.550
+    r3d:        n=40, median=30.960, min=21.830, max=63.210
+
+  T -> T:
+    distAlongO: n=237, median=-28.340, min=-120.530, max=-10.390
+    distFromO:  n=237, median=26.750, min=0.570, max=128.380
+    r3d:        n=237, median=40.970, min=24.040, max=166.940
+
+Outputs:
+  results/project01/risbud2025_original_vs_jadhav_class_matrix.csv
+  results/project01/risbud2025_class_mismatches.csv

@@ -1,0 +1,79 @@
+Project 01 — Risbud2025 original-catalogue reconstruction audit
+=====================================================================
+
+Original Risbud2025 Stock 2:
+  rows: 1278
+  unique Gaia DR3 IDs: 1278
+  duplicated Gaia IDs: 0
+
+Original flag counts:
+  FleadingTail == 1: 118
+  FtrailingTail == 1: 277
+  FwithinTidRad == 1: 883
+  FCorrSamp == 1: 1085
+  C/L/T union: 1278
+  corrected C/L/T union: 1085
+
+Jadhav2025 Risbud2025 subset:
+  rows: 1278
+  unique Gaia DR3 IDs: 1278
+
+Selection reconstruction tests:
+  all raw Stock_2 rows:
+    selected: 1278
+    shared: 1278
+    selected only: 0
+    Jadhav only: 0
+    exact match: True
+  C/L/T union:
+    selected: 1278
+    shared: 1278
+    selected only: 0
+    Jadhav only: 0
+    exact match: True
+  FCorrSamp == 1:
+    selected: 1085
+    shared: 1085
+    selected only: 0
+    Jadhav only: 193
+    exact match: False
+  C/L/T union AND FCorrSamp == 1:
+    selected: 1085
+    shared: 1085
+    selected only: 0
+    Jadhav only: 193
+    exact match: False
+
+Flag combinations (L,T,Corr-radius,CorrSample):
+  (0, 0, 1, 0): 112
+  (0, 0, 1, 1): 771
+  (0, 1, 0, 0): 58
+  (0, 1, 0, 1): 219
+  (1, 0, 0, 0): 23
+  (1, 0, 0, 1): 95
+
+Jadhav C/L/T reconstruction:
+  matched original flags: 1067
+  mismatched: 211
+
+First classification mismatches:
+  458167255512644480 | T | C | 0 | 0 | 1 | 1
+  465055695858551936 | T | C | 0 | 0 | 1 | 1
+  459005186451913856 | T | C | 0 | 0 | 1 | 0
+  459176916425962624 | T | C | 0 | 0 | 1 | 1
+  459012779953986816 | T | C | 0 | 0 | 1 | 1
+  458031294029981056 | T | C | 0 | 0 | 1 | 1
+  464158563090878464 | T | C | 0 | 0 | 1 | 1
+  464168630494064128 | T | C | 0 | 0 | 1 | 1
+  465113866895445376 | T | C | 0 | 0 | 1 | 1
+  464216734127968640 | T | C | 0 | 0 | 1 | 1
+  458944266637742080 | T | C | 0 | 0 | 1 | 1
+  458078985347313152 | T | C | 0 | 0 | 1 | 1
+  506849747741320832 | T | C | 0 | 0 | 1 | 0
+  464241163903378944 | T | C | 0 | 0 | 1 | 1
+  459218732228130816 | T | C | 0 | 0 | 1 | 1
+  458788788821813120 | T | C | 0 | 0 | 1 | 0
+  459302810505754624 | T | C | 0 | 0 | 1 | 0
+  507240864641463296 | T | C | 0 | 0 | 1 | 1
+  463961406912033152 | T | C | 0 | 0 | 1 | 1
+  458268066987327104 | T | C | 0 | 0 | 1 | 0

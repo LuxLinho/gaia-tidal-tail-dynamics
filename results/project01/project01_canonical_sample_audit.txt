@@ -1,0 +1,28 @@
+Project 01 — Canonical literature sample audit
+====================================================
+
+Long-table rows: 2341
+Unique master sources: 1456
+
+Catalogue composition:
+  shared: 885
+  Kos-only: 178
+  Risbud-only: 393
+
+Master homogenized C/L/T:
+  C: 940
+  L: 184
+  T: 332
+
+Expected invariants:
+  long rows == 1063 + 1278: True
+  master rows == 1456: True
+  shared == 885: True
+  Kos-only == 178: True
+  Risbud-only == 393: True
+
+Outputs:
+  data/processed/stock2_literature_long.ecsv
+  data/processed/stock2_literature_long.csv
+  data/processed/stock2_literature_master.ecsv
+  data/processed/stock2_literature_master.csv

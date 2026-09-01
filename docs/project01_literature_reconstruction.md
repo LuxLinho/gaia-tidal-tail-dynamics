@@ -7,48 +7,224 @@ candidate populations into a provenance-preserving canonical sample.
 
 Project 01 answers:
 
-> Which stars were selected by which literature catalogue, and how were they
-> classified in the original source?
+> Which stars were selected by which literature catalogue, how did they enter
+> the analysis sample, and how were they classified in both the original and
+> homogenized catalogue frameworks?
 
-It does not determine whether those literature classifications are dynamically
-correct.
+Project 01 does not determine whether those literature selections are
+dynamically correct.
+
+---
 
 ## Primary catalogues
 
-- Kos (2024)
-- Risbud et al. (2025)
+### Kos (2024)
 
-## Audit / indexing catalogue
+The original Stock 2 catalogue contains 3518 unique Gaia DR3 sources with
+reported membership probabilities.
 
-- Jadhav et al. (2025)
+The Jadhav et al. (2025) Stock 2 sample associated with Kos2024 is exactly
+reproduced by the selection:
 
-Jadhav et al. is used as a catalogue-of-catalogues provenance and reconstruction
-anchor. It is not treated as an independent third Stock 2 membership selection.
+`pbint > 0.9`
 
-## Core principles
+This yields:
 
-1. Preserve original literature provenance.
-2. Preserve original membership or tail classifications.
-3. Never silently remove duplicate Gaia sources.
-4. Do not assign physical membership confidence in Project 01.
-5. Separate catalogue reconstruction from later Gaia quality and dynamical tests.
+- 1063 selected sources
+- 1063/1063 exact Gaia-source match to Jadhav2025
+- no within-catalogue duplicate Gaia DR3 source IDs
 
-## Planned canonical outputs
+Selection provenance:
 
-- `data/processed/stock2_literature_long.csv`
-- `data/processed/stock2_literature_master.csv`
-- `results/project01/project01_catalogue_summary.csv`
-- `results/project01/project01_overlap_summary.csv`
-- `results/project01/project01_audit.txt`
+raw Kos2024 Stock 2 catalogue
+→ `pbint > 0.9`
+→ 1063-source high-probability subset
+→ Jadhav2025 homogenized classification
+
+---
+
+### Risbud et al. (2025)
+
+The published Stock 2 catalogue contains:
+
+- 1278 unique Gaia DR3 sources
+- 883 within-tidal-radius sources
+- 118 leading-tail sources
+- 277 trailing-tail sources
+
+The corrected-sample flag contains 1085 sources:
+
+- 771 within tidal radius
+- 95 leading tail
+- 219 trailing tail
+
+Jadhav2025 retains the full published 1278-source Stock 2 sample rather than
+the 1085-source corrected subset.
+
+The Gaia-source set is reproduced exactly:
+
+- 1278/1278 exact Gaia-source match
+- no within-catalogue duplicate Gaia DR3 source IDs
+
+---
+
+## Original versus homogenized classification
+
+Risbud2025 original classes are defined from:
+
+- `FwithinTidRad`
+- `FleadingTail`
+- `FtrailingTail`
+
+Jadhav2025 applies a cross-catalogue homogenized orbital classification using
+distance along the cluster orbit:
+
+- leading: `distAlongO > 10 pc`
+- cluster: `-10 pc <= distAlongO <= 10 pc`
+- trailing: `distAlongO < -10 pc`
+
+For the 1278 Risbud2025 Stock 2 sources:
+
+- 1067 retain the same C/L/T label
+- 211 are remapped
+- remapping fraction = 0.1651
+
+Transition matrix:
+
+| Risbud original | Jadhav C | Jadhav L | Jadhav T |
+|---|---:|---:|---:|
+| C | 754 | 51 | 78 |
+| L | 42 | 76 | 0 |
+| T | 40 | 0 | 237 |
+
+Original and homogenized classifications are therefore retained as distinct
+provenance fields.
+
+---
+
+## Cross-catalogue reconstruction
+
+After applying the verified literature-selection rules:
+
+- Kos2024: 1063 sources
+- Risbud2025: 1278 sources
+- shared: 885
+- Kos-only: 178
+- Risbud-only: 393
+- union: 1456
+
+Catalogue-set Jaccard similarity:
+
+`885 / 1456 = 0.6078`
+
+Shared fraction:
+
+- shared / Kos2024 = 0.8325
+- shared / Risbud2025 = 0.6925
+
+The 885 sources shared by both catalogues have identical Jadhav2025
+homogenized C/L/T labels.
+
+---
+
+## Canonical outputs
+
+### Long provenance table
+
+`data/processed/stock2_literature_long.ecsv`
+
+`data/processed/stock2_literature_long.csv`
+
+One row represents one Gaia DR3 source in one literature catalogue.
+
+Rows:
+
+- 1063 Kos2024 records
+- 1278 Risbud2025 records
+- total = 2341
+
+The table preserves:
+
+- Gaia DR3 source identity
+- catalogue provenance
+- selection stage
+- selection criterion
+- original catalogue-specific quantities
+- original classification where available
+- Jadhav2025 homogenized classification
+
+---
+
+### Master source table
+
+`data/processed/stock2_literature_master.ecsv`
+
+`data/processed/stock2_literature_master.csv`
+
+One row represents one unique Gaia DR3 source.
+
+Total:
+
+- 1456 unique sources
+
+Catalogue status:
+
+- shared: 885
+- Kos-only: 178
+- Risbud-only: 393
+
+Homogenized classes:
+
+- C: 940
+- L: 184
+- T: 332
+
+---
+
+## Scientific interpretation boundary
+
+Project 01 reconstructs literature selection and provenance only.
+
+Terms such as:
+
+- robust member
+- probable member
+- dynamically consistent
+- dynamically inconsistent
+
+are not assigned here.
+
+Those classifications require later Gaia quality, 6D phase-space, orbit,
+action-space, uncertainty, and Galactic-potential analyses.
+
+---
+
+## Paper assets
+
+Candidate paper assets generated by Project 01:
+
+- literature sample provenance section
+- sample-selection flow
+- catalogue-overlap statistics
+- original-versus-homogenized classification table
+- canonical literature master table
+
+These are marked as candidate assets only. Manuscript interpretation is
+deferred until scientific closure.
+
+---
 
 ## Project 01 acceptance criteria
 
-Project 01 is complete only when:
+- [x] Kos2024 Stock 2 records reproducibly reconstructed
+- [x] Risbud2025 Stock 2 records reproducibly reconstructed
+- [x] literature selection functions explicitly recovered
+- [x] Gaia DR3 source identifiers preserved
+- [x] within-catalogue duplicate audit passed
+- [x] cross-catalogue intersection and union quantified
+- [x] original and homogenized classification systems separated
+- [x] canonical long provenance table generated
+- [x] canonical one-row-per-source master table generated
+- [x] no physical membership reinterpretation introduced
 
-- Kos (2024) Stock 2 records are reproducibly reconstructed.
-- Risbud et al. (2025) Stock 2 records are reproducibly reconstructed.
-- Every retained record preserves its literature provenance.
-- Gaia DR3 source identifiers are audited for missing and duplicated values.
-- Catalogue intersection and union are explicitly quantified.
-- Shared-source classification agreement/disagreement is quantified.
-- No scientific reinterpretation of membership has been introduced.
+Project 01 status: COMPLETE

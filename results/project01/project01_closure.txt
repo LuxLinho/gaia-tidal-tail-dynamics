@@ -1,0 +1,17 @@
+Project 01 — Closure audit
+======================================
+
+All acceptance invariants passed.
+
+Long rows: 2341
+Master sources: 1456
+
+Shared: 885
+Kos-only: 178
+Risbud-only: 393
+
+C: 940
+L: 184
+T: 332
+
+PROJECT 01 STATUS: COMPLETE
