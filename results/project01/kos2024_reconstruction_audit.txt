@@ -1,0 +1,42 @@
+Project 01 — Kos2024 original-catalogue reconstruction audit
+==================================================================
+
+Detected Gaia-ID column: GaiaDR3
+
+Original Kos2024 Stock 2:
+  rows: 3518
+  unique Gaia DR3 IDs: 3518
+  duplicated Gaia IDs: 0
+
+Jadhav2025 Kos2024 subset:
+  rows: 1063
+  unique Gaia DR3 IDs: 1063
+
+Source-set comparison:
+  shared: 1063
+  Kos-original only: 2455
+  Jadhav only: 0
+  union: 3518
+  exact source-set match: False
+
+First Kos-original-only Gaia IDs:
+  155512832985090816
+  155845950649049856
+  161988303638177664
+  174252148959925888
+  174668902522259712
+  176382177859290624
+  177504233772153600
+  178644594833982080
+  180132238362399232
+  180860248204727808
+  180947831173957120
+  180965358939609856
+  181221098471887104
+  181522566519623936
+  181669042082684032
+  182459698322266880
+  182571985947520000
+  182715953250192640
+  182753641587207808
+  182852872508358272

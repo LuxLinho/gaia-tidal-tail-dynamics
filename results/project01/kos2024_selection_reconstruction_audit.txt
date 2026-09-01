@@ -1,0 +1,36 @@
+Project 01 — Kos2024 selection reconstruction
+=======================================================
+
+Raw Stock 2 catalogue:
+  rows: 3518
+
+Jadhav2025 Kos2024 subset:
+  rows: 1063
+  unique source IDs: 1063
+
+Documented criterion test:
+  pbint > 0.9:
+    selected: 1063
+    shared with Jadhav: 1063
+    selected only: 0
+    Jadhav only: 0
+    exact source-set match: True
+  pbint >= 0.9:
+    selected: 1063
+    shared with Jadhav: 1063
+    selected only: 0
+    Jadhav only: 0
+    exact source-set match: True
+
+pbint distribution:
+  min: 0.002738
+  Q25: 0.070203
+  median: 0.314446
+  Q75: 1.000000
+  P90: 1.000000
+  P95: 1.000000
+  P99: 1.000000
+  max: 1.000000
+
+Selected original-table output:
+  data/processed/stock2_kos2024_pbint_gt_0p9.ecsv
