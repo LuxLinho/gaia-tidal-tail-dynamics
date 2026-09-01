@@ -1,0 +1,4 @@
+catalogue_id,reference,year,role,cluster,raw_path,status,notes
+jadhav2025,Jadhav et al.,2025,audit_index,Stock 2,data/raw/literature/jadhav2025/jadhav2025_sources.ecsv,available,Unified tidal-tail catalogue used as provenance and reconstruction anchor
+kos2024,Kos,2024,primary_membership,Stock 2,data/raw/literature/kos2024/,pending,Independent Stock 2 extended or tidal-tail candidate catalogue
+risbud2025,Risbud et al.,2025,primary_membership,Stock 2,data/raw/literature/risbud2025/,pending,Independent Stock 2 cluster leading-tail and trailing-tail catalogue

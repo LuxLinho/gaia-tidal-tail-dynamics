@@ -1,0 +1,40 @@
+Project 01 — Jadhav et al. (2025) Stock 2 audit
+==========================================================
+
+Input catalogue rows: 57981
+Detected Stock 2 label: Stock_2
+Stock 2 catalogue rows: 2341
+Unique Gaia DR3 sources: 1456
+
+References:
+  Kos2024: 1063
+  Risbud2025: 1278
+
+Grades:
+  S: 2341
+
+Classes:
+  C: 1665
+  L: 256
+  T: 420
+
+Class counts by reference:
+  Kos2024: C=829, L=129, T=105
+  Risbud2025: C=836, L=127, T=315
+
+Gaia DR3 source-ID audit:
+  unique IDs: 1456
+  IDs appearing more than once: 885
+  rows associated with repeated IDs: 1770
+
+Pairwise Gaia-source overlaps:
+  Kos2024 vs Risbud2025: intersection=885, union=1456
+
+Missing-value audit:
+  RV masked: 875
+  BPmag masked: 0
+  RPmag masked: 0
+
+Outputs:
+  data/interim/project01/jadhav2025_stock2.ecsv
+  data/interim/project01/jadhav2025_stock2.csv

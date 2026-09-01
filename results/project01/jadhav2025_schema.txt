@@ -1,0 +1,57 @@
+Jadhav et al. (2025) catalogue schema audit
+================================================
+Input: data/raw/literature/jadhav2025/jadhav2025_sources.ecsv
+Rows: 57981
+Columns: 40
+
+Column names:
+- GaiaDR3: dtype=int64, masked=False
+- Cluster: dtype=<U13, masked=False
+- Ref: dtype=<U16, masked=False
+- ClusterID: dtype=int16, masked=False
+- Grade: dtype=<U1, masked=False
+- Class: dtype=<U1, masked=False
+- RA_ICRS: dtype=float64, masked=False
+- DE_ICRS: dtype=float64, masked=False
+- rmedgeo: dtype=float64, masked=False
+- pmRA: dtype=float64, masked=False
+- pmDE: dtype=float64, masked=False
+- RV: dtype=float64, masked=True
+- Gmag: dtype=float32, masked=False
+- BPmag: dtype=float64, masked=True
+- RPmag: dtype=float64, masked=True
+- BP-RP: dtype=float32, masked=True
+- GMAG: dtype=float64, masked=False
+- r3d: dtype=float32, masked=False
+- v3d: dtype=float32, masked=True
+- rsky: dtype=float32, masked=False
+- pmR: dtype=float64, masked=False
+- e_pmR: dtype=float32, masked=False
+- pmT: dtype=float64, masked=False
+- e_pmT: dtype=float32, masked=False
+- deltaRVGC: dtype=float64, masked=True
+- deltaphiGC: dtype=float32, masked=False
+- distFromO: dtype=float32, masked=False
+- distAlongO: dtype=float32, masked=False
+- cmdDist: dtype=float32, masked=True
+- q: dtype=float32, masked=True
+- e_q: dtype=float32, masked=True
+- MassSysMLR: dtype=float32, masked=True
+- MassSys: dtype=float32, masked=True
+- e_MassSys: dtype=float32, masked=True
+- MassA: dtype=float32, masked=True
+- e_MassA: dtype=float32, masked=True
+- MassB: dtype=float32, masked=True
+- e_MassB: dtype=float32, masked=True
+- _RA.icrs: dtype=float64, masked=False
+- _DE.icrs: dtype=float64, masked=False
+
+First 5 rows:
+      GaiaDR3       Cluster        Ref        ClusterID Grade Class  RA_ICRS   ...  MassA  e_MassA  MassB  e_MassB  _RA.icrs   _DE.icrs 
+                                                                       deg     ... solMass solMass solMass solMass    deg        deg    
+------------------- -------- ---------------- --------- ----- ----- ---------- ... ------- ------- ------- ------- ---------- ----------
+2050809775326179584 ASCC_101 Bhattacharya2022         0     B     T 288.178653 ...  0.4410  0.0965  0.0000  0.0000 288.178648  36.694353
+2050770300286488960 ASCC_101 Bhattacharya2022         0     B     T 288.087589 ...  1.2383  0.1838  0.7430  0.1103 288.087583  36.436495
+2050715286043161216 ASCC_101 Bhattacharya2022         0     B     T 288.422649 ...  0.3360  0.0553  0.1680  0.0277 288.422643  36.248046
+2050573311606246912 ASCC_101 Bhattacharya2022         0     B     T 287.575011 ...  0.3820  0.0874  0.0000  0.0000 287.575006  35.435397
+2050509097557530624 ASCC_101 Bhattacharya2022         0     B     T 288.618800 ...  1.0987  0.1719  0.5494  0.0860 288.618792  35.958053

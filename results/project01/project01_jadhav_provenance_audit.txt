@@ -1,0 +1,36 @@
+Project 01 — Jadhav provenance reconstruction
+======================================================
+
+Within-catalogue duplicate audit:
+  Kos2024: rows=1063, unique=1063, duplicate_ids=0
+  Risbud2025: rows=1278, unique=1278, duplicate_ids=0
+
+Catalogue overlap:
+  Kos2024: 1063
+  Risbud2025: 1278
+  shared: 885
+  Kos-only: 178
+  Risbud-only: 393
+  union: 1456
+  Jaccard similarity: 0.6078
+  shared / Kos2024: 0.8325
+  shared / Risbud2025: 0.6925
+
+Shared-source C/L/T agreement:
+  shared sources: 885
+  same C/L/T class: 885
+  class agreement fraction: 1.0000
+
+Class matrix (Kos2024 -> Risbud2025):
+  C: C=725, L=0, T=0
+  L: C=0, L=72, T=0
+  T: C=0, L=0, T=88
+
+Canonical provenance output:
+  data/processed/stock2_jadhav_provenance_long.ecsv
+  data/processed/stock2_jadhav_provenance_long.csv
+
+Important:
+  jadhav_class is treated as a homogenized literature
+  classification from the Jadhav2025 master catalogue.
+  It is not yet labelled as the original-source class.
