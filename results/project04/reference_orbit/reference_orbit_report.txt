@@ -1,0 +1,50 @@
+Project 04B — Stock 2 reference orbit integration
+================================================================
+
+Scope: fixed Project 03C/04A Stock 2 reference only; no source-by-source integration.
+Potential: galpy MWPotential2014 (Bovy 2015), baseline axisymmetric model.
+galpy version: 1.12.0
+Integration: dop853, -1 to +1 Gyr, 8001 stored samples.
+
+R_peri: 7.969319 kpc
+R_apo: 9.677011 kpc
+eccentricity: 0.096773
+Z_max: 104.055 pc
+radial period (sampled minima): 186.750 Myr
+azimuthal period (median instantaneous): 253.622 Myr
+relative energy span: 8.377e-13
+
+Fixed Project 03D L+T axis versus finite integrated orbit chords:
+  +/-5 Myr: 45.218430 deg
+  +/-20 Myr: 45.785839 deg
+  +/-50 Myr: 48.242911 deg
+
+Angle between fixed L+T axis and orbital angular-momentum normal: 87.901972 deg
+An angle near 90 deg here means the spatial axis lies near the instantaneous orbital plane; it does not establish tidal origin.
+
+Interpretation limits:
+- The instantaneous orbit tangent is exactly the instantaneous velocity direction, so Project 04A already measured that angle.
+- Finite orbit chords add curvature context but remain model-dependent.
+- MWPotential2014 is one baseline potential. Potential robustness is deferred.
+- No membership, bound/unbound, Jacobi-radius, action, or individual-star orbit inference is performed.
+
+Invariants:
+fixed reference used unchanged: True
+one reference orbit only: True
+no canonical source table modified: True
+no source membership inference: True
+no source-by-source orbit integration: True
+energy conservation threshold passed: True
+PROJECT 04B STATUS: PASS
+
+Outputs:
+data/interim/project04/stock2_reference_orbit.ecsv
+data/interim/project04/stock2_reference_orbit_summary.ecsv
+data/interim/project04/stock2_reference_orbit_alignments.ecsv
+results/project04/reference_orbit/reference_orbit_R_time.png
+results/project04/reference_orbit/reference_orbit_Z_time.png
+results/project04/reference_orbit/reference_orbit_xy.png
+results/project04/reference_orbit/reference_orbit_R_time.pdf
+results/project04/reference_orbit/reference_orbit_Z_time.pdf
+results/project04/reference_orbit/reference_orbit_xy.pdf
+results/project04/reference_orbit/reference_orbit_report.txt

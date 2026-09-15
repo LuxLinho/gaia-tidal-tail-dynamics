@@ -1,0 +1,61 @@
+Project 04C — Local Galactic gravitational tidal field
+===================================================================
+
+Scope: fixed Stock 2 reference and its Project 04B reference orbit only.
+Potential: galpy MWPotential2014, identical baseline to Project 04B.
+galpy version: 1.12.0
+Tensor definition: T_ij = partial a_i/partial x_j = -partial_i partial_j Phi.
+This is the inertial gravitational tidal tensor, NOT the rotating-frame effective tidal tensor.
+
+Present-day tidal eigenmodes (eigenvalues descending):
+  lambda1: 826.965207 (km/s)^2/kpc^2 [stretching]; axis alignment with L+T = 51.201069 deg; radial/azimuthal/vertical = 0.165/90.000/89.835 deg
+  lambda2: -681.986069 (km/s)^2/kpc^2 [compressive]; axis alignment with L+T = 38.809584 deg; radial/azimuthal/vertical = 90.000/0.000/90.000 deg
+  lambda3: -4978.998355 (km/s)^2/kpc^2 [compressive]; axis alignment with L+T = 89.227889 deg; radial/azimuthal/vertical = 89.835/90.000/0.165 deg
+
+Strongest-tidal-axis alignment with fixed L+T: 51.201069 deg
+Number of positive (stretching) eigenvalues now: 1
+Tidal trace now: -4834.019217 (km/s)^2/kpc^2
+
+Independent derivative audit:
+  analytic Phi_RR / Phi_Rz: -826.916808909, -16.762905907
+  finite-difference values: -826.916808996, -16.762904934
+  maximum relative discrepancy: 5.806e-08
+
+Evolution along the fixed Project 04B orbit:
+  -50 Myr: strongest-axis/L+T = 34.209787 deg; lambda_max = 861.087363 (km/s)^2/kpc^2
+  -20 Myr: strongest-axis/L+T = 17.835539 deg; lambda_max = 907.788240 (km/s)^2/kpc^2
+  -5 Myr: strongest-axis/L+T = 43.148443 deg; lambda_max = 852.186127 (km/s)^2/kpc^2
+  +0 Myr: strongest-axis/L+T = 51.201069 deg; lambda_max = 826.965207 (km/s)^2/kpc^2
+  +5 Myr: strongest-axis/L+T = 59.016913 deg; lambda_max = 800.608150 (km/s)^2/kpc^2
+  +20 Myr: strongest-axis/L+T = 81.001957 deg; lambda_max = 723.971844 (km/s)^2/kpc^2
+  +50 Myr: strongest-axis/L+T = 60.245226 deg; lambda_max = 624.308864 (km/s)^2/kpc^2
+
+Interpretation limits:
+- Positive eigenvalue means differential gravitational stretching; negative means compression.
+- This calculation does not include centrifugal/Coriolis terms of a cluster-comoving rotating frame.
+- Alignment or non-alignment does not by itself establish or reject tidal-tail origin.
+- MWPotential2014 is one baseline potential; potential robustness remains deferred.
+- No Jacobi radius, escape criterion, bound/unbound label, membership update, or individual-star orbit inference is performed.
+
+Invariants:
+fixed Project 04A reference used unchanged: True
+fixed Project 03D L+T axis used through Project 04A e1_ext_gc: True
+Project 04B reference orbit used unchanged: True
+same MWPotential2014 baseline as Project 04B: True
+no canonical source table modified: True
+no membership inference: True
+no source-by-source orbit integration: True
+no effective rotating-frame tide/Jacobi calculation: True
+PROJECT 04C STATUS: PASS
+
+Outputs:
+data/interim/project04/stock2_local_tidal_tensor.ecsv
+data/interim/project04/stock2_tidal_eigensystem.ecsv
+data/interim/project04/stock2_tidal_field_summary.ecsv
+results/project04/local_tidal_field/tidal_eigenvalues_time.png
+results/project04/local_tidal_field/tidal_eigenvalues_time.pdf
+results/project04/local_tidal_field/tidal_axis_alignment_time.png
+results/project04/local_tidal_field/tidal_axis_alignment_time.pdf
+results/project04/local_tidal_field/present_tidal_directions.png
+results/project04/local_tidal_field/present_tidal_directions.pdf
+results/project04/local_tidal_field/local_tidal_field_report.txt

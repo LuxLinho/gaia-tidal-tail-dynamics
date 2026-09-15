@@ -1,0 +1,51 @@
+Project 02C — Astrometric diagnostics audit
+======================================================
+
+Total sources: 1456
+
+RUWE
+----
+valid:   1456
+missing: 0
+median:  1.0111
+p84:     1.1122
+p95:     1.4792
+p99:     3.2413
+max:     11.4277
+
+Astrometric uncertainties
+-------------------------
+parallax_error median / p95: 0.023090 / 0.078551
+pmra_error median / p95:     0.019715 / 0.067767
+pmdec_error median / p95:    0.023690 / 0.078880
+
+Derived diagnostic
+------------------
+parallax_over_error median / p05: 116.9434 / 34.5048
+
+Important interpretation
+------------------------
+No RUWE threshold has been applied.
+No visibility-period threshold has been applied.
+No duplicated-source exclusion has been applied.
+No astrometric-error threshold has been applied.
+No physical membership criterion has been applied.
+
+Invariants
+----------
+rows == 1456:                    True
+source IDs unique == 1456:       True
+RUWE available for some sources: True
+parallax_error complete:          True
+pmra_error complete:              True
+pmdec_error complete:             True
+
+PROJECT 02C DIAGNOSTICS STATUS: PASS
+
+Outputs:
+  data/interim/project02/stock2_gaia_astrometric_diagnostics.ecsv
+  results/project02/astrometric_diagnostics_summary.csv
+  results/project02/astrometric_diagnostics_by_catalogue.csv
+  results/project02/astrometric_diagnostics_by_class.csv
+  results/project02/astrometric_discrete_diagnostics.csv
+  results/project02/astrometric_diagnostics_audit.txt

@@ -1,0 +1,13 @@
+flag,n_pass,n_fail,pct_pass
+has_full_astrometric_solution,1456,0,100.0
+pass_ruwe_1p4,1369,87,94.02472527472527
+pass_visibility_ge10,1456,0,100.0
+pass_gof_al_3,1201,255,82.48626373626374
+pass_excess_noise_sig_2,912,544,62.637362637362635
+pass_not_duplicated,1384,72,95.05494505494505
+pass_ipd_multi_peak_2,1405,51,96.49725274725274
+pass_ipd_harmonic_0p1,1454,2,99.86263736263736
+pass_astrometry_baseline,1300,156,89.28571428571429
+pass_astrometry_gof_sensitivity,1149,307,78.91483516483517
+pass_astrometry_excess_noise_sensitivity,881,575,60.50824175824176
+pass_astrometry_enhanced,872,584,59.89010989010989

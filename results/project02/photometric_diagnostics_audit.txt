@@ -1,0 +1,27 @@
+Project 02E — Photometric diagnostics audit
+====================================================
+
+Total sources: 1456
+
+Flux-over-error
+---------------
+G median / p05:  2846.003 / 981.700
+BP median / p05: 573.150 / 69.116
+RP median / p05: 972.669 / 273.080
+
+BP/RP excess factor
+-------------------
+median / p05 / p95: 1.2682 / 1.1834 / 1.4221
+
+Important interpretation
+------------------------
+No photometric quality threshold has been applied.
+No CMD membership selection has been applied.
+No source has been removed.
+
+Outputs:
+  data/interim/project02/stock2_gaia_photometric_diagnostics.ecsv
+  results/project02/photometric_diagnostics_summary.csv
+  results/project02/photometric_diagnostics_by_catalogue.csv
+  results/project02/photometric_diagnostics_by_class.csv
+  results/project02/photometric_diagnostics_audit.txt

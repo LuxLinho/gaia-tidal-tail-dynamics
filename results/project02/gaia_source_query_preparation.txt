@@ -1,0 +1,20 @@
+Project 02A — Gaia DR3 source-query preparation
+========================================================
+
+Input table:              data/processed/stock2_literature_master.ecsv
+Input rows:               1456
+Expected rows:            1456
+
+Source-ID column:         gaia_dr3_source_id
+Missing source IDs:       0
+Valid source IDs:         1456
+Unique source IDs:        1456
+Duplicate source IDs:     0
+
+Invariants:
+  master rows == 1456:            True
+  missing source IDs == 0:        True
+  valid IDs == master rows:       True
+  unique IDs == master rows:      True
+
+PREPARATION STATUS: PASS

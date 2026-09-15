@@ -1,0 +1,152 @@
+Project 03C — Stock 2 cluster-centered reference frame
+=================================================================
+Reference definition: already-existing literature C class; no new membership inference.
+Existing homogenized_class == C; component-wise median of all complete Cartesian position vectors and, separately, all complete Cartesian velocity vectors. No clipping, quality selection, iteration, or new membership inference.
+C total: 940; position contributors: 940; velocity contributors: 594
+x_ref_pc: -257.0582356893 [pc]
+y_ref_pc: 271.7037408556 [pc]
+z_ref_pc: -10.3984938308 [pc]
+vx_ref_kms: -30.6513762878 [km / s]
+vy_ref_kms: -17.5197042716 [km / s]
+vz_ref_kms: -14.3806970059 [km / s]
+r_ref_pc: 374.1790854719 [pc]
+speed_ref_kms: 38.1215339733 [km / s]
+l_ref_deg: 133.4134427428 [deg]
+b_ref_deg: -1.5924634672 [deg]
+ra_ref_deg: 33.8917184222 [deg]
+dec_ref_deg: 59.5563102729 [deg]
+
+Project 03B Astropy Galactic Cartesian axes unchanged: right-handed, +X toward l=0,b=0, +Y toward l=90,b=0, +Z toward the North Galactic Pole. Project 03B *_helio_* fields have a solar-system barycentric origin. Cluster-relative components subtract the fixed C component medians without rotation. No solar-motion or Galactocentric correction.
+
+Canonical rows: 1456
+Unique source IDs: 1456
+Valid positions: 1456; valid velocities: 886; missing velocities: 570
+Radial/tangential decomposition: 886; exact reference-position rows: 0
+Radial relative velocity is positive outward from the reference; tangential speed is nonnegative.
+These are spatial cluster-relative components, not Gaia line-of-sight radial_velocity.
+
+Full and grouped descriptive summaries (no clipping):
+all/all: total N=1456, N position=1456, N velocity=886; dx_cluster_pc [pc], valid N=1456: median=0.0149337, p05=-34.3666, p16=-14.4806, p84=13.0679, p95=33.6487, min=-121.973, max=103.509
+all/all: total N=1456, N position=1456, N velocity=886; dy_cluster_pc [pc], valid N=1456: median=-0.932612, p05=-38.2886, p16=-14.9515, p84=8.45418, p95=20.7416, min=-129.992, max=157.349
+all/all: total N=1456, N position=1456, N velocity=886; dz_cluster_pc [pc], valid N=1456: median=-0.119784, p05=-10.2406, p16=-5.13083, p84=4.88906, p95=10.5794, min=-19.6819, max=19.3111
+all/all: total N=1456, N position=1456, N velocity=886; r_cluster_pc [pc], valid N=1456: median=13.1522, p05=2.80133, p16=5.05242, p84=37.6499, p95=62.8735, min=0.421659, max=169.365
+all/all: total N=1456, N position=1456, N velocity=886; dvx_cluster_kms [km / s], valid N=886: median=0.041412, p05=-4.76548, p16=-2.16342, p84=3.20632, p95=7.84685, min=-32.4988, max=71.1398
+all/all: total N=1456, N position=1456, N velocity=886; dvy_cluster_kms [km / s], valid N=886: median=-0.15242, p05=-8.80186, p16=-3.70039, p84=1.78287, p95=4.71613, min=-76.8265, max=33.2181
+all/all: total N=1456, N position=1456, N velocity=886; dvz_cluster_kms [km / s], valid N=886: median=-0.0521475, p05=-1.47219, p16=-0.889724, p84=0.684724, p95=1.40727, min=-11.9299, max=5.68374
+all/all: total N=1456, N position=1456, N velocity=886; dv_cluster_kms [km / s], valid N=886: median=2.38587, p05=0.621416, p16=1.13367, p84=6.92933, p95=14.9777, min=0.129119, max=104.762
+all/all: total N=1456, N position=1456, N velocity=886; v_radial_cluster_rel_kms [km / s], valid N=886: median=0.0825931, p05=-6.19086, p16=-2.01362, p84=1.96993, p95=5.39023, min=-80.2507, max=50.2154
+all/all: total N=1456, N position=1456, N velocity=886; v_tangential_cluster_rel_kms [km / s], valid N=886: median=1.76618, p05=0.394111, p16=0.711043, p84=4.8006, p95=10.1395, min=0.034947, max=67.3422
+catalogue_status/shared: total N=885, N position=885, N velocity=580; dx_cluster_pc [pc], valid N=885: median=-0.138096, p05=-17.3626, p16=-7.74744, p84=6.95359, p95=14.9786, min=-55.0394, max=51.5817
+catalogue_status/shared: total N=885, N position=885, N velocity=580; dy_cluster_pc [pc], valid N=885: median=-0.0643395, p05=-14.5504, p16=-6.8512, p84=7.19065, p95=12.9872, min=-66.5929, max=69.6604
+catalogue_status/shared: total N=885, N position=885, N velocity=580; dz_cluster_pc [pc], valid N=885: median=-0.0132166, p05=-6.69263, p16=-3.7767, p84=3.44696, p95=6.37702, min=-19.1722, max=11.8992
+catalogue_status/shared: total N=885, N position=885, N velocity=580; r_cluster_pc [pc], valid N=885: median=8.78363, p05=2.26316, p16=4.02525, p84=18.2501, p95=29.5387, min=0.421659, max=87.1987
+catalogue_status/shared: total N=885, N position=885, N velocity=580; dvx_cluster_kms [km / s], valid N=580: median=-0.0222783, p05=-4.20647, p16=-1.9192, p84=2.63967, p95=5.86405, min=-28.3468, max=71.1398
+catalogue_status/shared: total N=885, N position=885, N velocity=580; dvy_cluster_kms [km / s], valid N=580: median=-0.0453297, p05=-6.66991, p16=-3.0845, p84=1.76584, p95=4.20323, min=-76.8265, max=31.3418
+catalogue_status/shared: total N=885, N position=885, N velocity=580; dvz_cluster_kms [km / s], valid N=580: median=0.0373658, p05=-1.06234, p16=-0.624856, p84=0.644499, p95=1.17345, min=-1.80886, max=3.74173
+catalogue_status/shared: total N=885, N position=885, N velocity=580; dv_cluster_kms [km / s], valid N=580: median=2.04861, p05=0.595185, p16=1.00378, p84=5.58861, p95=11.2822, min=0.275311, max=104.762
+catalogue_status/shared: total N=885, N position=885, N velocity=580; v_radial_cluster_rel_kms [km / s], valid N=580: median=-0.0231449, p05=-4.93139, p16=-1.62193, p84=1.71096, p95=4.05872, min=-80.2507, max=37.3342
+catalogue_status/shared: total N=885, N position=885, N velocity=580; v_tangential_cluster_rel_kms [km / s], valid N=580: median=1.5642, p05=0.397961, p16=0.661309, p84=4.17121, p95=7.89987, min=0.0599387, max=67.3422
+catalogue_status/kos_only: total N=178, N position=178, N velocity=75; dx_cluster_pc [pc], valid N=178: median=-3.54386, p05=-34.9179, p16=-19.8174, p84=8.67144, p95=16.7628, min=-58.8597, max=42.9757
+catalogue_status/kos_only: total N=178, N position=178, N velocity=75; dy_cluster_pc [pc], valid N=178: median=3.75757, p05=-12.428, p16=-5.54616, p84=16.2999, p95=35.6498, min=-71.9991, max=157.349
+catalogue_status/kos_only: total N=178, N position=178, N velocity=75; dz_cluster_pc [pc], valid N=178: median=-0.216196, p05=-9.63137, p16=-4.90043, p84=4.36424, p95=7.09874, min=-17.2196, max=18.3856
+catalogue_status/kos_only: total N=178, N position=178, N velocity=75; r_cluster_pc [pc], valid N=178: median=14.763, p05=3.08981, p16=6.34683, p84=31.5973, p95=51.2563, min=1.27584, max=158.259
+catalogue_status/kos_only: total N=178, N position=178, N velocity=75; dvx_cluster_kms [km / s], valid N=75: median=-0.229712, p05=-5.94178, p16=-2.57239, p84=4.26283, p95=6.16676, min=-6.92521, max=9.83949
+catalogue_status/kos_only: total N=178, N position=178, N velocity=75; dvy_cluster_kms [km / s], valid N=75: median=-0.868447, p05=-7.64404, p16=-4.85934, p84=1.96415, p95=3.97838, min=-16.8613, max=8.43386
+catalogue_status/kos_only: total N=178, N position=178, N velocity=75; dvz_cluster_kms [km / s], valid N=75: median=-0.0306566, p05=-1.49225, p16=-1.01109, p84=0.559806, p95=1.07269, min=-11.9299, max=1.94075
+catalogue_status/kos_only: total N=178, N position=178, N velocity=75; dv_cluster_kms [km / s], valid N=75: median=3.14077, p05=0.740713, p16=1.28756, p84=7.75897, p95=11.057, min=0.129119, max=19.2545
+catalogue_status/kos_only: total N=178, N position=178, N velocity=75; v_radial_cluster_rel_kms [km / s], valid N=75: median=-0.277076, p05=-7.05593, p16=-3.43176, p84=2.67401, p95=6.09023, min=-18.4336, max=10.4492
+catalogue_status/kos_only: total N=178, N position=178, N velocity=75; v_tangential_cluster_rel_kms [km / s], valid N=75: median=2.32497, p05=0.535409, p16=0.970464, p84=4.50179, p95=7.47254, min=0.034947, max=16.0379
+catalogue_status/risbud_only: total N=393, N position=393, N velocity=231; dx_cluster_pc [pc], valid N=393: median=7.32623, p05=-52.0457, p16=-32.1807, p84=36.1685, p95=65.8698, min=-121.973, max=103.509
+catalogue_status/risbud_only: total N=393, N position=393, N velocity=231; dy_cluster_pc [pc], valid N=393: median=-14.3767, p05=-65.773, p16=-38.3049, p84=6.98324, p95=44.2539, min=-129.992, max=108.02
+catalogue_status/risbud_only: total N=393, N position=393, N velocity=231; dz_cluster_pc [pc], valid N=393: median=-0.355556, p05=-14.7767, p16=-8.902, p84=10.7299, p95=14.9427, min=-19.6819, max=19.3111
+catalogue_status/risbud_only: total N=393, N position=393, N velocity=231; r_cluster_pc [pc], valid N=393: median=36.9612, p05=11.5014, p16=20.0465, p84=62.9114, p95=97.0637, min=2.7104, max=169.365
+catalogue_status/risbud_only: total N=393, N position=393, N velocity=231; dvx_cluster_kms [km / s], valid N=231: median=0.254135, p05=-5.93532, p16=-2.28011, p84=5.35404, p95=15.035, min=-32.4988, max=40.1159
+catalogue_status/risbud_only: total N=393, N position=393, N velocity=231; dvy_cluster_kms [km / s], valid N=231: median=-0.27393, p05=-13.4122, p16=-5.32845, p84=2.04242, p95=5.68246, min=-44.4496, max=33.2181
+catalogue_status/risbud_only: total N=393, N position=393, N velocity=231; dvz_cluster_kms [km / s], valid N=231: median=-0.410244, p05=-2.15575, p16=-1.44692, p84=0.845343, p95=2.30942, min=-3.16353, max=5.68374
+catalogue_status/risbud_only: total N=393, N position=393, N velocity=231; dv_cluster_kms [km / s], valid N=231: median=3.10166, p05=0.838173, p16=1.42326, p84=10.7054, p95=23.6409, min=0.218822, max=60.1444
+catalogue_status/risbud_only: total N=393, N position=393, N velocity=231; v_radial_cluster_rel_kms [km / s], valid N=231: median=0.372845, p05=-7.29553, p16=-2.21507, p84=2.30682, p95=7.18876, min=-45.4329, max=50.2154
+catalogue_status/risbud_only: total N=393, N position=393, N velocity=231; v_tangential_cluster_rel_kms [km / s], valid N=231: median=2.2629, p05=0.388447, p16=0.887747, p84=7.65985, p95=19.2174, min=0.0909535, max=51.0509
+homogenized_class/C: total N=940, N position=940, N velocity=594; dx_cluster_pc [pc], valid N=940: median=2.84217e-14, p05=-20.1971, p16=-7.96986, p84=7.82218, p95=18.6961, min=-63.4405, max=49.5703
+homogenized_class/C: total N=940, N position=940, N velocity=594; dy_cluster_pc [pc], valid N=940: median=-2.84217e-14, p05=-8.00872, p16=-4.79673, p84=5.7857, p95=8.57946, min=-19.8441, max=13.3597
+homogenized_class/C: total N=940, N position=940, N velocity=594; dz_cluster_pc [pc], valid N=940: median=-8.88178e-16, p05=-7.36967, p16=-4.09607, p84=3.77273, p95=8.16469, min=-19.2809, max=19.3111
+homogenized_class/C: total N=940, N position=940, N velocity=594; r_cluster_pc [pc], valid N=940: median=8.1476, p05=2.16924, p16=3.91413, p84=17.2736, p95=31.6724, min=0.421659, max=64.8776
+homogenized_class/C: total N=940, N position=940, N velocity=594; dvx_cluster_kms [km / s], valid N=594: median=-1.77636e-15, p05=-4.3773, p16=-1.9255, p84=2.72086, p95=6.01581, min=-28.3468, max=71.1398
+homogenized_class/C: total N=940, N position=940, N velocity=594; dvy_cluster_kms [km / s], valid N=594: median=0, p05=-6.85535, p16=-2.87233, p84=1.78149, p95=4.69598, min=-76.8265, max=31.3418
+homogenized_class/C: total N=940, N position=940, N velocity=594; dvz_cluster_kms [km / s], valid N=594: median=0, p05=-1.30087, p16=-0.762335, p84=0.639362, p95=1.17776, min=-2.80253, max=3.4622
+homogenized_class/C: total N=940, N position=940, N velocity=594; dv_cluster_kms [km / s], valid N=594: median=2.1466, p05=0.59094, p16=1.09337, p84=5.95885, p95=11.1855, min=0.129119, max=104.762
+homogenized_class/C: total N=940, N position=940, N velocity=594; v_radial_cluster_rel_kms [km / s], valid N=594: median=-0.0464205, p05=-5.77909, p16=-1.81585, p84=1.70425, p95=4.86929, min=-80.2507, max=37.3342
+homogenized_class/C: total N=940, N position=940, N velocity=594; v_tangential_cluster_rel_kms [km / s], valid N=594: median=1.62668, p05=0.401543, p16=0.693039, p84=4.21672, p95=8.22556, min=0.034947, max=67.3422
+homogenized_class/L: total N=184, N position=184, N velocity=111; dx_cluster_pc [pc], valid N=184: median=1.13611, p05=-27.2227, p16=-15.9785, p84=51.0055, p95=78.9119, min=-51.9263, max=103.509
+homogenized_class/L: total N=184, N position=184, N velocity=111; dy_cluster_pc [pc], valid N=184: median=16.9158, p05=10.1337, p16=11.7328, p84=38.5632, p95=72.6946, min=7.99196, max=157.349
+homogenized_class/L: total N=184, N position=184, N velocity=111; dz_cluster_pc [pc], valid N=184: median=-0.184661, p05=-13.359, p16=-6.41964, p84=5.82854, p95=10.2477, min=-19.6819, max=16.886
+homogenized_class/L: total N=184, N position=184, N velocity=111; r_cluster_pc [pc], valid N=184: median=24.5838, p05=12.2437, p16=15.3362, p84=72.4628, p95=96.8462, min=10.396, max=158.259
+homogenized_class/L: total N=184, N position=184, N velocity=111; dvx_cluster_kms [km / s], valid N=111: median=0.522226, p05=-3.94662, p16=-1.96594, p84=3.67268, p95=10.5211, min=-10.5971, max=41.9056
+homogenized_class/L: total N=184, N position=184, N velocity=111; dvy_cluster_kms [km / s], valid N=111: median=-0.961304, p05=-12.6916, p16=-5.43462, p84=1.37812, p95=2.86747, min=-51.007, max=10.7473
+homogenized_class/L: total N=184, N position=184, N velocity=111; dvz_cluster_kms [km / s], valid N=111: median=-0.00821514, p05=-1.65971, p16=-0.969855, p84=0.818248, p95=2.39753, min=-11.9299, max=3.74173
+homogenized_class/L: total N=184, N position=184, N velocity=111; dv_cluster_kms [km / s], valid N=111: median=2.89186, p05=0.670801, p16=1.25215, p84=7.9922, p95=18.2127, min=0.498022, max=66.1196
+homogenized_class/L: total N=184, N position=184, N velocity=111; v_radial_cluster_rel_kms [km / s], valid N=111: median=0.0365845, p05=-9.46929, p16=-3.50258, p84=1.91991, p95=4.43965, min=-19.6737, max=14.3075
+homogenized_class/L: total N=184, N position=184, N velocity=111; v_tangential_cluster_rel_kms [km / s], valid N=111: median=2.01975, p05=0.411298, p16=0.742444, p84=4.46744, p95=14.7399, min=0.1073, max=66.0165
+homogenized_class/T: total N=332, N position=332, N velocity=181; dx_cluster_pc [pc], valid N=332: median=-2.48016, p05=-52.1265, p16=-32.9851, p84=22.4904, p95=33.9455, min=-121.973, max=62.7083
+homogenized_class/T: total N=332, N position=332, N velocity=181; dy_cluster_pc [pc], valid N=332: median=-21.8818, p05=-69.9832, p16=-47.0342, p84=-12.2569, p95=-10.1656, min=-129.992, max=-6.8984
+homogenized_class/T: total N=332, N position=332, N velocity=181; dz_cluster_pc [pc], valid N=332: median=-0.787807, p05=-14.511, p16=-8.79869, p84=8.41679, p95=13.8185, min=-17.7703, max=18.9381
+homogenized_class/T: total N=332, N position=332, N velocity=181; r_cluster_pc [pc], valid N=332: median=34.0117, p05=14.5829, p16=19.3351, p84=57.4385, p95=84.8027, min=10.9181, max=169.365
+homogenized_class/T: total N=332, N position=332, N velocity=181; dvx_cluster_kms [km / s], valid N=181: median=0.0906958, p05=-6.16757, p16=-3.12249, p84=5.29375, p95=15.7987, min=-32.4988, max=40.1159
+homogenized_class/T: total N=332, N position=332, N velocity=181; dvy_cluster_kms [km / s], valid N=181: median=-0.203852, p05=-13.5511, p16=-4.99435, p84=2.38658, p95=5.46903, min=-44.4496, max=33.2181
+homogenized_class/T: total N=332, N position=332, N velocity=181; dvz_cluster_kms [km / s], valid N=181: median=-0.16715, p05=-1.95227, p16=-1.14762, p84=0.826239, p95=1.9318, min=-3.16353, max=5.68374
+homogenized_class/T: total N=332, N position=332, N velocity=181; dv_cluster_kms [km / s], valid N=181: median=3.07619, p05=0.764046, p16=1.25005, p84=10.3559, p95=24.6682, min=0.218822, max=60.1444
+homogenized_class/T: total N=332, N position=332, N velocity=181; v_radial_cluster_rel_kms [km / s], valid N=181: median=0.613996, p05=-5.2341, p16=-1.66344, p84=2.67682, p95=8.15669, min=-45.4329, max=50.2154
+homogenized_class/T: total N=332, N position=332, N velocity=181; v_tangential_cluster_rel_kms [km / s], valid N=181: median=2.40859, p05=0.364089, p16=0.779685, p84=7.49997, p95=17.5491, min=0.0909535, max=46.7537
+
+No source removed. Original observations and labels preserved.
+No quality cuts, clipping, membership criterion, centre iteration, or structure classification.
+No Galactocentric transformation, solar-motion correction, or orbit integration. Stop after 03C.
+ECDFs show fractions within each class with available N stated. All finite extrema retained.
+
+Outputs:
+data/interim/project03/stock2_cluster_relative_phase_space.ecsv
+data/interim/project03/stock2_reference_frame.ecsv
+data/interim/project03/stock2_cluster_relative_summary.ecsv
+data/interim/project03/stock2_cluster_relative_group_summary.ecsv
+results/project03/cluster_relative_phase_space/dx_cluster_pc_vs_dy_cluster_pc_by_homogenized_class.png
+results/project03/cluster_relative_phase_space/dx_cluster_pc_vs_dy_cluster_pc_by_homogenized_class.pdf
+results/project03/cluster_relative_phase_space/dx_cluster_pc_vs_dz_cluster_pc_by_homogenized_class.png
+results/project03/cluster_relative_phase_space/dx_cluster_pc_vs_dz_cluster_pc_by_homogenized_class.pdf
+results/project03/cluster_relative_phase_space/dy_cluster_pc_vs_dz_cluster_pc_by_homogenized_class.png
+results/project03/cluster_relative_phase_space/dy_cluster_pc_vs_dz_cluster_pc_by_homogenized_class.pdf
+results/project03/cluster_relative_phase_space/dx_cluster_pc_vs_dy_cluster_pc_by_catalogue_status.png
+results/project03/cluster_relative_phase_space/dx_cluster_pc_vs_dy_cluster_pc_by_catalogue_status.pdf
+results/project03/cluster_relative_phase_space/dvx_cluster_kms_vs_dvy_cluster_kms_by_homogenized_class.png
+results/project03/cluster_relative_phase_space/dvx_cluster_kms_vs_dvy_cluster_kms_by_homogenized_class.pdf
+results/project03/cluster_relative_phase_space/dvx_cluster_kms_vs_dvz_cluster_kms_by_homogenized_class.png
+results/project03/cluster_relative_phase_space/dvx_cluster_kms_vs_dvz_cluster_kms_by_homogenized_class.pdf
+results/project03/cluster_relative_phase_space/dvy_cluster_kms_vs_dvz_cluster_kms_by_homogenized_class.png
+results/project03/cluster_relative_phase_space/dvy_cluster_kms_vs_dvz_cluster_kms_by_homogenized_class.pdf
+results/project03/cluster_relative_phase_space/r_cluster_pc_vs_dv_cluster_kms_by_homogenized_class.png
+results/project03/cluster_relative_phase_space/r_cluster_pc_vs_dv_cluster_kms_by_homogenized_class.pdf
+results/project03/cluster_relative_phase_space/r_cluster_pc_ecdf_by_homogenized_class.png
+results/project03/cluster_relative_phase_space/r_cluster_pc_ecdf_by_homogenized_class.pdf
+results/project03/cluster_relative_phase_space/dv_cluster_kms_ecdf_by_homogenized_class.png
+results/project03/cluster_relative_phase_space/dv_cluster_kms_ecdf_by_homogenized_class.pdf
+results/project03/cluster_relative_phase_space/reference_frame_spatial_overview.png
+results/project03/cluster_relative_phase_space/reference_frame_spatial_overview.pdf
+results/project03/cluster_relative_phase_space/cluster_reference_frame_report.txt
+
+Invariants:
+rows == 1456: True
+unique source_id == 1456: True
+C total == 940: True
+L total == 184: True
+T total == 332: True
+velocity availability remains 886: True
+sources without RV retain NaN relative velocities: True
+no source removed: True
+original observables unchanged: True
+original labels unchanged: True
+reference position uses only existing C sources: True
+reference velocity uses only existing C sources with valid velocities: True
+no clipping used: True
+no membership criterion introduced: True
+no Galactocentric transformation performed: True
+no orbit integration performed: True
+Project 02/03A/03B products unchanged: True
+PROJECT 03C STATUS: PASS

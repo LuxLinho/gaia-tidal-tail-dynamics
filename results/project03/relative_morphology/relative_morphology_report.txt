@@ -1,0 +1,283 @@
+Project 03D — Cluster-relative morphology and phase-space coherence
+========================================================================
+Canonical rows/unique source IDs: 1456/1456; C/L/T: 940/184/332.
+Valid positions: 1456; valid velocities: 886; missing velocities: 570.
+Project 03C reference read unchanged; no reference median was recomputed.
+C/L/T labels are inherited from literature reconstruction. No membership inference.
+L+T PCA describes existing extended-population geometry; PCA does not establish a tidal origin.
+Correlations do not establish gravitational association.
+Sample covariance PCA: subtract each population coordinate mean, use covariance denominator N-1; no per-axis scaling, source removal, or clipping. SVD of centred positions; eigenvalues=SVD singular values squared/(N-1).
+Eigenvalues descending. For e1 and e2, make the largest-absolute Cartesian component positive (ties use first index X,Y,Z). Set e3=cross(e1,e2) for a right-handed triad. Rows of basis are e1,e2,e3. Signs are deterministic; individual axes in exactly degenerate eigenspaces are not uniquely defined.
+Only existing L+T positions define the fixed basis. s=basis @ Project03C_delta_r and u=basis @ Project03C_delta_v; do NOT subtract the L+T mean for canonical projection. Zero remains the stored Stock 2 reference. No velocity PCA.
+
+Spatial morphology:
+full: N=1456; eigenvalues [pc^2]=[664.6403575762818, 230.77728785138234, 36.000921736759075]
+  explained variance ratios=[0.7135786004349137, 0.24776968807262703, 0.038651711492459266]; axis lengths [pc]=[25.780619805898418, 15.191355694979377, 6.00007681090493]
+  axis ratios 1/2, 2/3, 1/3=[1.6970585327298149, 2.5318602034176663, 4.296714961888995]; PCA mean [pc]=[0.018009482778276704, -3.219680661097308, -0.12174529411552207]
+  e1=[0.7085623007426147, 0.7055392694764497, 0.012401822163316862]; e2=[-0.7056482129030488, 0.7084464353085053, 0.01281592468009992]; e3=[0.00025611143353105464, -0.017832204723761624, 0.9998409607940777]
+C: N=940; eigenvalues [pc^2]=[164.45972589676495, 26.329601107924923, 21.89895891840156]
+  explained variance ratios=[0.7732429888321821, 0.12379431708545419, 0.10296269408236369]; axis lengths [pc]=[12.824185194263414, 5.1312377754227025, 4.679632348636115]
+  axis ratios 1/2, 2/3, 1/3=[2.499238147896387, 1.0965044672618798, 2.740425793919695]; PCA mean [pc]=[-0.32636288784512635, 0.23593698604642432, 0.004748128786756442]
+  e1=[0.9996539318079916, 0.016801863916695175, -0.020241392979441022]; e2=[-0.0030557727000168826, 0.8384112768648313, 0.5450295341347005]; e3=[0.026128124196526985, -0.5447790636531544, 0.8381724720671533]
+L: N=184; eigenvalues [pc^2]=[1341.0021214318306, 223.56201139089947, 44.415118348633904]
+  explained variance ratios=[0.8334489835437955, 0.138946485001682, 0.027604531454522456]; axis lengths [pc]=[36.6196958129342, 14.951990215048278, 6.664466846540232]
+  axis ratios 1/2, 2/3, 1/3=[2.4491519380529474, 2.2435388395412907, 5.494767496959613]; PCA mean [pc]=[10.971688000708479, 25.7208490035217, -0.19274574942865363]
+  e1=[0.8737712570340024, 0.4858259867088432, 0.02229127676017047]; e2=[-0.48161178941666505, 0.8707460251572732, -0.09925444054392595]; e3=[-0.06763042714708617, 0.075989935591425, 0.9948123717629946]
+T: N=332; eigenvalues [pc^2]=[1056.9099536895073, 217.49154894927082, 65.39000782746376]
+  explained variance ratios=[0.7888615097446819, 0.1623323832478866, 0.048806107007431564]; axis lengths [pc]=[32.51015154823963, 14.747594683516049, 8.086408833806498]
+  axis ratios 1/2, 2/3, 1/3=[2.2044375537780048, 1.8237508128282385, 4.02034478053173]; PCA mean [pc]=[-5.077673706719197, -29.04298803038946, -0.44053967288217877]
+  e1=[0.8457807173465867, 0.5333371629163182, 0.014368326870807555]; e2=[-0.5324139579468148, 0.8419628154285758, 0.08737273498634095]; e3=[0.03450152964871123, -0.08154807225164089, 0.9960720638407347]
+L+T: N=516; eigenvalues [pc^2]=[1682.9516951931757, 439.29217872538123, 59.250488484717586]
+  explained variance ratios=[0.7714673593467957, 0.20137213567741186, 0.027160504975792574]; axis lengths [pc]=[41.02379425642118, 20.95929814486595, 7.697433889597077]
+  axis ratios 1/2, 2/3, 1/3=[1.9573076337229403, 2.72289420675532, 5.329541616702158]; PCA mean [pc]=[0.645354499030207, -9.514798080312637, -0.3521790490150301]
+  e1=[0.6515182608824263, 0.7585157819803061, 0.013332825039867213]; e2=[0.75850353228243, -0.6516311224769061, 0.007019382776642476]; e3=[0.014012396362360933, 0.00553973882893675, -0.9998864755770489]
+
+Fixed L+T basis:
+e1_ext=[0.6515182608824263, 0.7585157819803061, 0.013332825039867213]
+e2_ext=[0.75850353228243, -0.6516311224769061, 0.007019382776642476]
+e3_ext=[0.014012396362360933, 0.00553973882893675, -0.9998864755770489]
+
+Key C/L/T projected structure and velocities:
+C: median |s1|=3.451413 pc; median r_perp=6.475006 pc; median relative speed=2.146601 km/s; median |u1|=0.520640 km/s; median transverse speed=2.059578 km/s
+L: median |s1|=13.638032 pc; median r_perp=16.177746 pc; median relative speed=2.891856 km/s; median |u1|=0.967788 km/s; median transverse speed=2.455110 km/s
+T: median |s1|=19.985093 pc; median r_perp=18.409665 pc; median relative speed=3.076190 km/s; median |u1|=0.680644 km/s; median transverse speed=2.766451 km/s
+
+Key s1-u1 correlations:
+full: N=886; Pearson r=0.043676; Spearman rho=0.062103
+C: N=594; Pearson r=0.037491; Spearman rho=0.024339
+L: N=111; Pearson r=0.181360; Spearman rho=0.384293
+T: N=181; Pearson r=0.162908; Spearman rho=0.355220
+L+T: N=292; Pearson r=0.028601; Spearman rho=0.126847
+
+Key C/L/T radial behavior (fractions of finite radial measurements):
+C: median radial=-0.046421 km/s; outward=0.484848; inward=0.515152; N=594
+L: median radial=0.036584 km/s; outward=0.504505; inward=0.495495; N=111
+T: median radial=0.613996 km/s; outward=0.629834; inward=0.370166; N=181
+
+Overall and class/provenance summaries:
+all/all N=1456, N velocity=886: s1_ext_pc [pc], valid N=1456: median=-0.33486, p05=-44.9376, p16=-15.0463, p84=8.79262, p95=25.4697, min=-168.532, max=144.905
+all/all N=1456, N velocity=886: s2_ext_pc [pc], valid N=1456: median=0.837597, p05=-21.9519, p16=-9.78409, p84=15.3331, p95=30.1232, min=-104.409, max=60.7011
+all/all N=1456, N velocity=886: s3_ext_pc [pc], valid N=1456: median=0.0967395, p05=-10.7092, p16=-4.702, p84=5.17037, p95=10.3893, min=-19.4233, max=20.1692
+all/all N=1456, N velocity=886: r_perp_ext_pc [pc], valid N=1456: median=9.12354, p05=1.79358, p16=3.51511, p84=23.1012, p95=33.9027, min=0.104481, max=105.885
+all/all N=1456, N velocity=886: u1_ext_kms [km / s], valid N=886: median=-0.148766, p05=-2.44747, p16=-1.15358, p84=0.704556, p95=1.3364, min=-11.8791, max=5.9243
+all/all N=1456, N velocity=886: u2_ext_kms [km / s], valid N=886: median=0.0783156, p05=-6.42155, p16=-2.67877, p84=4.75707, p95=11.2011, min=-46.3136, max=104.047
+all/all N=1456, N velocity=886: u3_ext_kms [km / s], valid N=886: median=0.0563643, p05=-1.44777, p16=-0.656806, p84=0.870581, p95=1.47592, min=-5.36722, max=11.984
+all/all N=1456, N velocity=886: u_perp_ext_kms [km / s], valid N=886: median=2.15707, p05=0.437036, p16=0.853206, p84=6.82961, p95=14.6744, min=0.0715841, max=104.087
+all/all N=1456, N velocity=886: abs_s1_ext_pc [pc], valid N=1456: median=5.54518, p05=0.386721, p16=1.20104, p84=24.2401, p95=56.6448, min=0.0147862, max=168.532
+all/all N=1456, N velocity=886: abs_s2_ext_pc [pc], valid N=1456: median=7.40283, p05=0.682599, p16=1.95118, p84=21.9552, p95=33.1157, min=0.0127585, max=104.409
+all/all N=1456, N velocity=886: abs_s3_ext_pc [pc], valid N=1456: median=3.0675, p05=0.281865, p16=0.8274, p84=8.11541, p95=13.8125, min=0.000453498, max=20.1692
+all/all N=1456, N velocity=886: r_cluster_pc [pc], valid N=1456: median=13.1522, p05=2.80133, p16=5.05242, p84=37.6499, p95=62.8735, min=0.421659, max=169.365
+all/all N=1456, N velocity=886: abs_u1_ext_kms [km / s], valid N=886: median=0.600833, p05=0.0640593, p16=0.167656, p84=1.47867, p95=2.82049, min=0.00022028, max=11.8791
+all/all N=1456, N velocity=886: dv_cluster_kms [km / s], valid N=886: median=2.38587, p05=0.621416, p16=1.13367, p84=6.92933, p95=14.9777, min=0.129119, max=104.762
+all/all N=1456, N velocity=886: v_radial_cluster_rel_kms [km / s], valid N=886: median=0.0825931, p05=-6.19086, p16=-2.01362, p84=1.96993, p95=5.39023, min=-80.2507, max=50.2154
+all/all N=1456, N velocity=886: v_tangential_cluster_rel_kms [km / s], valid N=886: median=1.76618, p05=0.394111, p16=0.711043, p84=4.8006, p95=10.1395, min=0.034947, max=67.3422
+catalogue_status/shared N=885, N velocity=580: s1_ext_pc [pc], valid N=885: median=0.0153325, p05=-17.7985, p16=-6.80933, p84=6.63031, p95=13.821, min=-86.3616, max=86.4871
+catalogue_status/shared N=885, N velocity=580: s2_ext_pc [pc], valid N=885: median=-0.454856, p05=-13.1193, p16=-7.97843, p84=7.205, p95=14.8838, min=-33.1416, max=31.1938
+catalogue_status/shared N=885, N velocity=580: s3_ext_pc [pc], valid N=885: median=-0.0112313, p05=-6.37335, p16=-3.45159, p84=3.73234, p95=6.72317, min=-12.3293, max=18.9568
+catalogue_status/shared N=885, N velocity=580: r_perp_ext_pc [pc], valid N=885: median=6.40801, p05=1.46204, p16=2.76275, p84=12.7695, p95=19.0918, min=0.104481, max=33.2797
+catalogue_status/shared N=885, N velocity=580: u1_ext_kms [km / s], valid N=580: median=-0.160845, p05=-1.70215, p16=-0.972594, p84=0.577505, p95=1.01087, min=-11.8791, max=5.30016
+catalogue_status/shared N=885, N velocity=580: u2_ext_kms [km / s], valid N=580: median=-0.000980045, p05=-5.78854, p16=-2.4128, p84=3.69323, p95=8.53395, min=-41.9268, max=104.047
+catalogue_status/shared N=885, N velocity=580: u3_ext_kms [km / s], valid N=580: median=-0.041071, p05=-1.14535, p16=-0.633546, p84=0.625253, p95=1.04909, min=-3.43667, max=1.70465
+catalogue_status/shared N=885, N velocity=580: u_perp_ext_kms [km / s], valid N=580: median=1.91628, p05=0.431066, p16=0.756612, p84=5.49923, p95=11.0933, min=0.0715841, max=104.087
+catalogue_status/shared N=885, N velocity=580: abs_s1_ext_pc [pc], valid N=885: median=3.83294, p05=0.290492, p16=0.929512, p84=12.0687, p95=22.9606, min=0.0147862, max=86.4871
+catalogue_status/shared N=885, N velocity=580: abs_s2_ext_pc [pc], valid N=885: median=4.71203, p05=0.455619, p16=1.51669, p84=11.5147, p95=17.7879, min=0.0161903, max=33.1416
+catalogue_status/shared N=885, N velocity=580: abs_s3_ext_pc [pc], valid N=885: median=2.36142, p05=0.276275, p16=0.694697, p84=5.49394, p95=8.50759, min=0.000453498, max=18.9568
+catalogue_status/shared N=885, N velocity=580: r_cluster_pc [pc], valid N=885: median=8.78363, p05=2.26316, p16=4.02525, p84=18.2501, p95=29.5387, min=0.421659, max=87.1987
+catalogue_status/shared N=885, N velocity=580: abs_u1_ext_kms [km / s], valid N=580: median=0.506055, p05=0.0632517, p16=0.150161, p84=1.14351, p95=1.92392, min=0.00022028, max=11.8791
+catalogue_status/shared N=885, N velocity=580: dv_cluster_kms [km / s], valid N=580: median=2.04861, p05=0.595185, p16=1.00378, p84=5.58861, p95=11.2822, min=0.275311, max=104.762
+catalogue_status/shared N=885, N velocity=580: v_radial_cluster_rel_kms [km / s], valid N=580: median=-0.0231449, p05=-4.93139, p16=-1.62193, p84=1.71096, p95=4.05872, min=-80.2507, max=37.3342
+catalogue_status/shared N=885, N velocity=580: v_tangential_cluster_rel_kms [km / s], valid N=580: median=1.5642, p05=0.397961, p16=0.661309, p84=4.17121, p95=7.89987, min=0.0599387, max=67.3422
+catalogue_status/kos_only N=178, N velocity=75: s1_ext_pc [pc], valid N=178: median=0.667478, p05=-20.2702, p16=-8.52647, p84=8.48779, p95=29.993, min=-92.9744, max=117.619
+catalogue_status/kos_only N=178, N velocity=75: s2_ext_pc [pc], valid N=178: median=-6.58661, p05=-35.0035, p16=-22.7102, p84=6.50757, p95=13.3747, min=-104.409, max=34.3297
+catalogue_status/kos_only N=178, N velocity=75: s3_ext_pc [pc], valid N=178: median=0.127517, p05=-7.02, p16=-4.30906, p84=4.89872, p95=10.0198, min=-18.7102, max=17.6227
+catalogue_status/kos_only N=178, N velocity=75: r_perp_ext_pc [pc], valid N=178: median=11.3634, p05=1.78844, p16=4.55913, p84=24.2478, p95=35.7721, min=0.563074, max=105.885
+catalogue_status/kos_only N=178, N velocity=75: u1_ext_kms [km / s], valid N=75: median=-0.634421, p05=-3.38543, p16=-2.26297, p84=0.547048, p95=1.90727, min=-6.73258, max=2.74127
+catalogue_status/kos_only N=178, N velocity=75: u2_ext_kms [km / s], valid N=75: median=-0.117782, p05=-6.26339, p16=-2.8977, p84=6.68699, p95=9.14902, min=-10.7414, max=18.0391
+catalogue_status/kos_only N=178, N velocity=75: u3_ext_kms [km / s], valid N=75: median=0.0450791, p05=-1.07224, p16=-0.567924, p84=1.02242, p95=1.46006, min=-1.91124, max=11.984
+catalogue_status/kos_only N=178, N velocity=75: u_perp_ext_kms [km / s], valid N=75: median=2.69692, p05=0.430526, p16=0.96634, p84=7.15576, p95=10.9316, min=0.089773, max=18.077
+catalogue_status/kos_only N=178, N velocity=75: abs_s1_ext_pc [pc], valid N=178: median=4.66194, p05=0.42094, p16=1.00309, p84=16.922, p95=44.0279, min=0.0721248, max=117.619
+catalogue_status/kos_only N=178, N velocity=75: abs_s2_ext_pc [pc], valid N=178: median=9.23839, p05=1.21794, p16=2.73922, p84=23.6843, p95=35.0035, min=0.0372033, max=104.409
+catalogue_status/kos_only N=178, N velocity=75: abs_s3_ext_pc [pc], valid N=178: median=3.1087, p05=0.195839, p16=0.726491, p84=6.94244, p95=12.2068, min=0.0749513, max=18.7102
+catalogue_status/kos_only N=178, N velocity=75: r_cluster_pc [pc], valid N=178: median=14.763, p05=3.08981, p16=6.34683, p84=31.5973, p95=51.2563, min=1.27584, max=158.259
+catalogue_status/kos_only N=178, N velocity=75: abs_u1_ext_kms [km / s], valid N=75: median=0.947833, p05=0.125189, p16=0.298263, p84=2.36745, p95=3.38543, min=0.0380265, max=6.73258
+catalogue_status/kos_only N=178, N velocity=75: dv_cluster_kms [km / s], valid N=75: median=3.14077, p05=0.740713, p16=1.28756, p84=7.75897, p95=11.057, min=0.129119, max=19.2545
+catalogue_status/kos_only N=178, N velocity=75: v_radial_cluster_rel_kms [km / s], valid N=75: median=-0.277076, p05=-7.05593, p16=-3.43176, p84=2.67401, p95=6.09023, min=-18.4336, max=10.4492
+catalogue_status/kos_only N=178, N velocity=75: v_tangential_cluster_rel_kms [km / s], valid N=75: median=2.32497, p05=0.535409, p16=0.970464, p84=4.50179, p95=7.47254, min=0.034947, max=16.0379
+catalogue_status/risbud_only N=393, N velocity=231: s1_ext_pc [pc], valid N=393: median=-5.97337, p05=-73.4975, p16=-43.4682, p84=20.1432, p95=77.2333, min=-168.532, max=144.905
+catalogue_status/risbud_only N=393, N velocity=231: s2_ext_pc [pc], valid N=393: median=14.4204, p05=-27.5209, p16=-10.9412, p84=31.3449, p95=42.7776, min=-45.7807, max=60.7011
+catalogue_status/risbud_only N=393, N velocity=231: s3_ext_pc [pc], valid N=393: median=0.340548, p05=-14.9361, p16=-10.7993, p84=8.88905, p95=15.0525, min=-19.4233, max=20.1692
+catalogue_status/risbud_only N=393, N velocity=231: r_perp_ext_pc [pc], valid N=393: median=21.0929, p05=6.34676, p16=12.0039, p84=33.8821, p95=43.8302, min=0.770654, max=61.1447
+catalogue_status/risbud_only N=393, N velocity=231: u1_ext_kms [km / s], valid N=231: median=-0.0158969, p05=-3.40644, p16=-1.42882, p84=1.09438, p95=2.61226, min=-8.97581, max=5.9243
+catalogue_status/risbud_only N=393, N velocity=231: u2_ext_kms [km / s], valid N=231: median=0.392085, p05=-7.57107, p16=-2.89889, p84=7.706, p95=18.3067, min=-46.3136, max=59.4327
+catalogue_status/risbud_only N=393, N velocity=231: u3_ext_kms [km / s], valid N=231: median=0.424172, p05=-2.26399, p16=-0.823546, p84=1.46773, p95=2.16642, min=-5.36722, max=3.18
+catalogue_status/risbud_only N=393, N velocity=231: u_perp_ext_kms [km / s], valid N=231: median=2.76515, p05=0.736816, p16=1.31349, p84=10.5182, p95=23.4801, min=0.186664, max=59.6745
+catalogue_status/risbud_only N=393, N velocity=231: abs_s1_ext_pc [pc], valid N=393: median=21.677, p05=1.50215, p16=4.25968, p84=55.9927, p95=96.8757, min=0.0609837, max=168.532
+catalogue_status/risbud_only N=393, N velocity=231: abs_s2_ext_pc [pc], valid N=393: median=19.2488, p05=1.99066, p16=6.36332, p84=32.6315, p95=43.5173, min=0.0127585, max=60.7011
+catalogue_status/risbud_only N=393, N velocity=231: abs_s3_ext_pc [pc], valid N=393: median=6.5584, p05=0.434863, p16=2.00335, p84=13.5418, p95=16.4258, min=0.000586372, max=20.1692
+catalogue_status/risbud_only N=393, N velocity=231: r_cluster_pc [pc], valid N=393: median=36.9612, p05=11.5014, p16=20.0465, p84=62.9114, p95=97.0637, min=2.7104, max=169.365
+catalogue_status/risbud_only N=393, N velocity=231: abs_u1_ext_kms [km / s], valid N=231: median=0.733378, p05=0.0658363, p16=0.190828, p84=2.34176, p95=3.87225, min=0.0127236, max=8.97581
+catalogue_status/risbud_only N=393, N velocity=231: dv_cluster_kms [km / s], valid N=231: median=3.10166, p05=0.838173, p16=1.42326, p84=10.7054, p95=23.6409, min=0.218822, max=60.1444
+catalogue_status/risbud_only N=393, N velocity=231: v_radial_cluster_rel_kms [km / s], valid N=231: median=0.372845, p05=-7.29553, p16=-2.21507, p84=2.30682, p95=7.18876, min=-45.4329, max=50.2154
+catalogue_status/risbud_only N=393, N velocity=231: v_tangential_cluster_rel_kms [km / s], valid N=231: median=2.2629, p05=0.388447, p16=0.887747, p84=7.65985, p95=19.2174, min=0.0909535, max=51.0509
+homogenized_class/C N=940, N velocity=594: s1_ext_pc [pc], valid N=940: median=0.0863844, p05=-15.0321, p16=-5.47789, p84=6.01194, p95=14.0316, min=-51.1458, max=37.0297
+homogenized_class/C N=940, N velocity=594: s2_ext_pc [pc], valid N=940: median=-0.360827, p05=-15.649, p16=-8.16324, p84=7.35391, p95=15.8405, min=-45.7807, max=35.9838
+homogenized_class/C N=940, N velocity=594: s3_ext_pc [pc], valid N=940: median=0.0132253, p05=-8.14773, p16=-3.76844, p84=3.99911, p95=7.46344, min=-19.3969, max=19.8908
+homogenized_class/C N=940, N velocity=594: r_perp_ext_pc [pc], valid N=940: median=6.47501, p05=1.43513, p16=2.75483, p84=13.9237, p95=24.5512, min=0.104481, max=45.8883
+homogenized_class/C N=940, N velocity=594: u1_ext_kms [km / s], valid N=594: median=-0.121956, p05=-1.61913, p16=-0.876711, p84=0.68033, p95=1.1597, min=-11.8791, max=5.30016
+homogenized_class/C N=940, N velocity=594: u2_ext_kms [km / s], valid N=594: median=-0.0201263, p05=-6.08654, p16=-2.46215, p84=3.74798, p95=8.83166, min=-41.9268, max=104.047
+homogenized_class/C N=940, N velocity=594: u3_ext_kms [km / s], valid N=594: median=0.0142469, p05=-1.15166, p16=-0.619952, p84=0.757992, p95=1.30269, min=-2.89057, max=2.78947
+homogenized_class/C N=940, N velocity=594: u_perp_ext_kms [km / s], valid N=594: median=2.05958, p05=0.42812, p16=0.812573, p84=5.7138, p95=11.0588, min=0.0715841, max=104.087
+homogenized_class/C N=940, N velocity=594: abs_s1_ext_pc [pc], valid N=940: median=3.45141, p05=0.310072, p16=0.871681, p84=10.9326, p95=20.3397, min=0.0147862, max=51.1458
+homogenized_class/C N=940, N velocity=594: abs_s2_ext_pc [pc], valid N=940: median=4.84809, p05=0.446226, p16=1.50216, p84=12.405, p95=23.1451, min=0.0161903, max=45.7807
+homogenized_class/C N=940, N velocity=594: abs_s3_ext_pc [pc], valid N=940: median=2.44903, p05=0.259391, p16=0.674439, p84=6.03284, p95=10.5439, min=0.000453498, max=19.8908
+homogenized_class/C N=940, N velocity=594: r_cluster_pc [pc], valid N=940: median=8.1476, p05=2.16924, p16=3.91413, p84=17.2736, p95=31.6724, min=0.421659, max=64.8776
+homogenized_class/C N=940, N velocity=594: abs_u1_ext_kms [km / s], valid N=594: median=0.52064, p05=0.0596274, p16=0.160344, p84=1.15437, p95=2.13263, min=0.00022028, max=11.8791
+homogenized_class/C N=940, N velocity=594: dv_cluster_kms [km / s], valid N=594: median=2.1466, p05=0.59094, p16=1.09337, p84=5.95885, p95=11.1855, min=0.129119, max=104.762
+homogenized_class/C N=940, N velocity=594: v_radial_cluster_rel_kms [km / s], valid N=594: median=-0.0464205, p05=-5.77909, p16=-1.81585, p84=1.70425, p95=4.86929, min=-80.2507, max=37.3342
+homogenized_class/C N=940, N velocity=594: v_tangential_cluster_rel_kms [km / s], valid N=594: median=1.62668, p05=0.401543, p16=0.693039, p84=4.21672, p95=8.22556, min=0.034947, max=67.3422
+homogenized_class/L N=184, N velocity=111: s1_ext_pc [pc], valid N=184: median=13.0317, p05=-6.54055, p16=1.25833, p84=66.8658, p95=96.3046, min=-22.0028, max=144.905
+homogenized_class/L N=184, N velocity=111: s2_ext_pc [pc], valid N=184: median=-9.5922, p05=-35.0613, p16=-23.8781, p84=8.66345, p95=26.2521, min=-104.409, max=42.2431
+homogenized_class/L N=184, N velocity=111: s3_ext_pc [pc], valid N=184: median=0.270572, p05=-9.82178, p16=-5.40575, p84=6.60353, p95=13.3936, min=-16.4688, max=20.1692
+homogenized_class/L N=184, N velocity=111: r_perp_ext_pc [pc], valid N=184: median=16.1777, p05=5.50955, p16=8.80742, p84=27.7256, p95=38.3719, min=2.09538, max=105.885
+homogenized_class/L N=184, N velocity=111: u1_ext_kms [km / s], valid N=111: median=-0.539923, p05=-3.47607, p16=-2.50746, p84=0.63459, p95=1.83116, min=-11.3375, max=4.01812
+homogenized_class/L N=184, N velocity=111: u2_ext_kms [km / s], valid N=111: median=0.525525, p05=-4.49701, p16=-1.99797, p84=6.9907, p95=17.8585, min=-14.392, max=65.0496
+homogenized_class/L N=184, N velocity=111: u3_ext_kms [km / s], valid N=111: median=0.0450717, p05=-2.31975, p16=-0.810687, p84=0.951447, p95=1.65393, min=-3.43667, max=11.984
+homogenized_class/L N=184, N velocity=111: u_perp_ext_kms [km / s], valid N=111: median=2.45511, p05=0.473223, p16=0.805769, p84=7.51699, p95=17.9701, min=0.125027, max=65.1403
+homogenized_class/L N=184, N velocity=111: abs_s1_ext_pc [pc], valid N=184: median=13.638, p05=0.688776, p16=3.70683, p84=66.8658, p95=96.3046, min=0.0721248, max=144.905
+homogenized_class/L N=184, N velocity=111: abs_s2_ext_pc [pc], valid N=184: median=14.5061, p05=1.63145, p16=5.55232, p84=26.7986, p95=36.9783, min=0.0601083, max=104.409
+homogenized_class/L N=184, N velocity=111: abs_s3_ext_pc [pc], valid N=184: median=3.80931, p05=0.530013, p16=1.23663, p84=9.20653, p95=14.9455, min=0.0250002, max=20.1692
+homogenized_class/L N=184, N velocity=111: r_cluster_pc [pc], valid N=184: median=24.5838, p05=12.2437, p16=15.3362, p84=72.4628, p95=96.8462, min=10.396, max=158.259
+homogenized_class/L N=184, N velocity=111: abs_u1_ext_kms [km / s], valid N=111: median=0.967788, p05=0.0849304, p16=0.246957, p84=2.52796, p95=3.61497, min=0.0466256, max=11.3375
+homogenized_class/L N=184, N velocity=111: dv_cluster_kms [km / s], valid N=111: median=2.89186, p05=0.670801, p16=1.25215, p84=7.9922, p95=18.2127, min=0.498022, max=66.1196
+homogenized_class/L N=184, N velocity=111: v_radial_cluster_rel_kms [km / s], valid N=111: median=0.0365845, p05=-9.46929, p16=-3.50258, p84=1.91991, p95=4.43965, min=-19.6737, max=14.3075
+homogenized_class/L N=184, N velocity=111: v_tangential_cluster_rel_kms [km / s], valid N=111: median=2.01975, p05=0.411298, p16=0.742444, p84=4.46744, p95=14.7399, min=0.1073, max=66.0165
+homogenized_class/T N=332, N velocity=181: s1_ext_pc [pc], valid N=332: median=-18.6497, p05=-82.9673, p16=-51.3471, p84=1.39152, p95=11.9978, min=-168.532, max=35.4279
+homogenized_class/T N=332, N velocity=181: s2_ext_pc [pc], valid N=332: median=14.9866, p05=-13.3459, p16=-0.913998, p84=30.9071, p95=43.9321, min=-31.2723, max=60.7011
+homogenized_class/T N=332, N velocity=181: s3_ext_pc [pc], valid N=332: median=0.304237, p05=-14.1488, p16=-8.30819, p84=8.68462, p95=14.3438, min=-19.4233, max=17.6876
+homogenized_class/T N=332, N velocity=181: r_perp_ext_pc [pc], valid N=332: median=18.4097, p05=4.21813, p16=9.30709, p84=32.5923, p95=44.2504, min=0.947047, max=61.1447
+homogenized_class/T N=332, N velocity=181: u1_ext_kms [km / s], valid N=181: median=-0.11458, p05=-3.26053, p16=-1.52052, p84=0.796516, p95=2.56878, min=-7.50366, max=5.9243
+homogenized_class/T N=332, N velocity=181: u2_ext_kms [km / s], valid N=181: median=0.112227, p05=-7.70007, p16=-3.69486, p84=7.51129, p95=18.2643, min=-46.3136, max=59.4327
+homogenized_class/T N=332, N velocity=181: u3_ext_kms [km / s], valid N=181: median=0.176488, p05=-1.91124, p16=-0.819371, p84=1.1408, p95=2.00356, min=-5.36722, max=3.18
+homogenized_class/T N=332, N velocity=181: u_perp_ext_kms [km / s], valid N=181: median=2.76645, p05=0.581306, p16=1.02885, p84=10.0169, p95=24.475, min=0.186664, max=59.6745
+homogenized_class/T N=332, N velocity=181: abs_s1_ext_pc [pc], valid N=332: median=19.9851, p05=1.72838, p16=4.5276, p84=51.3471, p95=82.9673, min=0.0609837, max=168.532
+homogenized_class/T N=332, N velocity=181: abs_s2_ext_pc [pc], valid N=332: median=15.8018, p05=1.64033, p16=5.57364, p84=31.1969, p95=43.9321, min=0.0127585, max=60.7011
+homogenized_class/T N=332, N velocity=181: abs_s3_ext_pc [pc], valid N=332: median=5.40576, p05=0.397103, p16=1.69686, p84=12.4595, p95=15.5075, min=0.000586372, max=19.4233
+homogenized_class/T N=332, N velocity=181: r_cluster_pc [pc], valid N=332: median=34.0117, p05=14.5829, p16=19.3351, p84=57.4385, p95=84.8027, min=10.9181, max=169.365
+homogenized_class/T N=332, N velocity=181: abs_u1_ext_kms [km / s], valid N=181: median=0.680644, p05=0.0676752, p16=0.134459, p84=2.01604, p95=3.69805, min=0.0127236, max=7.50366
+homogenized_class/T N=332, N velocity=181: dv_cluster_kms [km / s], valid N=181: median=3.07619, p05=0.764046, p16=1.25005, p84=10.3559, p95=24.6682, min=0.218822, max=60.1444
+homogenized_class/T N=332, N velocity=181: v_radial_cluster_rel_kms [km / s], valid N=181: median=0.613996, p05=-5.2341, p16=-1.66344, p84=2.67682, p95=8.15669, min=-45.4329, max=50.2154
+homogenized_class/T N=332, N velocity=181: v_tangential_cluster_rel_kms [km / s], valid N=181: median=2.40859, p05=0.364089, p16=0.779685, p84=7.49997, p95=17.5491, min=0.0909535, max=46.7537
+
+Positive/negative-side morphology:
+catalogue_status/shared negative: N=441; median |s1|=3.59417 pc; max |s1|=86.3616 pc
+catalogue_status/shared positive: N=444; median |s1|=3.96334 pc; max |s1|=86.4871 pc
+catalogue_status/shared zero: N=0; median |s1|=nan pc; max |s1|=nan pc
+catalogue_status/kos_only negative: N=84; median |s1|=4.41123 pc; max |s1|=92.9744 pc
+catalogue_status/kos_only positive: N=94; median |s1|=4.6794 pc; max |s1|=117.619 pc
+catalogue_status/kos_only zero: N=0; median |s1|=nan pc; max |s1|=nan pc
+catalogue_status/risbud_only negative: N=235; median |s1|=25.0196 pc; max |s1|=168.532 pc
+catalogue_status/risbud_only positive: N=158; median |s1|=16.5831 pc; max |s1|=144.905 pc
+catalogue_status/risbud_only zero: N=0; median |s1|=nan pc; max |s1|=nan pc
+homogenized_class/C negative: N=462; median |s1|=3.31451 pc; max |s1|=51.1458 pc
+homogenized_class/C positive: N=478; median |s1|=3.54533 pc; max |s1|=37.0297 pc
+homogenized_class/C zero: N=0; median |s1|=nan pc; max |s1|=nan pc
+homogenized_class/L negative: N=24; median |s1|=4.1997 pc; max |s1|=22.0028 pc
+homogenized_class/L positive: N=160; median |s1|=16.5985 pc; max |s1|=144.905 pc
+homogenized_class/L zero: N=0; median |s1|=nan pc; max |s1|=nan pc
+homogenized_class/T negative: N=274; median |s1|=24.034 pc; max |s1|=168.532 pc
+homogenized_class/T positive: N=58; median |s1|=6.63352 pc; max |s1|=35.4279 pc
+homogenized_class/T zero: N=0; median |s1|=nan pc; max |s1|=nan pc
+
+Correlations:
+Two-sided SciPy Pearson p-values use the normal uncorrelated null; Spearman p-values are asymptotic and may be inaccurate for small samples, especially N<=500. No multiple-comparison adjustment, measurement-error model, or treatment of shared reference uncertainty. Descriptive diagnostics, not a complete physical significance test or evidence of gravitational association; no classification uses p-values.
+full: s1_ext_pc vs u1_ext_kms; N=886; Pearson r=0.0436758, p=0.194003; Spearman rho=0.0621031, p=0.064643
+full: abs_s1_ext_pc vs abs_u1_ext_kms; N=886; Pearson r=0.236677, p=9.57017e-13; Spearman rho=0.0907676, p=0.00686061
+full: r_cluster_pc vs dv_cluster_kms; N=886; Pearson r=0.171242, p=2.93035e-07; Spearman rho=0.124439, p=0.000204633
+full: r_perp_ext_pc vs u_perp_ext_kms; N=886; Pearson r=0.11729, p=0.000468096; Spearman rho=0.0644474, p=0.0551603
+full: s1_ext_pc vs dv_cluster_kms; N=886; Pearson r=-0.0425283, p=0.205989; Spearman rho=-0.0565325, p=0.0926266
+C: s1_ext_pc vs u1_ext_kms; N=594; Pearson r=0.0374908, p=0.361703; Spearman rho=0.0243389, p=0.553832
+C: abs_s1_ext_pc vs abs_u1_ext_kms; N=594; Pearson r=0.0639771, p=0.119335; Spearman rho=-0.0343003, p=0.404024
+C: r_cluster_pc vs dv_cluster_kms; N=594; Pearson r=-0.0610194, p=0.137431; Spearman rho=-0.0821354, p=0.0453948
+C: r_perp_ext_pc vs u_perp_ext_kms; N=594; Pearson r=-0.063204, p=0.123875; Spearman rho=-0.0715521, p=0.0814323
+C: s1_ext_pc vs dv_cluster_kms; N=594; Pearson r=0.0495039, p=0.228315; Spearman rho=0.0222907, p=0.587684
+L: s1_ext_pc vs u1_ext_kms; N=111; Pearson r=0.18136, p=0.0567867; Spearman rho=0.384293, p=3.12715e-05
+L: abs_s1_ext_pc vs abs_u1_ext_kms; N=111; Pearson r=0.106627, p=0.265344; Spearman rho=-0.0906283, p=0.344165
+L: r_cluster_pc vs dv_cluster_kms; N=111; Pearson r=0.174959, p=0.0662634; Spearman rho=0.350281, p=0.000164041
+L: r_perp_ext_pc vs u_perp_ext_kms; N=111; Pearson r=0.151412, p=0.112665; Spearman rho=0.319384, p=0.000633679
+L: s1_ext_pc vs dv_cluster_kms; N=111; Pearson r=0.126816, p=0.184732; Spearman rho=-0.0388821, p=0.685357
+T: s1_ext_pc vs u1_ext_kms; N=181; Pearson r=0.162908, p=0.0284391; Spearman rho=0.35522, p=9.25408e-07
+T: abs_s1_ext_pc vs abs_u1_ext_kms; N=181; Pearson r=0.261454, p=0.000377717; Spearman rho=0.282393, p=0.000117357
+T: r_cluster_pc vs dv_cluster_kms; N=181; Pearson r=0.197218, p=0.00778846; Spearman rho=0.273406, p=0.000196073
+T: r_perp_ext_pc vs u_perp_ext_kms; N=181; Pearson r=0.134175, p=0.071737; Spearman rho=0.0612693, p=0.412585
+T: s1_ext_pc vs dv_cluster_kms; N=181; Pearson r=-0.125362, p=0.0926604; Spearman rho=-0.201749, p=0.00645929
+L+T: s1_ext_pc vs u1_ext_kms; N=292; Pearson r=0.0286008, p=0.626446; Spearman rho=0.126847, p=0.0302333
+L+T: abs_s1_ext_pc vs abs_u1_ext_kms; N=292; Pearson r=0.176061, p=0.00253406; Spearman rho=0.11613, p=0.0474093
+L+T: r_cluster_pc vs dv_cluster_kms; N=292; Pearson r=0.187112, p=0.00131784; Spearman rho=0.291216, p=4.08061e-07
+L+T: r_perp_ext_pc vs u_perp_ext_kms; N=292; Pearson r=0.142758, p=0.014626; Spearman rho=0.156911, p=0.00722133
+L+T: s1_ext_pc vs dv_cluster_kms; N=292; Pearson r=-0.0484341, p=0.409612; Spearman rho=-0.12921, p=0.027263
+
+Radial behavior (reused 03C; positive outward does not imply escaping or unbound):
+catalogue_status/shared: N radial=580; median radial=-0.0231449 km/s; p16/p84=-1.62193/1.71096; outward fraction=0.489655; inward fraction=0.510345; zero N=0; median tangential=1.5642 km/s
+catalogue_status/kos_only: N radial=75; median radial=-0.277076 km/s; p16/p84=-3.43176/2.67401; outward fraction=0.466667; inward fraction=0.533333; zero N=0; median tangential=2.32497 km/s
+catalogue_status/risbud_only: N radial=231; median radial=0.372845 km/s; p16/p84=-2.21507/2.30682; outward fraction=0.601732; inward fraction=0.398268; zero N=0; median tangential=2.2629 km/s
+homogenized_class/C: N radial=594; median radial=-0.0464205 km/s; p16/p84=-1.81585/1.70425; outward fraction=0.484848; inward fraction=0.515152; zero N=0; median tangential=1.62668 km/s
+homogenized_class/L: N radial=111; median radial=0.0365845 km/s; p16/p84=-3.50258/1.91991; outward fraction=0.504505; inward fraction=0.495495; zero N=0; median tangential=2.01975 km/s
+homogenized_class/T: N radial=181; median radial=0.613996 km/s; p16/p84=-1.66344/2.67682; outward fraction=0.629834; inward fraction=0.370166; zero N=0; median tangential=2.40859 km/s
+
+Outputs:
+data/interim/project03/stock2_relative_morphology.ecsv
+data/interim/project03/stock2_morphology_pca.ecsv
+data/interim/project03/stock2_morphology_summary.ecsv
+data/interim/project03/stock2_morphology_group_summary.ecsv
+data/interim/project03/stock2_morphology_side_summary.ecsv
+data/interim/project03/stock2_morphology_radial_summary.ecsv
+data/interim/project03/stock2_morphology_correlations.ecsv
+results/project03/relative_morphology/s1_ext_pc_vs_s2_ext_pc_by_homogenized_class.png
+results/project03/relative_morphology/s1_ext_pc_vs_s2_ext_pc_by_homogenized_class.pdf
+results/project03/relative_morphology/s1_ext_pc_vs_s3_ext_pc_by_homogenized_class.png
+results/project03/relative_morphology/s1_ext_pc_vs_s3_ext_pc_by_homogenized_class.pdf
+results/project03/relative_morphology/s2_ext_pc_vs_s3_ext_pc_by_homogenized_class.png
+results/project03/relative_morphology/s2_ext_pc_vs_s3_ext_pc_by_homogenized_class.pdf
+results/project03/relative_morphology/s1_ext_pc_vs_r_perp_ext_pc_by_homogenized_class.png
+results/project03/relative_morphology/s1_ext_pc_vs_r_perp_ext_pc_by_homogenized_class.pdf
+results/project03/relative_morphology/s1_ext_pc_vs_u1_ext_kms_by_homogenized_class.png
+results/project03/relative_morphology/s1_ext_pc_vs_u1_ext_kms_by_homogenized_class.pdf
+results/project03/relative_morphology/abs_s1_ext_pc_vs_abs_u1_ext_kms_by_homogenized_class.png
+results/project03/relative_morphology/abs_s1_ext_pc_vs_abs_u1_ext_kms_by_homogenized_class.pdf
+results/project03/relative_morphology/r_cluster_pc_vs_dv_cluster_kms_by_homogenized_class.png
+results/project03/relative_morphology/r_cluster_pc_vs_dv_cluster_kms_by_homogenized_class.pdf
+results/project03/relative_morphology/r_perp_ext_pc_vs_u_perp_ext_kms_by_homogenized_class.png
+results/project03/relative_morphology/r_perp_ext_pc_vs_u_perp_ext_kms_by_homogenized_class.pdf
+results/project03/relative_morphology/s1_ext_pc_vs_r_perp_ext_pc_by_catalogue_status.png
+results/project03/relative_morphology/s1_ext_pc_vs_r_perp_ext_pc_by_catalogue_status.pdf
+results/project03/relative_morphology/s1_ext_pc_ecdf_by_homogenized_class.png
+results/project03/relative_morphology/s1_ext_pc_ecdf_by_homogenized_class.pdf
+results/project03/relative_morphology/r_perp_ext_pc_ecdf_by_homogenized_class.png
+results/project03/relative_morphology/r_perp_ext_pc_ecdf_by_homogenized_class.pdf
+results/project03/relative_morphology/u1_ext_kms_ecdf_by_homogenized_class.png
+results/project03/relative_morphology/u1_ext_kms_ecdf_by_homogenized_class.pdf
+results/project03/relative_morphology/extended_population_pca_axis_original_coordinates.png
+results/project03/relative_morphology/extended_population_pca_axis_original_coordinates.pdf
+results/project03/relative_morphology/relative_morphology_report.txt
+
+Invariants:
+rows == 1456: True
+unique source_id == 1456: True
+C == 940: True
+L == 184: True
+T == 332: True
+position count == 1456: True
+velocity count == 886: True
+missing-RV rows retain NaN projected velocities: True
+Project 03C reference frame unchanged: True
+original columns and labels unchanged: True
+Project 03A/03B/03C products unchanged: True
+no source removed: True
+no clipping: True
+no new membership field: True
+no membership threshold: True
+no Galactocentric transformation: True
+no orbit integration: True
+no actions: True
+no potential model: True
+PROJECT 03D STATUS: PASS

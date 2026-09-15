@@ -1,0 +1,10 @@
+{
+  "convention": "Astropy v4.0 parameter set, explicitly frozen for Project 04A",
+  "source": "https://docs.astropy.org/en/stable/coordinates/galactocentric.html",
+  "assumption": "Adopted Galactic modelling assumptions, not measured properties of Stock 2.",
+  "galcen_distance": {"value": 8.122, "unit": "kpc", "meaning": "Distance from the solar-system origin to the Galactic centre, including solar height", "source": "https://ui.adsabs.harvard.edu/abs/2018A%26A...615L..15G"},
+  "z_sun": {"value": 20.8, "unit": "pc", "meaning": "Height of the solar-system origin above the adopted Galactic midplane", "source": "https://ui.adsabs.harvard.edu/abs/2019MNRAS.482.1417B"},
+  "galcen_v_sun": {"value": [12.9, 245.6, 7.78], "unit": "km / s", "meaning": "Solar velocity relative to Galactic centre, in adopted Cartesian X,Y,Z axes; includes total azimuthal motion", "source": ["https://ui.adsabs.harvard.edu/abs/2018RNAAS...2..210D", "https://ui.adsabs.harvard.edu/abs/2018A%26A...615L..15G", "https://ui.adsabs.harvard.edu/abs/2004ApJ...616..872R"]},
+  "galcen_coord": {"ra": 266.4051, "dec": -28.936175, "unit": "deg", "frame": "icrs", "meaning": "Adopted ICRS direction of Galactic centre", "source": "https://ui.adsabs.harvard.edu/abs/2004ApJ...616..872R"},
+  "roll": {"value": 0.0, "unit": "deg", "meaning": "Additional roll relative to Astropy's Galactic-plane orientation", "source": "Astropy v4.0 convention"}
+}

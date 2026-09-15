@@ -1,0 +1,36 @@
+Project 02B — Measurement completeness audit
+======================================================
+
+Total Gaia-resolved sources:       1456
+
+Measurement availability
+------------------------
+has_position               1456 / 1456 (100.00%)
+has_parallax               1456 / 1456 (100.00%)
+has_pm                     1456 / 1456 (100.00%)
+has_5d                     1456 / 1456 (100.00%)
+has_gbp_rp                 1456 / 1456 (100.00%)
+has_rv                      886 / 1456 ( 60.85%)
+has_rv_measurement          886 / 1456 ( 60.85%)
+has_6d                      886 / 1456 ( 60.85%)
+
+Important interpretation
+------------------------
+has_5d and has_6d indicate measurement availability only.
+No astrometric, photometric, or RV quality threshold has been applied.
+No physical membership criterion has been applied.
+
+Invariants
+----------
+combined rows == 1456:                True
+combined source IDs unique == 1456:   True
+has_6d subset of has_5d:              True
+has_rv_measurement subset of has_rv:  True
+
+PROJECT 02B COMPLETENESS STATUS: PASS
+
+Outputs:
+  data/interim/project02/stock2_gaia_measurement_completeness.ecsv
+  results/project02/measurement_completeness_summary.csv
+  results/project02/measurement_completeness_by_catalogue.csv
+  results/project02/measurement_completeness_by_class.csv

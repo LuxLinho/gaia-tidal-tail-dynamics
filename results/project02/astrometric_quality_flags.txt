@@ -1,0 +1,54 @@
+Project 02D — Astrometric quality flags
+==================================================
+
+Total sources: 1456
+
+Operational definitions
+-----------------------
+RUWE < 1.4
+visibility_periods_used >= 10
+astrometric_gof_al < 3.0
+astrometric_excess_noise_sig <= 2.0
+duplicated_source == False
+
+Enhanced IPD diagnostics
+------------------------
+ipd_frac_multi_peak <= 2.0
+ipd_gof_harmonic_amplitude < 0.1
+
+Flag results
+------------
+has_full_astrometric_solution    1456 / 1456 (100.00%)
+pass_ruwe_1p4                    1369 / 1456 ( 94.02%)
+pass_visibility_ge10             1456 / 1456 (100.00%)
+pass_gof_al_3                    1201 / 1456 ( 82.49%)
+pass_excess_noise_sig_2           912 / 1456 ( 62.64%)
+pass_not_duplicated              1384 / 1456 ( 95.05%)
+pass_ipd_multi_peak_2            1405 / 1456 ( 96.50%)
+pass_ipd_harmonic_0p1            1454 / 1456 ( 99.86%)
+pass_astrometry_baseline         1300 / 1456 ( 89.29%)
+pass_astrometry_gof_sensitivity  1149 / 1456 ( 78.91%)
+pass_astrometry_excess_noise_sensitivity  881 / 1456 ( 60.51%)
+pass_astrometry_enhanced          872 / 1456 ( 59.89%)
+
+Interpretation
+--------------
+pass_astrometry_baseline requires a full astrometric solution, RUWE < 1.4, at least 10 visibility periods, and duplicated_source == False.
+GOF_AL, excess-noise significance, and IPD diagnostics are retained as stricter sensitivity definitions rather than primary baseline gates.
+All 1456 literature sources remain in the canonical table regardless of flag status.
+No parallax or proper-motion consistency with Stock 2 has been required.
+
+Invariants
+----------
+rows == 1456:                  True
+enhanced subset of baseline:   True
+all flag arrays length 1456:   True
+
+PROJECT 02D FLAG STATUS: PASS
+
+Outputs:
+  data/interim/project02/stock2_gaia_astrometric_quality_flags.ecsv
+  results/project02/astrometric_quality_flag_flow.csv
+  results/project02/astrometric_quality_by_catalogue.csv
+  results/project02/astrometric_quality_by_class.csv
+  results/project02/astrometric_quality_flags.txt

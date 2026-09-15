@@ -1,0 +1,114 @@
+Project 03B — Heliocentric Cartesian phase space
+============================================================
+Canonical rows: 1456
+Unique source_id: 1456
+RV finite: 886
+Parallax finite: 1456
+Parallax positive: 1456
+Parallax zero: 0
+Parallax negative: 0
+Parallax nonfinite: 0
+Valid positions: 1456; unavailable: 0
+Valid 3D velocities: 886; unavailable: 570
+Max position round-trip separation: 2.76e-10 arcsec
+Full velocity round trip: rtol=1e-11, atol=1e-9 in native units: passed
+
+Astropy ICRS -> Galactic, right-handed Cartesian: +X toward l=0,b=0 (Galactic-centre direction), +Y toward l=90,b=0 (rotation direction), +Z toward b=90 (North Galactic Pole). Velocities positive along the same axes. Gaia pmra is pm_ra_cosdec; positive RV is receding. No solar position or motion added. The helio names denote local solar-neighbourhood coordinates: the actual ICRS/Gaia origin and RV convention remain barycentric; no epoch-dependent Sun/barycentre translation or RV correction is performed.
+Direct geometric distance via Astropy Distance(parallax=...), pc = 1000 / parallax[mas]; no prior or zero-point correction.
+Astropy version: 8.0.1
+
+Full and grouped summaries:
+all/all: N=1456, N positional=1456, N velocity=886; x_helio_pc [pc], valid N=1456: median=-257.043, p05=-291.425, p16=-271.539, p84=-243.99, p95=-223.41, min=-379.031, max=-153.549
+all/all: N=1456, N positional=1456, N velocity=886; y_helio_pc [pc], valid N=1456: median=270.771, p05=233.415, p16=256.752, p84=280.158, p95=292.445, min=141.712, max=429.053
+all/all: N=1456, N positional=1456, N velocity=886; z_helio_pc [pc], valid N=1456: median=-10.5183, p05=-20.639, p16=-15.5293, p84=-5.50944, p95=0.180935, min=-30.0804, max=8.91259
+all/all: N=1456, N positional=1456, N velocity=886; r_helio_pc [pc], valid N=1456: median=373.731, p05=345.512, p16=359.625, p84=384.345, p95=396.836, min=317.337, max=502.096
+all/all: N=1456, N positional=1456, N velocity=886; vx_helio_kms [km / s], valid N=886: median=-30.61, p05=-35.4169, p16=-32.8148, p84=-27.4451, p95=-22.8045, min=-63.1502, max=40.4884
+all/all: N=1456, N positional=1456, N velocity=886; vy_helio_kms [km / s], valid N=886: median=-17.6721, p05=-26.3216, p16=-21.2201, p84=-15.7368, p95=-12.8036, min=-94.3462, max=15.6984
+all/all: N=1456, N positional=1456, N velocity=886; vz_helio_kms [km / s], valid N=886: median=-14.4328, p05=-15.8529, p16=-15.2704, p84=-13.696, p95=-12.9734, min=-26.3106, max=-8.69695
+all/all: N=1456, N positional=1456, N velocity=886; speed_helio_kms [km / s], valid N=886: median=38.3003, p05=36.5383, p16=37.3367, p84=39.6801, p95=41.7785, min=32.6335, max=103.246
+catalogue_status/shared: N=885, N positional=885, N velocity=580; x_helio_pc [pc], valid N=885: median=-257.196, p05=-274.421, p16=-264.806, p84=-250.105, p95=-242.08, min=-312.098, max=-205.477
+catalogue_status/shared: N=885, N positional=885, N velocity=580; y_helio_pc [pc], valid N=885: median=271.639, p05=257.153, p16=264.853, p84=278.894, p95=284.691, min=205.111, max=341.364
+catalogue_status/shared: N=885, N positional=885, N velocity=580; z_helio_pc [pc], valid N=885: median=-10.4117, p05=-17.0911, p16=-14.1752, p84=-6.95153, p95=-4.02147, min=-29.5707, max=1.50067
+catalogue_status/shared: N=885, N positional=885, N velocity=580; r_helio_pc [pc], valid N=885: median=374.768, p05=358.996, p16=366.968, p84=382.046, p95=387.938, min=343.54, max=406.502
+catalogue_status/shared: N=885, N positional=885, N velocity=580; vx_helio_kms [km / s], valid N=580: median=-30.6737, p05=-34.8578, p16=-32.5706, p84=-28.0117, p95=-24.7873, min=-58.9982, max=40.4884
+catalogue_status/shared: N=885, N positional=885, N velocity=580; vy_helio_kms [km / s], valid N=580: median=-17.565, p05=-24.1896, p16=-20.6042, p84=-15.7539, p95=-13.3165, min=-94.3462, max=13.8221
+catalogue_status/shared: N=885, N positional=885, N velocity=580; vz_helio_kms [km / s], valid N=580: median=-14.3433, p05=-15.443, p16=-15.0056, p84=-13.7362, p95=-13.2072, min=-16.1896, max=-10.639
+catalogue_status/shared: N=885, N positional=885, N velocity=580; speed_helio_kms [km / s], valid N=580: median=38.2513, p05=36.8195, p16=37.431, p84=39.3035, p95=40.5434, min=36.1201, max=103.246
+catalogue_status/kos_only: N=178, N positional=178, N velocity=75; x_helio_pc [pc], valid N=178: median=-260.602, p05=-291.976, p16=-276.876, p84=-248.387, p95=-240.295, min=-315.918, max=-214.083
+catalogue_status/kos_only: N=178, N positional=178, N velocity=75; y_helio_pc [pc], valid N=178: median=275.461, p05=259.276, p16=266.158, p84=288.004, p95=307.354, min=199.705, max=429.053
+catalogue_status/kos_only: N=178, N positional=178, N velocity=75; z_helio_pc [pc], valid N=178: median=-10.6147, p05=-20.0299, p16=-15.2989, p84=-6.03426, p95=-3.29976, min=-27.6181, max=7.98713
+catalogue_status/kos_only: N=178, N positional=178, N velocity=75; r_helio_pc [pc], valid N=178: median=381.274, p05=361.085, p16=367.696, p84=397.335, p95=408.794, min=340.828, max=502.096
+catalogue_status/kos_only: N=178, N positional=178, N velocity=75; vx_helio_kms [km / s], valid N=75: median=-30.8811, p05=-36.5932, p16=-33.2238, p84=-26.3885, p95=-24.4846, min=-37.5766, max=-20.8119
+catalogue_status/kos_only: N=178, N positional=178, N velocity=75; vy_helio_kms [km / s], valid N=75: median=-18.3882, p05=-25.1637, p16=-22.379, p84=-15.5556, p95=-13.5413, min=-34.381, max=-9.08585
+catalogue_status/kos_only: N=178, N positional=178, N velocity=75; vz_helio_kms [km / s], valid N=75: median=-14.4114, p05=-15.8729, p16=-15.3918, p84=-13.8209, p95=-13.308, min=-26.3106, max=-12.4399
+catalogue_status/kos_only: N=178, N positional=178, N velocity=75; speed_helio_kms [km / s], valid N=75: median=38.9387, p05=36.6094, p16=37.3104, p84=40.5779, p95=42.3593, min=34.8272, max=43.048
+catalogue_status/risbud_only: N=393, N positional=393, N velocity=231; x_helio_pc [pc], valid N=393: median=-249.732, p05=-309.104, p16=-289.239, p84=-220.89, p95=-191.188, min=-379.031, max=-153.549
+catalogue_status/risbud_only: N=393, N positional=393, N velocity=231; y_helio_pc [pc], valid N=393: median=257.327, p05=205.931, p16=233.399, p84=278.687, p95=315.958, min=141.712, max=379.723
+catalogue_status/risbud_only: N=393, N positional=393, N velocity=231; z_helio_pc [pc], valid N=393: median=-10.754, p05=-25.1752, p16=-19.3005, p84=0.331407, p95=4.54419, min=-30.0804, max=8.91259
+catalogue_status/risbud_only: N=393, N positional=393, N velocity=231; r_helio_pc [pc], valid N=393: median=361.96, p05=332.224, p16=344.399, p84=386.508, p95=401.332, min=317.337, max=418.043
+catalogue_status/risbud_only: N=393, N positional=393, N velocity=231; vx_helio_kms [km / s], valid N=231: median=-30.3972, p05=-36.5867, p16=-32.9315, p84=-25.2973, p95=-15.6164, min=-63.1502, max=9.46453
+catalogue_status/risbud_only: N=393, N positional=393, N velocity=231; vy_helio_kms [km / s], valid N=231: median=-17.7936, p05=-30.9319, p16=-22.8482, p84=-15.4773, p95=-11.8372, min=-61.9693, max=15.6984
+catalogue_status/risbud_only: N=393, N positional=393, N velocity=231; vz_helio_kms [km / s], valid N=231: median=-14.7909, p05=-16.5365, p16=-15.8276, p84=-13.5354, p95=-12.0713, min=-17.5442, max=-8.69695
+catalogue_status/risbud_only: N=393, N positional=393, N velocity=231; speed_helio_kms [km / s], valid N=231: median=38.3326, p05=35.621, p16=36.8208, p84=40.3475, p95=43.8152, min=32.6335, max=67.2134
+homogenized_class/C: N=940, N positional=940, N velocity=594; x_helio_pc [pc], valid N=940: median=-257.058, p05=-277.255, p16=-265.028, p84=-249.236, p95=-238.362, min=-320.499, max=-207.488
+homogenized_class/C: N=940, N positional=940, N velocity=594; y_helio_pc [pc], valid N=940: median=271.704, p05=263.695, p16=266.907, p84=277.489, p95=280.283, min=251.86, max=285.063
+homogenized_class/C: N=940, N positional=940, N velocity=594; z_helio_pc [pc], valid N=940: median=-10.3985, p05=-17.7682, p16=-14.4946, p84=-6.62576, p95=-2.23381, min=-29.6794, max=8.91259
+homogenized_class/C: N=940, N positional=940, N velocity=594; r_helio_pc [pc], valid N=940: median=374.655, p05=359.096, p16=367.035, p84=382.078, p95=388.907, min=340.828, max=418.043
+homogenized_class/C: N=940, N positional=940, N velocity=594; vx_helio_kms [km / s], valid N=594: median=-30.6514, p05=-35.0287, p16=-32.5769, p84=-27.9305, p95=-24.6356, min=-58.9982, max=40.4884
+homogenized_class/C: N=940, N positional=940, N velocity=594; vy_helio_kms [km / s], valid N=594: median=-17.5197, p05=-24.3751, p16=-20.392, p84=-15.7382, p95=-12.8237, min=-94.3462, max=13.8221
+homogenized_class/C: N=940, N positional=940, N velocity=594; vz_helio_kms [km / s], valid N=594: median=-14.3807, p05=-15.6816, p16=-15.143, p84=-13.7413, p95=-13.2029, min=-17.1832, max=-10.9185
+homogenized_class/C: N=940, N positional=940, N velocity=594; speed_helio_kms [km / s], valid N=594: median=38.2451, p05=36.6982, p16=37.3499, p84=39.2673, p95=40.4992, min=34.6543, max=103.246
+homogenized_class/L: N=184, N positional=184, N velocity=111; x_helio_pc [pc], valid N=184: median=-255.922, p05=-284.281, p16=-273.037, p84=-206.053, p95=-178.146, min=-308.985, max=-153.549
+homogenized_class/L: N=184, N positional=184, N velocity=111; y_helio_pc [pc], valid N=184: median=288.62, p05=281.837, p16=283.437, p84=310.267, p95=344.398, min=279.696, max=429.053
+homogenized_class/L: N=184, N positional=184, N velocity=111; z_helio_pc [pc], valid N=184: median=-10.5832, p05=-23.7575, p16=-16.8181, p84=-4.56995, p95=-0.15083, min=-30.0804, max=6.48751
+homogenized_class/L: N=184, N positional=184, N velocity=111; r_helio_pc [pc], valid N=184: median=388.159, p05=362.819, p16=375.434, p84=400.149, p95=410.502, min=349.265, max=502.096
+homogenized_class/L: N=184, N positional=184, N velocity=111; vx_helio_kms [km / s], valid N=111: median=-30.1292, p05=-34.598, p16=-32.6173, p84=-26.9787, p95=-20.1303, min=-41.2485, max=11.2542
+homogenized_class/L: N=184, N positional=184, N velocity=111; vy_helio_kms [km / s], valid N=111: median=-18.481, p05=-30.2113, p16=-22.9543, p84=-16.1416, p95=-14.6522, min=-68.5267, max=-6.7724
+homogenized_class/L: N=184, N positional=184, N velocity=111; vz_helio_kms [km / s], valid N=111: median=-14.3889, p05=-16.0404, p16=-15.3506, p84=-13.5624, p95=-11.9832, min=-26.3106, max=-10.639
+homogenized_class/L: N=184, N positional=184, N velocity=111; speed_helio_kms [km / s], valid N=111: median=38.5572, p05=36.0327, p16=37.1609, p84=40.2331, p95=42.7962, min=33.6823, max=70.2549
+homogenized_class/T: N=332, N positional=332, N velocity=181; x_helio_pc [pc], valid N=332: median=-259.538, p05=-309.185, p16=-290.043, p84=-234.568, p95=-223.113, min=-379.031, max=-194.35
+homogenized_class/T: N=332, N positional=332, N velocity=181; y_helio_pc [pc], valid N=332: median=249.822, p05=201.721, p16=224.67, p84=259.447, p95=261.538, min=141.712, max=264.805
+homogenized_class/T: N=332, N positional=332, N velocity=181; z_helio_pc [pc], valid N=332: median=-11.1863, p05=-24.9095, p16=-19.1972, p84=-1.9817, p95=3.41999, min=-28.1688, max=8.5396
+homogenized_class/T: N=332, N positional=332, N velocity=181; r_helio_pc [pc], valid N=332: median=358.857, p05=331.669, p16=343.278, p84=374.341, p95=385.58, min=317.337, max=415.38
+homogenized_class/T: N=332, N positional=332, N velocity=181; vx_helio_kms [km / s], valid N=181: median=-30.5607, p05=-36.819, p16=-33.7739, p84=-25.3576, p95=-14.8527, min=-63.1502, max=9.46453
+homogenized_class/T: N=332, N positional=332, N velocity=181; vy_helio_kms [km / s], valid N=181: median=-17.7236, p05=-31.0708, p16=-22.5141, p84=-15.1331, p95=-12.0507, min=-61.9693, max=15.6984
+homogenized_class/T: N=332, N positional=332, N velocity=181; vz_helio_kms [km / s], valid N=181: median=-14.5478, p05=-16.333, p16=-15.5283, p84=-13.5545, p95=-12.4489, min=-17.5442, max=-8.69695
+homogenized_class/T: N=332, N positional=332, N velocity=181; speed_helio_kms [km / s], valid N=181: median=38.4239, p05=35.9727, p16=37.2845, p84=40.454, p95=44.2115, min=32.6335, max=67.2134
+
+No source was removed from the canonical population.
+No membership criterion was introduced. No quality cut or outlier clipping applied.
+No Galactocentric correction was applied. No solar motion correction was applied.
+No orbit integration was performed. No cluster centre or bulk-motion subtraction. Stop at 03B.
+
+Outputs:
+data/interim/project03/stock2_heliocentric_phase_space.ecsv
+data/interim/project03/stock2_heliocentric_summary.ecsv
+data/interim/project03/stock2_heliocentric_group_summary.ecsv
+results/project03/heliocentric_phase_space/x_helio_pc_vs_y_helio_pc_by_homogenized_class.png
+results/project03/heliocentric_phase_space/x_helio_pc_vs_y_helio_pc_by_homogenized_class.pdf
+results/project03/heliocentric_phase_space/x_helio_pc_vs_z_helio_pc_by_homogenized_class.png
+results/project03/heliocentric_phase_space/x_helio_pc_vs_z_helio_pc_by_homogenized_class.pdf
+results/project03/heliocentric_phase_space/y_helio_pc_vs_z_helio_pc_by_homogenized_class.png
+results/project03/heliocentric_phase_space/y_helio_pc_vs_z_helio_pc_by_homogenized_class.pdf
+results/project03/heliocentric_phase_space/x_helio_pc_vs_y_helio_pc_by_catalogue_status.png
+results/project03/heliocentric_phase_space/x_helio_pc_vs_y_helio_pc_by_catalogue_status.pdf
+results/project03/heliocentric_phase_space/vx_helio_kms_vs_vy_helio_kms_by_homogenized_class.png
+results/project03/heliocentric_phase_space/vx_helio_kms_vs_vy_helio_kms_by_homogenized_class.pdf
+results/project03/heliocentric_phase_space/vx_helio_kms_vs_vz_helio_kms_by_homogenized_class.png
+results/project03/heliocentric_phase_space/vx_helio_kms_vs_vz_helio_kms_by_homogenized_class.pdf
+results/project03/heliocentric_phase_space/vy_helio_kms_vs_vz_helio_kms_by_homogenized_class.png
+results/project03/heliocentric_phase_space/vy_helio_kms_vs_vz_helio_kms_by_homogenized_class.pdf
+results/project03/heliocentric_phase_space/distance_histogram_by_homogenized_class.png
+results/project03/heliocentric_phase_space/distance_histogram_by_homogenized_class.pdf
+
+Invariants:
+rows == 1456: True
+unique source_id == 1456: True
+canonical population unchanged: True
+no membership cut applied: True
+no source dropped because of missing RV: True
+position norm reproduces adopted distance: True
+velocities exist only where input information supports them: True
+Original observables and labels unchanged: True
+Project 02/03A products unchanged: True
+PROJECT 03B STATUS: PASS

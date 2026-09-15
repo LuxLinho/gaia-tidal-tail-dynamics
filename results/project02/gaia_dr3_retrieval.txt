@@ -1,0 +1,21 @@
+Project 02A — Gaia DR3 retrieval
+==============================================
+
+Input source IDs:          1456
+Returned rows:             1456
+Rows with Gaia source_id:  1456
+Rows without Gaia match:   0
+
+Retrieval method:
+  exact Gaia DR3 source_id LEFT OUTER JOIN
+
+No quality cuts applied.
+No membership cuts applied.
+No coordinate crossmatch applied.
+
+Gaia TAP job ID:           00d681a7-a60d-11f1-b5c5-bc97e148b76b-O
+
+Outputs:
+  data/raw/gaia/project02/gaia_dr3_enrichment_raw.ecsv
+  data/raw/gaia/project02/gaia_dr3_enrichment_raw.csv
+  results/project02/gaia_dr3_retrieval_query.adql

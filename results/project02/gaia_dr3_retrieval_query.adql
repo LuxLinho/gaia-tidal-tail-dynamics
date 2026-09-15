@@ -1,0 +1,72 @@
+SELECT
+    u.gaia_dr3_source_id AS input_source_id,
+
+    g.source_id,
+    g.ra,
+    g.dec,
+    g.ref_epoch,
+
+    g.parallax,
+    g.parallax_error,
+
+    g.pmra,
+    g.pmra_error,
+
+    g.pmdec,
+    g.pmdec_error,
+
+    g.ra_error,
+    g.dec_error,
+
+    g.ra_dec_corr,
+    g.ra_parallax_corr,
+    g.ra_pmra_corr,
+    g.ra_pmdec_corr,
+    g.dec_parallax_corr,
+    g.dec_pmra_corr,
+    g.dec_pmdec_corr,
+    g.parallax_pmra_corr,
+    g.parallax_pmdec_corr,
+    g.pmra_pmdec_corr,
+
+    g.astrometric_params_solved,
+    g.astrometric_n_good_obs_al,
+    g.astrometric_n_bad_obs_al,
+    g.astrometric_gof_al,
+    g.astrometric_excess_noise,
+    g.astrometric_excess_noise_sig,
+    g.visibility_periods_used,
+    g.ruwe,
+    g.ipd_frac_multi_peak,
+    g.ipd_gof_harmonic_amplitude,
+    g.duplicated_source,
+
+    g.phot_g_mean_mag,
+    g.phot_bp_mean_mag,
+    g.phot_rp_mean_mag,
+
+    g.phot_g_mean_flux_over_error,
+    g.phot_bp_mean_flux_over_error,
+    g.phot_rp_mean_flux_over_error,
+
+    g.bp_rp,
+    g.bp_g,
+    g.g_rp,
+
+    g.phot_bp_rp_excess_factor,
+
+    g.radial_velocity,
+    g.radial_velocity_error,
+
+    g.rv_method_used,
+    g.rv_nb_transits,
+    g.rv_expected_sig_to_noise,
+    g.rv_renormalised_gof,
+    g.rv_chisq_pvalue,
+    g.rv_time_duration,
+    g.rv_amplitude_robust
+
+FROM tap_upload.stock2_source_ids AS u
+
+LEFT OUTER JOIN gaiadr3.gaia_source AS g
+    ON u.gaia_dr3_source_id = g.source_id

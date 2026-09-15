@@ -1,0 +1,7 @@
+definition,n_pass,n_fail,pct_pass,delta_from_previous
+A_ruwe_only,1369,87,94.02472527472527,-87
+B_ruwe_visibility,1369,87,94.02472527472527,0
+C_ruwe_visibility_notdup,1300,156,89.28571428571429,-69
+D_plus_gof,1149,307,78.91483516483517,-151
+E_plus_excess_noise_sig,881,575,60.50824175824176,-268
+F_plus_ipd,872,584,59.89010989010989,-9

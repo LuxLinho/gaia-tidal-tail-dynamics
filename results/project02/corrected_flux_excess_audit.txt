@@ -1,0 +1,38 @@
+Project 02E — Corrected BP/RP flux-excess audit
+==========================================================
+
+Total sources: 1456
+
+Corrected flux excess C*
+------------------------
+valid:   1456
+median:  0.000545
+p05:     -0.006196
+p16:     -0.003312
+p84:     0.006139
+p95:     0.028644
+p99:     0.292119
+min:     -0.023000
+max:     1.190211
+
+Interpretation
+--------------
+C* is the colour-corrected BP/RP flux-excess diagnostic.
+Well-behaved Gaia photometry is expected to lie near C* = 0.
+No C* threshold has been applied.
+No CMD membership criterion has been applied.
+All 1456 sources remain in the canonical population.
+
+Invariants
+----------
+rows == 1456:          True
+C* available == 1456: True
+
+PROJECT 02E CORRECTED-EXCESS STATUS: PASS
+
+Outputs:
+  data/interim/project02/stock2_gaia_corrected_flux_excess.ecsv
+  results/project02/corrected_flux_excess_summary.csv
+  results/project02/corrected_flux_excess_by_catalogue.csv
+  results/project02/corrected_flux_excess_by_class.csv
+  results/project02/corrected_flux_excess_audit.txt

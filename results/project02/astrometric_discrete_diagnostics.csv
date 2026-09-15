@@ -1,0 +1,5 @@
+diagnostic,value,count,fraction_percent
+astrometric_params_solved,31,1388,95.32967032967034
+astrometric_params_solved,95,68,4.670329670329671
+duplicated_source,False,1384,95.05494505494505
+duplicated_source,True,72,4.945054945054945

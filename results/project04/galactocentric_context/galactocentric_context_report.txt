@@ -1,0 +1,162 @@
+Project 04A — Galactocentric transformation and Galactic context
+======================================================================
+Adopted Galactic parameters (modelling assumptions, not measured Stock 2 properties):
+{
+  "convention": "Astropy v4.0 parameter set, explicitly frozen for Project 04A",
+  "source": "https://docs.astropy.org/en/stable/coordinates/galactocentric.html",
+  "assumption": "Adopted Galactic modelling assumptions, not measured properties of Stock 2.",
+  "galcen_distance": {
+    "value": 8.122,
+    "unit": "kpc",
+    "meaning": "Distance from the solar-system origin to the Galactic centre, including solar height",
+    "source": "https://ui.adsabs.harvard.edu/abs/2018A%26A...615L..15G"
+  },
+  "z_sun": {
+    "value": 20.8,
+    "unit": "pc",
+    "meaning": "Height of the solar-system origin above the adopted Galactic midplane",
+    "source": "https://ui.adsabs.harvard.edu/abs/2019MNRAS.482.1417B"
+  },
+  "galcen_v_sun": {
+    "value": [
+      12.9,
+      245.6,
+      7.78
+    ],
+    "unit": "km / s",
+    "meaning": "Solar velocity relative to Galactic centre, in adopted Cartesian X,Y,Z axes; includes total azimuthal motion",
+    "source": [
+      "https://ui.adsabs.harvard.edu/abs/2018RNAAS...2..210D",
+      "https://ui.adsabs.harvard.edu/abs/2018A%26A...615L..15G",
+      "https://ui.adsabs.harvard.edu/abs/2004ApJ...616..872R"
+    ]
+  },
+  "galcen_coord": {
+    "ra": 266.4051,
+    "dec": -28.936175,
+    "unit": "deg",
+    "frame": "icrs",
+    "meaning": "Adopted ICRS direction of Galactic centre",
+    "source": "https://ui.adsabs.harvard.edu/abs/2004ApJ...616..872R"
+  },
+  "roll": {
+    "value": 0.0,
+    "unit": "deg",
+    "meaning": "Additional roll relative to Astropy's Galactic-plane orientation",
+    "source": "Astropy v4.0 convention"
+  }
+}
+Astropy version: 8.0.1
+Astropy Galactocentric, right-handed, Galactic centre at origin. The solar-system origin is at negative X, Y=0, positive Z=z_sun; +X points from the solar projection through the centre toward the opposite side. +Y is approximately Galactic l=90 degrees and the adopted solar rotation direction; +Z is toward the northern side of the adopted midplane. Velocities are positive along the same axes. Solar height induces Astropy's small frame tilt. All five public frame parameters are explicit; no default parameter values are used.
+R=hypot(X,Y); phi=atan2(Y,X) in [-180,180] degrees, increasing from +X toward +Y. e_R=(X/R,Y/R,0) points outward in the plane; e_phi=(-Y/R,X/R,0) is increasing azimuth; e_Z=(0,0,1). v_R=(X*Vx+Y*Vy)/R; v_phi=(-Y*Vx+X*Vy)/R; cylindrical v_z=vz_gc_kms. With Sun at negative X and positive Vy, increasing azimuth opposes adopted local solar rotation: solar v_phi is negative. R=0 has undefined phi,v_R,v_phi (NaN).
+
+Fixed Project 03C reference transformed without recomputation:
+x_gc_kpc: -8.3790571211 [kpc]
+y_gc_kpc: 0.2717039952 [kpc]
+z_gc_kpc: 0.0110598829 [kpc]
+R_gc_kpc: 8.3834611766 [kpc]
+r_gc_kpc: 8.3834684720 [kpc]
+phi_gc_deg: 178.1427457639 [deg]
+vx_gc_kms: -17.7880998491 [km / s]
+vy_gc_kms: 228.0803453636 [km / s]
+vz_gc_kms: -6.5222229583 [km / s]
+v_gc_kms: 228.8658992286 [km / s]
+v_R_gc_kms: 25.1707309592 [km / s]
+v_phi_gc_kms: -227.3840248135 [km / s]
+
+Transformation validation:
+Maximum positional invariance error: 1.70530256582e-12 pc
+Maximum relative-speed invariance error: 4.26325641456e-14 km/s
+Tolerance: position rtol=1e-11, atol=1e-8 pc; relative speed rtol=1e-11, atol=1e-9 km/s.
+Rows/unique IDs: 1456/1456. Positions: 1456. Velocities: 886. Missing velocities: 570.
+C/L/T: 940/184/332. Cartesian/cylindrical consistency and full 6D Astropy inverse transform passed.
+Adopted Sun v_phi sign check: -245.600000 km/s (negative).
+
+Fixed L+T major-axis geometric context:
+radial_outward: signed dot=-0.626625568, absolute dot=0.626625568, directed angle=128.801600 deg, unsigned alignment=51.198400 deg
+azimuth_increasing: signed dot=-0.779233145, absolute dot=0.779233145, directed angle=141.190416 deg, unsigned alignment=38.809584 deg
+vertical_positive: signed dot=0.011666323, absolute dot=0.011666323, directed angle=89.331554 deg, unsigned alignment=89.331554 deg
+instantaneous_velocity: signed dot=0.704938811, absolute dot=0.704938811, directed angle=45.175399 deg, unsigned alignment=45.175399 deg
+Directed angles follow the stored PCA sign; unsigned angles are sign-invariant, 0–90 degrees.
+Alignment with instantaneous Galactocentric velocity is not orbital-path alignment or evidence of tidal origin.
+
+Population summaries:
+catalogue_status/shared: N position=885, N velocity=580; z_gc_kpc median=0.01105257 [kpc]
+catalogue_status/shared: N position=885, N velocity=580; R_gc_kpc median=8.38364342 [kpc]
+catalogue_status/shared: N position=885, N velocity=580; vz_gc_kms median=-6.48128890 [km / s]
+catalogue_status/shared: N position=885, N velocity=580; v_R_gc_kms median=25.19416465 [km / s]
+catalogue_status/shared: N position=885, N velocity=580; v_phi_gc_kms median=-227.32536558 [km / s]
+catalogue_status/kos_only: N position=178, N velocity=75; z_gc_kpc median=0.01086601 [kpc]
+catalogue_status/kos_only: N position=178, N velocity=75; R_gc_kpc median=8.38739118 [kpc]
+catalogue_status/kos_only: N position=178, N velocity=75; vz_gc_kms median=-6.55425843 [km / s]
+catalogue_status/kos_only: N position=178, N velocity=75; v_R_gc_kms median=25.56471448 [km / s]
+catalogue_status/kos_only: N position=178, N velocity=75; v_phi_gc_kms median=-226.30666176 [km / s]
+catalogue_status/risbud_only: N position=393, N velocity=231; z_gc_kpc median=0.01063288 [kpc]
+catalogue_status/risbud_only: N position=393, N velocity=231; R_gc_kpc median=8.37597602 [kpc]
+catalogue_status/risbud_only: N position=393, N velocity=231; vz_gc_kms median=-6.93920784 [km / s]
+catalogue_status/risbud_only: N position=393, N velocity=231; v_R_gc_kms median=24.65996692 [km / s]
+catalogue_status/risbud_only: N position=393, N velocity=231; v_phi_gc_kms median=-227.16558021 [km / s]
+homogenized_class/C: N position=940, N velocity=594; z_gc_kpc median=0.01105557 [kpc]
+homogenized_class/C: N position=940, N velocity=594; R_gc_kpc median=8.38350095 [kpc]
+homogenized_class/C: N position=940, N velocity=594; vz_gc_kms median=-6.51957761 [km / s]
+homogenized_class/C: N position=940, N velocity=594; v_R_gc_kms median=25.18556340 [km / s]
+homogenized_class/C: N position=940, N velocity=594; v_phi_gc_kms median=-227.37783454 [km / s]
+homogenized_class/L: N position=184, N velocity=111; z_gc_kpc median=0.01090283 [kpc]
+homogenized_class/L: N position=184, N velocity=111; R_gc_kpc median=8.38283392 [kpc]
+homogenized_class/L: N position=184, N velocity=111; vz_gc_kms median=-6.54693068 [km / s]
+homogenized_class/L: N position=184, N velocity=111; v_R_gc_kms median=25.41987016 [km / s]
+homogenized_class/L: N position=184, N velocity=111; v_phi_gc_kms median=-226.33364625 [km / s]
+homogenized_class/T: N position=332, N velocity=181; z_gc_kpc median=0.01031214 [kpc]
+homogenized_class/T: N position=332, N velocity=181; R_gc_kpc median=8.38537142 [kpc]
+homogenized_class/T: N position=332, N velocity=181; vz_gc_kms median=-6.69150857 [km / s]
+homogenized_class/T: N position=332, N velocity=181; v_R_gc_kms median=24.42295767 [km / s]
+homogenized_class/T: N position=332, N velocity=181; v_phi_gc_kms median=-227.21920471 [km / s]
+
+Outputs:
+data/interim/project04/stock2_galactocentric_phase_space.ecsv
+data/interim/project04/stock2_galactocentric_reference.ecsv
+data/interim/project04/stock2_galactocentric_summary.ecsv
+data/interim/project04/stock2_galactocentric_group_summary.ecsv
+data/interim/project04/stock2_galactocentric_alignments.ecsv
+results/project04/galactocentric_context/galactic_xy_location.png
+results/project04/galactocentric_context/galactic_xy_location.pdf
+results/project04/galactocentric_context/R_gc_vs_Z_gc_by_class.png
+results/project04/galactocentric_context/R_gc_vs_Z_gc_by_class.pdf
+results/project04/galactocentric_context/local_radial_vs_azimuthal_by_class.png
+results/project04/galactocentric_context/local_radial_vs_azimuthal_by_class.pdf
+results/project04/galactocentric_context/local_radial_vs_vertical_by_class.png
+results/project04/galactocentric_context/local_radial_vs_vertical_by_class.pdf
+results/project04/galactocentric_context/local_azimuthal_vs_vertical_by_class.png
+results/project04/galactocentric_context/local_azimuthal_vs_vertical_by_class.pdf
+results/project04/galactocentric_context/v_R_gc_kms_vs_v_phi_gc_kms_by_class.png
+results/project04/galactocentric_context/v_R_gc_kms_vs_v_phi_gc_kms_by_class.pdf
+results/project04/galactocentric_context/v_R_gc_kms_vs_vz_gc_kms_by_class.png
+results/project04/galactocentric_context/v_R_gc_kms_vs_vz_gc_kms_by_class.pdf
+results/project04/galactocentric_context/v_phi_gc_kms_vs_vz_gc_kms_by_class.png
+results/project04/galactocentric_context/v_phi_gc_kms_vs_vz_gc_kms_by_class.pdf
+results/project04/galactocentric_context/local_direction_alignment.png
+results/project04/galactocentric_context/local_direction_alignment.pdf
+results/project04/galactocentric_context/galactocentric_context_report.txt
+
+Invariants:
+rows == 1456: True
+unique source_id == 1456: True
+C == 940: True
+L == 184: True
+T == 332: True
+valid Galactocentric positions == 1456: True
+valid Galactocentric velocities == 886: True
+missing-RV rows retain NaN velocities: True
+Project 03 reference position unchanged: True
+Project 03 reference velocity unchanged: True
+Project 03D PCA axis unchanged: True
+cluster-relative distances numerically preserved: True
+cluster-relative speed magnitudes numerically preserved: True
+Project 01–03D products unchanged: True
+no source removed: True
+no clipping: True
+no membership criterion introduced: True
+no orbit integrated: True
+no Galactic potential instantiated: True
+no actions calculated: True
+PROJECT 04A STATUS: PASS

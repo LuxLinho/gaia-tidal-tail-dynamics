@@ -1,0 +1,37 @@
+Project 02D — Astrometric flag overlap audit
+========================================================
+
+Total sources: 1456
+
+Individual failures
+-------------------
+RUWE fail:              87
+GOF_AL fail:            255
+Excess-noise-sig fail:  544
+Duplicated-source fail: 72
+
+Important overlaps
+------------------
+RUWE fail AND GOF fail:              87
+RUWE fail AND excess-noise fail:     87
+GOF fail AND excess-noise fail:      236
+
+Candidate sequential definitions
+--------------------------------
+A_ruwe_only                    1369 / 1456 ( 94.02%) delta=-87
+B_ruwe_visibility              1369 / 1456 ( 94.02%) delta=+0
+C_ruwe_visibility_notdup       1300 / 1456 ( 89.29%) delta=-69
+D_plus_gof                     1149 / 1456 ( 78.91%) delta=-151
+E_plus_excess_noise_sig         881 / 1456 ( 60.51%) delta=-268
+F_plus_ipd                      872 / 1456 ( 59.89%) delta=-9
+
+Interpretation
+--------------
+This audit does not freeze the final astrometric baseline.
+It quantifies how strongly each diagnostic changes the retained sample.
+No source is removed from the canonical 1456-source population.
+
+Outputs:
+  results/project02/astrometric_flag_overlap.csv
+  results/project02/astrometric_flag_sequential_flow.csv
+  results/project02/astrometric_flag_overlap_audit.txt

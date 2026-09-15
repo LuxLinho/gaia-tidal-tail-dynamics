@@ -1,0 +1,59 @@
+Project 02A — Gaia DR3 identity audit
+==================================================
+
+Inputs
+------
+Manifest:                  data/interim/project02/gaia_dr3_source_query.ecsv
+Gaia enrichment:           data/raw/gaia/project02/gaia_dr3_enrichment_raw.ecsv
+
+Row counts
+----------
+Manifest rows:              1456
+Gaia returned rows:         1456
+
+Unique IDs
+----------
+Manifest unique IDs:        1456
+Returned input unique IDs:  1456
+Gaia source unique IDs:     1456
+
+Masked / unresolved
+-------------------
+Masked manifest IDs:        0
+Masked returned input IDs:  0
+Unresolved Gaia source IDs: 0
+
+Set comparison
+--------------
+Missing Gaia IDs:           0
+Unexpected Gaia IDs:        0
+Missing returned-input IDs: 0
+Unexpected input IDs:     0
+
+Duplicates
+----------
+Manifest duplicate IDs:     0
+Returned-input duplicates: 0
+Gaia-result duplicates:     0
+
+Row-level identity
+------------------
+Row mismatches:             0
+
+Invariants
+----------
+manifest rows == 1456:              True
+Gaia rows == 1456:                  True
+manifest IDs all present:           True
+returned input IDs all present:     True
+Gaia source IDs all resolved:       True
+manifest IDs unique:                True
+returned input IDs unique:          True
+Gaia source IDs unique:             True
+manifest set == returned-input set: True
+manifest set == Gaia source set:    True
+missing Gaia IDs == 0:              True
+unexpected Gaia IDs == 0:           True
+row-level ID mismatches == 0:       True
+
+PROJECT 02A IDENTITY STATUS: PASS

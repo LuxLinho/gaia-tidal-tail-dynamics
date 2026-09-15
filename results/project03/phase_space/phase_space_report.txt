@@ -1,0 +1,56 @@
+Project 03A — Observed astrometric phase-space diagnostics
+=================================================================
+Canonical population size: 1456
+Unique source_id count: 1456
+RV availability: 886 / 1456
+
+Existing catalogue and class sizes:
+catalogue_status: shared: N=885, N RV=580
+catalogue_status: kos_only: N=178, N RV=75
+catalogue_status: risbud_only: N=393, N RV=231
+homogenized_class: C: N=940, N RV=594
+homogenized_class: L: N=184, N RV=111
+homogenized_class: T: N=332, N RV=181
+
+Full population summaries:
+ra [deg]: valid N=1456, median=33.973, p16–p84=31.0944–38.4676, min–max=1.68658–359.846
+dec [deg]: valid N=1456, median=59.4727, p16–p84=58.4371–60.2615, min–max=45.2294–63.8044
+parallax [mas]: valid N=1456, median=2.67572, p16–p84=2.60183–2.78067, min–max=1.99165–3.15122
+pmra [mas / yr]: valid N=1456, median=15.7976, p16–p84=14.6435–16.8044, min–max=4.43429–22.0353
+pmdec [mas / yr]: valid N=1456, median=-13.7913, p16–p84=-14.9024–-12.9781, min–max=-21.2323–-0.360698
+radial_velocity [km / s]: valid N=886, median=8.78903, p16–p84=3.48589–12.1308, min–max=-96.0155–55.7351
+
+No filtering applied. Missing measurements remain missing; finite values only
+for each statistic/histogram. No source is removed from the population.
+All plot axes cover the complete finite range. No new centre is defined.
+
+Outputs:
+data/interim/project03/stock2_phase_space_summary.ecsv
+data/interim/project03/stock2_phase_space_group_summary.ecsv
+results/project03/phase_space/ra_vs_dec_by_catalogue_status.png
+results/project03/phase_space/ra_vs_dec_by_catalogue_status.pdf
+results/project03/phase_space/ra_vs_dec_by_homogenized_class.png
+results/project03/phase_space/ra_vs_dec_by_homogenized_class.pdf
+results/project03/phase_space/pmra_vs_pmdec_by_catalogue_status.png
+results/project03/phase_space/pmra_vs_pmdec_by_catalogue_status.pdf
+results/project03/phase_space/pmra_vs_pmdec_by_homogenized_class.png
+results/project03/phase_space/pmra_vs_pmdec_by_homogenized_class.pdf
+results/project03/phase_space/parallax_vs_pmra_by_homogenized_class.png
+results/project03/phase_space/parallax_vs_pmra_by_homogenized_class.pdf
+results/project03/phase_space/parallax_vs_pmdec_by_homogenized_class.png
+results/project03/phase_space/parallax_vs_pmdec_by_homogenized_class.pdf
+results/project03/phase_space/parallax_histogram_by_homogenized_class.png
+results/project03/phase_space/parallax_histogram_by_homogenized_class.pdf
+results/project03/phase_space/radial_velocity_histogram_by_homogenized_class.png
+results/project03/phase_space/radial_velocity_histogram_by_homogenized_class.pdf
+
+Invariants:
+rows == 1456: True
+unique source_id == 1456: True
+canonical population unchanged: True
+canonical labels unchanged: True
+Project 01/02 input and Project 02 products unchanged: True
+no membership cut applied: True
+no quality cut applied: True
+no outlier clipping applied: True
+PROJECT 03A STATUS: PASS
