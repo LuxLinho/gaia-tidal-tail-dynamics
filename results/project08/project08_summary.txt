@@ -1,0 +1,49 @@
+Project 08 — Galactic-potential robustness
+========================================================================
+
+Tested models
+-------------
+MWPotential2014: ro=8.000 kpc, vo=220.000 km/s, vcirc(R_now)=218.935 km/s
+McMillan17: ro=8.210 kpc, vo=233.100 km/s, vcirc(R_now)=233.182 km/s
+Irrgang13I: ro=8.400 kpc, vo=242.000 km/s, vcirc(R_now)=242.017 km/s
+Cautun20: ro=8.122 kpc, vo=229.000 km/s, vcirc(R_now)=229.782 km/s
+
+Orbit robustness
+----------------
+MWPotential2014: Rperi=7.969363 kpc, Rapo=9.676914 kpc, e=0.096765, zmax=103.991 pc
+McMillan17: Rperi=7.563538 kpc, Rapo=8.881815 kpc, e=0.080161, zmax=93.120 pc
+Irrgang13I: Rperi=7.149453 kpc, Rapo=8.698143 kpc, e=0.097724, zmax=91.459 pc
+Cautun20: Rperi=7.677392 kpc, Rapo=9.006116 kpc, e=0.079643, zmax=94.804 pc
+
+Jacobi-radius robustness
+------------------------
+MWPotential2014: rJ_now=22.507 pc, rJ_min=21.722 pc, rJ_max=24.952 pc
+McMillan17: rJ_now=22.275 pc, rJ_min=20.990 pc, rJ_max=23.061 pc
+Irrgang13I: rJ_now=21.434 pc, rJ_min=19.431 pc, rJ_max=21.950 pc
+Cautun20: rJ_now=22.232 pc, rJ_min=21.097 pc, rJ_max=23.236 pc
+
+Morphology-to-stretching-axis robustness
+----------------------------------------
+MWPotential2014 / intermediate: 4.679894 deg
+MWPotential2014 / outer: 47.676973 deg
+MWPotential2014 / outside_rJ: 45.278578 deg
+McMillan17 / intermediate: 4.679867 deg
+McMillan17 / outer: 47.676974 deg
+McMillan17 / outside_rJ: 45.278579 deg
+Irrgang13I / intermediate: 4.691679 deg
+Irrgang13I / outer: 47.676350 deg
+Irrgang13I / outside_rJ: 45.278274 deg
+Cautun20 / intermediate: 4.685464 deg
+Cautun20 / outer: 47.676678 deg
+Cautun20 / outside_rJ: 45.278434 deg
+
+Scientific synthesis
+--------------------
+1. Stock 2 remains on a low-eccentricity disk orbit in every tested Galactic potential.
+2. The reference orbit remains vertically confined to roughly 0.09-0.10 kpc from the Galactic midplane.
+3. The present-day Jacobi radius remains near 21-23 pc for the fixed 4000 Msun literature baseline mass.
+4. The intermediate morphology remains within about 5 deg of the instantaneous stretching axis.
+5. The outer and outside-rJ morphologies remain rotated by roughly 45-48 deg from the instantaneous stretching axis.
+
+These tests demonstrate robustness across the selected smooth Galactic-potential family. They do not represent exhaustive Milky Way potential uncertainty.
+No candidate is classified as escaped, bound, unbound, or dynamically confirmed as a tidal-tail member.

@@ -329,7 +329,7 @@ Particular attention is given to:
 | Project 05 | Stock 2 Galactic Orbit | ✅ COMPLETE |
 | Project 06 | Galactic Tidal Field & Jacobi Radius | ✅ COMPLETE |
 | Project 07 | Cluster-centric Morphology & Tidal Geometry | ✅ Complete |
-| Project 08 | Galactic-potential robustness | ⏳ Planned |
+| Project 08 | Galactic-potential robustness | ✅ Complete |
 | Project 08 | Catalogue robustness | ⏳ Planned |
 | Final | Astrophysical interpretation | ⏳ Planned |
 

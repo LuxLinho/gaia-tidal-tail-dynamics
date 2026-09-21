@@ -1,0 +1,10 @@
+Project 08A — Potential audit
+==================================================
+
+     model      baseline ro_kpc vo_kms axisymmetric           provenance              F_R_kms2_kpc        F_z_kms2_kpc        vcirc_kms        Omega_kms_kpc   
+                          kpc   km / s                                               km2 / (kpc s2)      km2 / (kpc s2)         km / s          km / (kpc s)   
+--------------- -------- ------ ------ ------------ ------------------------------ ------------------ ------------------- ------------------ ------------------
+MWPotential2014     True    8.0  220.0         True galpy built-in MWPotential2014 -5717.403730176194 -55.143523056732946  218.9347154194004  26.11507476523197
+     McMillan17    False   8.21  233.1         True  galpy mwpotentials.McMillan17 -6485.749822144184  -64.28568431281488 233.18213999953818 27.814542834558228
+     Irrgang13I    False    8.4  242.0         True  galpy mwpotentials.Irrgang13I -6986.517649385784  -62.07725514206138   242.016500572215 28.868327230589323
+       Cautun20    False  8.122  229.0         True    galpy mwpotentials.Cautun20 -6297.985683724726  -62.82724881831016 229.78194732408448 27.408959436029743

@@ -1,0 +1,46 @@
+Project 08D — Tidal-axis / morphology-alignment robustness
+========================================================================
+
+Morphology is frozen from Project 07 covariance PCA.
+Only the Galactic-potential tidal tensor is changed.
+
+Tidal tensor eigenaxes
+----------------------
+     model      tidal_component     eigenvalue            e_radial              e_prograde             e_vertical       interpretation
+                                 km2 / (kpc2 s2)                                                                                      
+--------------- --------------- ------------------ --------------------- ----------------------- ---------------------- --------------
+MWPotential2014               1  826.9652069664712   -0.9999958320304988                     0.0  -0.002887199617316401     stretching
+MWPotential2014               2 -681.9860687262053                   0.0                    -1.0                    0.0    compression
+MWPotential2014               3 -4978.998355112044  0.002887199617316401                     0.0    -0.9999958320304988    compression
+     McMillan17               1  782.8834902526671   -0.9999958301439006                     0.0   -0.00288785297597007     stretching
+     McMillan17               2 -773.6362923962151                   0.0                    -1.0                    0.0    compression
+     McMillan17               3  -5749.41596098564   0.00288785297597007                     0.0    -0.9999958301439006    compression
+     Irrgang13I               1  913.6880218216052   -0.9999966114472956   8.673617379884035e-19   -0.00260328521806619     stretching
+     Irrgang13I               2 -833.3691183365199 -9.25676960456659e-19                    -1.0 1.1102230246251565e-16    compression
+     Irrgang13I               3 -5605.707282053062  0.002603285218066191 -1.1102230246251565e-16    -0.9999966114472956    compression
+       Cautun20               1  814.4510508328442   -0.9999962106371459                     0.0  -0.002752945939986327     stretching
+       Cautun20               2 -751.2393212093466                   0.0                    -1.0                    0.0    compression
+       Cautun20               3 -5619.432933437986  0.002752945939986327                     0.0    -0.9999962106371459    compression
+
+Key morphology-to-stretching-axis angles
+---------------------------------------
+     model       population  angle_to_stretching_deg
+                                       deg          
+--------------- ------------ -----------------------
+MWPotential2014 intermediate       4.679894192890135
+MWPotential2014        outer       47.67697304593013
+MWPotential2014   outside_rJ       45.27857814201692
+     McMillan17 intermediate        4.67986710317236
+     McMillan17        outer       47.67697448570241
+     McMillan17   outside_rJ       45.27857884729653
+     Irrgang13I intermediate       4.691679351117162
+     Irrgang13I        outer      47.676349503573185
+     Irrgang13I   outside_rJ       45.27827395706246
+       Cautun20 intermediate       4.685463666493777
+       Cautun20        outer       47.67667767000078
+       Cautun20   outside_rJ       45.27843373319317
+
+Project 07 baseline reproduction
+--------------------------------
+Eigenvalue differences: [5.684341886081e-13 0.000000000000e+00 0.000000000000e+00]
+Axis-angle differences [deg]: [0. 0. 0.]

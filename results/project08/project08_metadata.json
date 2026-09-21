@@ -1,0 +1,91 @@
+{
+  "project": "Project 08 \u2014 Galactic-potential robustness",
+  "models": [
+    "MWPotential2014",
+    "McMillan17",
+    "Irrgang13I",
+    "Cautun20"
+  ],
+  "canonical_population": 1456,
+  "classes": {
+    "C": 940,
+    "L": 184,
+    "T": 332
+  },
+  "cluster_mass_msun": 4000.0,
+  "metrics": {
+    "rperi_kpc": {
+      "minimum": 7.149452696089783,
+      "maximum": 7.96936334284558,
+      "absolute_range": 0.8199106467557966,
+      "fractional_range_vs_baseline": 0.10288282908971186
+    },
+    "rap_kpc": {
+      "minimum": 8.698142599961812,
+      "maximum": 9.676913610731944,
+      "absolute_range": 0.9787710107701315,
+      "fractional_range_vs_baseline": 0.10114495697105837
+    },
+    "eccentricity": {
+      "minimum": 0.07964298544124918,
+      "maximum": 0.09772396852271227,
+      "absolute_range": 0.018080983081463095,
+      "fractional_range_vs_baseline": 0.1868536704593698
+    },
+    "zmax_kpc": {
+      "minimum": 0.0914589136937544,
+      "maximum": 0.10399098813835966,
+      "absolute_range": 0.01253207444460526,
+      "fractional_range_vs_baseline": 0.12051115840856687
+    },
+    "rj_now_pc": {
+      "minimum": 21.434061388035804,
+      "maximum": 22.506870508265514,
+      "absolute_range": 1.07280912022971,
+      "fractional_range_vs_baseline": 0.04766585029383482
+    },
+    "rj_min_pc": {
+      "minimum": 19.430896775631602,
+      "maximum": 21.721909466726135,
+      "absolute_range": 2.291012691094533,
+      "fractional_range_vs_baseline": 0.10547013348913602
+    },
+    "rj_max_pc": {
+      "minimum": 21.949954645519803,
+      "maximum": 24.952063765945027,
+      "absolute_range": 3.0021091204252244,
+      "fractional_range_vs_baseline": 0.1203150628575481
+    }
+  },
+  "alignment_angle_ranges": {
+    "intermediate": {
+      "minimum_deg": 4.67986710317236,
+      "maximum_deg": 4.691679351117162,
+      "spread_deg": 0.011812247944801513
+    },
+    "outer": {
+      "minimum_deg": 47.676349503573185,
+      "maximum_deg": 47.67697448570241,
+      "spread_deg": 0.0006249821292243496
+    },
+    "outside_rJ": {
+      "minimum_deg": 45.27827395706246,
+      "maximum_deg": 45.27857884729653,
+      "spread_deg": 0.0003048902340694326
+    }
+  },
+  "conclusions": {
+    "low_eccentricity_disk_orbit": true,
+    "vertically_confined_near_disk": true,
+    "jacobi_scale_remains_tens_of_pc": true,
+    "intermediate_close_to_stretching_axis": true,
+    "outer_rotated_from_stretching_axis": true
+  },
+  "interpretation_limits": [
+    "model-family robustness, not exhaustive Galactic-potential uncertainty",
+    "no individual escape classification",
+    "no candidate-level orbit inference",
+    "no reclassification of literature C/L/T labels",
+    "no morphology refit by potential"
+  ]
+}
