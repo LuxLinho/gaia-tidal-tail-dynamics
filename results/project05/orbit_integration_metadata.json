@@ -1,0 +1,107 @@
+{
+  "project": "05B",
+  "potential": {
+    "components": [
+      {
+        "alpha": 1.8,
+        "normalize": 0.05,
+        "rc_over_ro": 0.2375,
+        "type": "PowerSphericalPotentialwCutoff"
+      },
+      {
+        "a_over_ro": 0.375,
+        "b_over_ro": 0.035,
+        "normalize": 0.6,
+        "type": "MiyamotoNagaiPotential"
+      },
+      {
+        "a_over_ro": 2.0,
+        "normalize": 0.35,
+        "type": "NFWPotential"
+      }
+    ],
+    "galpy_docs": "https://docs.galpy.org/en/latest/tutorials/potentials/milky_way_potentials.html",
+    "name": "galpy MWPotential2014",
+    "non_default_parameters": {},
+    "reference": "Bovy 2015, ApJS 216, 29",
+    "ro_kpc": 8.0,
+    "scope": "Project 05 baseline; same model as 04B/04C",
+    "vo_kms": 220.0
+  },
+  "integration": {
+    "atol": 1e-11,
+    "initialization": "independent past and future integrations each start from supplied t=0 state",
+    "internal_step": "adaptive; output cadence is not internal solver step",
+    "method": "dop853",
+    "output_step_myr": 0.25,
+    "rtol": 1e-11,
+    "samples": 4001,
+    "start_myr": -500.0,
+    "stop_myr": 500.0
+  },
+  "software": {
+    "astropy": "8.0.1",
+    "galpy": "1.12.0",
+    "numpy": "2.5.2",
+    "python": "3.14.6",
+    "scipy": "1.18.1"
+  },
+  "adopted_parameters": {
+    "assumption": "Adopted Galactic modelling assumptions, not measured properties of Stock 2.",
+    "convention": "Astropy v4.0 parameter set, explicitly frozen for Project 04A",
+    "galcen_coord": {
+      "dec": -28.936175,
+      "frame": "icrs",
+      "meaning": "Adopted ICRS direction of Galactic centre",
+      "ra": 266.4051,
+      "source": "https://ui.adsabs.harvard.edu/abs/2004ApJ...616..872R",
+      "unit": "deg"
+    },
+    "galcen_distance": {
+      "meaning": "Distance from the solar-system origin to the Galactic centre, including solar height",
+      "source": "https://ui.adsabs.harvard.edu/abs/2018A%26A...615L..15G",
+      "unit": "kpc",
+      "value": 8.122
+    },
+    "galcen_v_sun": {
+      "meaning": "Solar velocity relative to Galactic centre, in adopted Cartesian X,Y,Z axes; includes total azimuthal motion",
+      "source": [
+        "https://ui.adsabs.harvard.edu/abs/2018RNAAS...2..210D",
+        "https://ui.adsabs.harvard.edu/abs/2018A%26A...615L..15G",
+        "https://ui.adsabs.harvard.edu/abs/2004ApJ...616..872R"
+      ],
+      "unit": "km / s",
+      "value": [
+        12.9,
+        245.6,
+        7.78
+      ]
+    },
+    "roll": {
+      "meaning": "Additional roll relative to Astropy's Galactic-plane orientation",
+      "source": "Astropy v4.0 convention",
+      "unit": "deg",
+      "value": 0.0
+    },
+    "source": "https://docs.astropy.org/en/stable/coordinates/galactocentric.html",
+    "z_sun": {
+      "meaning": "Height of the solar-system origin above the adopted Galactic midplane",
+      "source": "https://ui.adsabs.harvard.edu/abs/2019MNRAS.482.1417B",
+      "unit": "pc",
+      "value": 20.8
+    }
+  },
+  "reference_definition": "Existing homogenized_class == C; component-wise median of all complete Cartesian position vectors and, separately, all complete Cartesian velocity vectors. No clipping, quality selection, iteration, or new membership inference.",
+  "coordinate_bridge": "x_galpy=-x_astropy; y,z unchanged; vx_galpy=-vx_astropy; vT_galpy=-vphi_astropy",
+  "inputs": {
+    "data/interim/project04/stock2_galactocentric_reference.ecsv": "8029be8e48c9e3cc5f3a40094872d0c902a60165bb02b7c2edde7f159ad0fa0e",
+    "data/interim/project05/stock2_cluster_reference.ecsv": "b16c046a626c166997274b14dc49fb0d6b748dfb95648f7b11ece705a4baef4e",
+    "src/project04/02_reference_orbit.py": "2d78dfe78ba236cc64a2a1a45c96b8a911564b40a3306ecb7f9d88d15b87270a"
+  },
+  "validation": {
+    "max_position_increment_residual_kpc": 2.583210482450267e-07,
+    "max_relative_Lz_drift": 3.721920945819899e-12,
+    "max_relative_energy_drift": 9.173571323092707e-12,
+    "status": "PASS"
+  }
+}

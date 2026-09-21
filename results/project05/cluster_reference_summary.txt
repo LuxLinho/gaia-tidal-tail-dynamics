@@ -1,0 +1,26 @@
+Project 05A — Cluster Reference State
+Existing homogenized_class == C; component-wise median of all complete Cartesian position vectors and, separately, all complete Cartesian velocity vectors. No clipping, quality selection, iteration, or new membership inference.
+Position contributors: 940; velocity contributors: 594; no new selection.
+x_gc_kpc: -8.37905712113331 kpc
+y_gc_kpc: 0.27170399524623245 kpc
+z_gc_kpc: 0.011059882891974826 kpc
+vx_gc_kms: -17.788099849086187 km / s
+vy_gc_kms: 228.08034536358127 km / s
+vz_gc_kms: -6.522222958250226 km / s
+R_gc_kpc: 8.383461176641042 kpc
+phi_gc_deg: 178.1427457638957 deg
+v_R_gc_kms: 25.170730959225235 km / s
+v_phi_gc_kms: -227.38402481350766 km / s
+v_gc_kms: 228.86589922862842 km / s
+ra: 33.89171842221817 deg
+dec: 59.556310272929416 deg
+distance: 374.1790854719216 pc
+pmra: 15.778870166642282 mas / yr
+pmdec: -13.735550083190324 mas / yr
+radial_velocity: 8.735274730020803 km / s
+n_c_total: 940 
+n_position_contributors: 940 
+n_velocity_contributors: 594 
+reference_population: C 
+reference_statistic: component-wise median 
+Canonical population: 1456 unchanged; validation: PASS

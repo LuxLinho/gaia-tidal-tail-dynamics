@@ -1,0 +1,9 @@
+Focused Project 05 review patch
+Full unittest discovery: 66 tests PASS; zero failures, errors or skips.
+Seven new sensitivity tests. Full log: test_results.txt.
+Command: MPLCONFIGDIR=/private/tmp/stock2-mpl .venv/bin/python -m unittest discover -s tests -v
+All 291 audit-protected files still match SHA256 after the full test suite.
+README and its status unchanged by this patch; frozen reference, baseline orbit, earlier outputs and canonical 1456-source population unchanged.
+Added: src/project05/reference_sensitivity.py; tests/test_project05_sensitivity.py; results/project05/reference_sensitivity/ outputs.
+Updated: docs/project05_stock2_galactic_orbit.md, Reference-state sensitivity subsection.
+No new main stage; no commit or push.

@@ -7,7 +7,7 @@
 ![Python](https://img.shields.io/badge/python-3.x-3776ab)
 ![Astropy](https://img.shields.io/badge/Astropy-8.0.1-e67e22)
 ![Sample](https://img.shields.io/badge/canonical%20sample-1456-6f42c1)
-![Stage](https://img.shields.io/badge/current%20stage-Project%2004C-f0ad4e)
+![Stage](https://img.shields.io/badge/current%20stage-Project%2005-f0ad4e)
 
 > **Are the literature-defined extended and tidal-tail candidates around Stock 2 dynamically consistent with the cluster in Gaia 6D phase space and Galactic dynamics?**
 
@@ -192,6 +192,25 @@ Detailed interpretation is intentionally separated from the coordinate transform
 
 ---
 
+## ✅ Project 05 — Stock 2 Galactic Orbit: COMPLETE
+
+Three reproducible stages export the inherited 03C/04A cluster reference (940 C
+position contributors; 594 C velocity contributors), integrate one orbit over
+−500 to +500 Myr, and generate orbital diagnostics. The baseline remains the
+`galpy.MWPotential2014` already introduced in 04B/04C; no earlier products are
+replaced. DOP853 uses a 0.25 Myr output cadence with explicit tolerances.
+
+Cylindrical pericentre/apocentre: **7.96936 / 9.67691 kpc**;
+eccentricity: **0.096765**; maximum |Z|: **103.991 pc**.
+These describe the cluster reference environment, not candidate membership.
+The canonical **1456** sources and existing labels remain unchanged.
+
+See [Project 05 methods and reproduction](docs/project05_stock2_galactic_orbit.md),
+[numerical summary](results/project05/project05_summary.txt), and
+[verification record](results/project05/verification.md).
+
+---
+
 ## 🧠 Sample Philosophy
 
 Three concepts are deliberately kept separate:
@@ -287,7 +306,7 @@ Particular attention is given to:
 | Project 04A | Galactocentric transformation | ✅ Complete |
 | Project 04B | Dynamical comparison | ✅ Complete |
 | Project 04C | Extended dynamical diagnostics | ✅ Complete |
-| Project 05 | Orbit analysis | ⏳ Planned |
+| Project 05 | Stock 2 Galactic Orbit | ✅ COMPLETE |
 | Project 06 | Uncertainty propagation | ⏳ Planned |
 | Project 07 | Galactic-potential robustness | ⏳ Planned |
 | Project 08 | Catalogue robustness | ⏳ Planned |
@@ -299,15 +318,10 @@ Particular attention is given to:
 
 The next stages extend the deterministic phase-space analysis into uncertainty-aware Galactic dynamics.
 
-Planned quantities include:
-
-- orbital eccentricity
-- pericentre and apocentre
-- maximum vertical excursion
-- angular momentum
-- orbital energy proxies
-- relative cluster–candidate orbital behaviour
-- orbital actions where appropriate
+Project 05 now provides deterministic cluster-reference eccentricity, radial
+extrema, vertical excursion, angular momentum and energy diagnostics. Future
+work includes uncertainty propagation, relative cluster–candidate orbital
+behaviour and orbital actions where appropriate.
 
 Gaia measurement uncertainties and covariance information will be propagated using Monte Carlo sampling.
 
@@ -387,8 +401,8 @@ Original catalogue authors retain credit for their published candidate samples. 
 
 ### 🚧 Current status
 
-**Active research · Project 04C complete**
+**Active research · Project 05 — Stock 2 Galactic Orbit: COMPLETE**
 
 Next major phase:
 
-> **orbit dynamics → uncertainty propagation → robustness → astrophysical interpretation**
+> **uncertainty propagation → robustness → astrophysical interpretation**

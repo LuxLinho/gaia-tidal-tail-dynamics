@@ -1,0 +1,87 @@
+{
+  "adopted_parameters": {
+    "assumption": "Adopted Galactic modelling assumptions, not measured properties of Stock 2.",
+    "convention": "Astropy v4.0 parameter set, explicitly frozen for Project 04A",
+    "galcen_coord": {
+      "dec": -28.936175,
+      "frame": "icrs",
+      "meaning": "Adopted ICRS direction of Galactic centre",
+      "ra": 266.4051,
+      "source": "https://ui.adsabs.harvard.edu/abs/2004ApJ...616..872R",
+      "unit": "deg"
+    },
+    "galcen_distance": {
+      "meaning": "Distance from the solar-system origin to the Galactic centre, including solar height",
+      "source": "https://ui.adsabs.harvard.edu/abs/2018A%26A...615L..15G",
+      "unit": "kpc",
+      "value": 8.122
+    },
+    "galcen_v_sun": {
+      "meaning": "Solar velocity relative to Galactic centre, in adopted Cartesian X,Y,Z axes; includes total azimuthal motion",
+      "source": [
+        "https://ui.adsabs.harvard.edu/abs/2018RNAAS...2..210D",
+        "https://ui.adsabs.harvard.edu/abs/2018A%26A...615L..15G",
+        "https://ui.adsabs.harvard.edu/abs/2004ApJ...616..872R"
+      ],
+      "unit": "km / s",
+      "value": [
+        12.9,
+        245.6,
+        7.78
+      ]
+    },
+    "roll": {
+      "meaning": "Additional roll relative to Astropy's Galactic-plane orientation",
+      "source": "Astropy v4.0 convention",
+      "unit": "deg",
+      "value": 0.0
+    },
+    "source": "https://docs.astropy.org/en/stable/coordinates/galactocentric.html",
+    "z_sun": {
+      "meaning": "Height of the solar-system origin above the adopted Galactic midplane",
+      "source": "https://ui.adsabs.harvard.edu/abs/2019MNRAS.482.1417B",
+      "unit": "pc",
+      "value": 20.8
+    }
+  },
+  "astropy_version": "8.0.1",
+  "convention": "Astropy Galactocentric, right-handed, Galactic centre at origin. The solar-system origin is at negative X, Y=0, positive Z=z_sun; +X points from the solar projection through the centre toward the opposite side. +Y is approximately Galactic l=90 degrees and the adopted solar rotation direction; +Z is toward the northern side of the adopted midplane. Velocities are positive along the same axes. Solar height induces Astropy's small frame tilt. All five public frame parameters are explicit; no default parameter values are used.",
+  "cylindrical_convention": "R=hypot(X,Y); phi=atan2(Y,X) in [-180,180] degrees, increasing from +X toward +Y. e_R=(X/R,Y/R,0) points outward in the plane; e_phi=(-Y/R,X/R,0) is increasing azimuth; e_Z=(0,0,1). v_R=(X*Vx+Y*Vy)/R; v_phi=(-Y*Vx+X*Vy)/R; cylindrical v_z=vz_gc_kms. With Sun at negative X and positive Vy, increasing azimuth opposes adopted local solar rotation: solar v_phi is negative. R=0 has undefined phi,v_R,v_phi (NaN).",
+  "reference_source": "data/interim/project03/stock2_reference_frame.ecsv",
+  "reference_sha256": "c8434339c9f53f20f0340580031f28163d8b1001fbb58bed8ec50895d0be66ae",
+  "pca_source": "data/interim/project03/stock2_morphology_pca.ecsv",
+  "pca_sha256": "a1a40fd0fda2f20713f9e23c55631cef67054d767bb7a4a8ff7d8fb33a73ec85",
+  "axis_transform": "Astropy transform of +/-1 kpc positions along stored axis; difference cancels translation. No PCA refit.",
+  "reference_columns": "x_gc_kpc etc in this one-row product are the transformed fixed Project 03C reference, not sample medians.",
+  "project": "05A",
+  "reference_definition": "Existing homogenized_class == C; component-wise median of all complete Cartesian position vectors and, separately, all complete Cartesian velocity vectors. No clipping, quality selection, iteration, or new membership inference.",
+  "observable_definition": "ICRS back-transform of fixed 03C Cartesian reference; pmra includes cos(dec).",
+  "present_epoch": "t=0 is the inherited Gaia DR3 reference state, not propagated to execution date",
+  "inputs": {
+    "data/interim/project03/stock2_reference_frame.ecsv": "c8434339c9f53f20f0340580031f28163d8b1001fbb58bed8ec50895d0be66ae",
+    "data/interim/project04/stock2_galactocentric_phase_space.ecsv": "fb8102d84b45f12c6e00fdcc031801706ee9c9d811b73f24ea4a21f2ccd3c1c5",
+    "data/interim/project04/stock2_galactocentric_reference.ecsv": "8029be8e48c9e3cc5f3a40094872d0c902a60165bb02b7c2edde7f159ad0fa0e",
+    "src/project04/galactocentric_parameters.json": "718eca933d074e6640c1be57499c393543c04032b27553d562d3f135b96b881c"
+  },
+  "software": {
+    "astropy": "8.0.1",
+    "galpy": "1.12.0",
+    "numpy": "2.5.2",
+    "python": "3.14.6",
+    "scipy": "1.18.1"
+  },
+  "invariants": {
+    "canonical_unique_sources": 1456,
+    "catalogue_counts": {
+      "kos_only": 178,
+      "risbud_only": 393,
+      "shared": 885
+    },
+    "class_counts": {
+      "C": 940,
+      "L": 184,
+      "T": 332
+    },
+    "full_6d_sources": 886
+  }
+}

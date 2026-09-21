@@ -1,0 +1,46 @@
+Project 05 — Stock 2 Galactic Orbit
+=======================================================
+Existing homogenized_class == C; component-wise median of all complete Cartesian position vectors and, separately, all complete Cartesian velocity vectors. No clipping, quality selection, iteration, or new membership inference.
+N position = 940; N velocity = 594 (existing C population).
+Potential: galpy MWPotential2014, ro=8 kpc, vo=220 km/s; unchanged from 04B/04C.
+Software: {'astropy': '8.0.1', 'galpy': '1.12.0', 'numpy': '2.5.2', 'scipy': '1.18.1', 'python': '3.14.6'}
+Integration: {'atol': 1e-11, 'initialization': 'independent past and future integrations each start from supplied t=0 state', 'internal_step': 'adaptive; output cadence is not internal solver step', 'method': 'dop853', 'output_step_myr': 0.25, 'rtol': 1e-11, 'samples': 4001, 'start_myr': -500.0, 'stop_myr': 500.0}
+Frame: frozen Project 04A parameters; see cluster_reference_metadata.json.
+Present-day Galactocentric state:
+  x_gc_kpc: -8.37905712113 kpc
+  y_gc_kpc: 0.271703995246 kpc
+  z_gc_kpc: 0.011059882892 kpc
+  vx_gc_kms: -17.7880998491 km / s
+  vy_gc_kms: 228.080345364 km / s
+  vz_gc_kms: -6.52222295825 km / s
+
+Cylindrical R=hypot(X,Y); finite-window sampled extrema
+(R_apo-R_peri)/(R_apo+R_peri)
+X*Vy-Y*Vx in inherited Astropy axes; prograde solar rotation has negative Lz
+Radial: median successive R-minimum spacing; vertical: median successive Z-maximum spacing; >=3 extrema required. Azimuthal: window duration / unwrapped turns, >=2 turns required. Unavailable values are null.
+R_now_kpc: 8.383461176641044
+z_now_kpc: 0.011059882891974826
+speed_now_kms: 228.8658992286284
+pericentre_kpc: 7.969363342965023
+apocentre_kpc: 9.676913610729205
+eccentricity: 0.09676546912671617
+z_max_kpc: 0.10399098814500654
+z_min_kpc: -0.10054816978154237
+z_peak_kpc: 0.10399098814500654
+Lz_now_kpc_kms: -1906.2651442124247
+radial_period_myr: 186.75
+vertical_period_myr: 94.75
+azimuthal_period_myr: 250.98383306657448
+radial_minima_count: 5
+vertical_maxima_count: 11
+azimuthal_turns: 3.984320375467156
+Validation: {'status': 'PASS', 'max_relative_energy_drift': 9.173571323092707e-12, 'max_relative_Lz_drift': 3.721920945819899e-12, 'max_position_increment_residual_kpc': 2.583210482450267e-07, 'resolution_audit': {'step_myr': 0.125, 'absolute_differences': {'pericentre_kpc': 3.701147734957999e-06, 'apocentre_kpc': 3.7291941126227357e-06, 'z_max_kpc': 0.0, 'eccentricity': 4.20917564331047e-07}, 'tolerance': 1e-05, 'status': 'PASS'}}
+Canonical population invariant: 1456 unchanged; full 6D subset: 886.
+All 263 upstream files unchanged by SHA256: PASS.
+PROJECT 05 STATUS: PASS
+
+Interpretation: in this baseline model the reference follows a mildly eccentric disk orbit,
+remaining within about 0.12 kpc of the Galactic plane over the sampled window.
+This deterministic reference has separate position/velocity contributor sets; it is not a fitted centre of mass.
+No uncertainty propagation, candidate classification, membership cuts, potential robustness,
+or evidence of tidal disruption or confirmed tails is claimed. Sampled extrema are window dependent.

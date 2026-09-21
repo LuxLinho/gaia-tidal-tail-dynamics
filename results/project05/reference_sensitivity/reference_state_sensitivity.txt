@@ -1,0 +1,75 @@
+Project 05 — focused reference-state sensitivity audit
+Matched complete-6D C sample: 594; frozen counts remain 940/594.
+Diagnostic only: existing C class AND complete finite 6D vectors; both component-wise medians from the same sources in 03B axes, then 04A transform.
+Initial position displacement: 0.116176177 pc
+All velocities unchanged; all integration, potential and coordinate configuration matched.
+
+quantity | baseline | comparison | signed delta | absolute relative delta | unit
+x_gc_kpc | -8.37905712113 | -8.37899462441 | 6.24967189928e-05 | 7.45868157829e-06 | kpc
+y_gc_kpc | 0.271703995246 | 0.271714132801 | 1.01375550148e-05 | 3.73110266768e-05 | kpc
+z_gc_kpc | 0.011059882892 | 0.0109624750163 | -9.74078756524e-05 | 0.00880731528569 | kpc
+vx_gc_kms | -17.7880998491 | -17.7880998491 | 0 | 0 | km / s
+vy_gc_kms | 228.080345364 | 228.080345364 | 0 | 0 | km / s
+vz_gc_kms | -6.52222295825 | -6.52222295825 | 0 | 0 | km / s
+
+R_now_kpc | 8.38346117664 | 8.38339904132 | -6.21353256456e-05 | 7.41165544116e-06 | kpc
+z_now_kpc | 0.011059882892 | 0.0109624750163 | -9.74078756524e-05 | 0.00880731528569 | kpc
+speed_now_kms | 228.865899229 | 228.865899229 | 2.84217094304e-14 | 1.24184990102e-16 | km/s
+pericentre_kpc | 7.96936334297 | 7.96929048416 | -7.28588058765e-05 | 9.14236216131e-06 | kpc
+apocentre_kpc | 9.67691361073 | 9.67683483565 | -7.87750839581e-05 | 8.14051743428e-06 | kpc
+eccentricity | 0.0967654691267 | 0.0967659653629 | 4.96236213038e-07 | 5.128236524e-06 | dimensionless
+z_max_kpc | 0.103990988145 | 0.103973970709 | -1.70174363245e-05 | 0.000163643375528 | kpc
+Lz_now_kpc_kms | -1906.26514421 | -1906.25070961 | 0.0144346010932 | 7.5721895965e-06 | kpc km/s
+radial_period_myr | 186.75 | 186.75 | 0 | 0 | Myr
+vertical_period_myr | 94.75 | 94.75 | 0 | 0 | Myr
+azimuthal_period_myr | 250.983833067 | 250.981528879 | -0.0023041878685 | 9.18062267338e-06 | Myr
+
+Astropy uses the inherited right-handed Galactocentric frame: Sun at negative X,
+solar rotation near positive Y, Z north. The galpy Galactic convention used here
+is left-handed relative to these physical axes: x_g=-x_A, y_g=y_A, z_g=z_A,
+and vx_g=-vx_A, vy_g=vy_A, vz_g=vz_A. The matrix diag(-1,1,1) has determinant -1:
+a reflection, not a proper rotation. phi_g=pi-phi_A modulo 2pi, vR_g=vR_A,
+vT_g=-vphi_A. Numerically Lz_A=X_A*Vy_A-Y_A*Vx_A=R*vphi_A;
+galpy's scalar Lz_g=R*vT_g=-Lz_A. Angular momentum is an axial vector,
+so its components under reflection obey L_g=det(M)*M*L_A, not M*L_A.
+Negative Astropy Lz is expected for this prograde orbit (X<0 and Vy>0).
+Positive galpy vT, positive galpy Orbit.Lz(), and increasing galpy azimuth
+confirm prograde rotation. No signs are changed to relabel the results.
+This bridge is used with the existing axisymmetric potential; no new rotation,
+solar-frame assumptions, or potential model is introduced.
+{
+  "status": "PASS",
+  "reflection_determinant": -1.0,
+  "Astropy_Lz_kpc_kms": -1906.2651442124247,
+  "galpy_Lz_kpc_kms": 1906.2651442124247,
+  "Astropy_vphi_kms": -227.38402481350766,
+  "galpy_vT_kms": 227.38402481350766,
+  "physically_prograde": true,
+  "explanation": "Astropy uses the inherited right-handed Galactocentric frame: Sun at negative X,\nsolar rotation near positive Y, Z north. The galpy Galactic convention used here\nis left-handed relative to these physical axes: x_g=-x_A, y_g=y_A, z_g=z_A,\nand vx_g=-vx_A, vy_g=vy_A, vz_g=vz_A. The matrix diag(-1,1,1) has determinant -1:\na reflection, not a proper rotation. phi_g=pi-phi_A modulo 2pi, vR_g=vR_A,\nvT_g=-vphi_A. Numerically Lz_A=X_A*Vy_A-Y_A*Vx_A=R*vphi_A;\ngalpy's scalar Lz_g=R*vT_g=-Lz_A. Angular momentum is an axial vector,\nso its components under reflection obey L_g=det(M)*M*L_A, not M*L_A.\nNegative Astropy Lz is expected for this prograde orbit (X<0 and Vy>0).\nPositive galpy vT, positive galpy Orbit.Lz(), and increasing galpy azimuth\nconfirm prograde rotation. No signs are changed to relabel the results.\nThis bridge is used with the existing axisymmetric potential; no new rotation,\nsolar-frame assumptions, or potential model is introduced."
+}
+Scientific assessment:
+{
+  "decision": "RETAIN_FROZEN_REFERENCE",
+  "criteria": "All available physical-scale normalized changes <1%; |delta eccentricity|<0.001. These conservative review gates are not statistical error bars. Any unavailable required comparison triggers review.",
+  "physical_scale_normalized_differences": {
+    "R_now_kpc": 7.411655441157563e-06,
+    "z_now_kpc": 0.0009366953559150739,
+    "speed_now_kms": 1.2418499010205007e-16,
+    "pericentre_kpc": 9.14236216131392e-06,
+    "apocentre_kpc": 8.140517434278618e-06,
+    "z_max_kpc": 0.0001636433755279905,
+    "Lz_now_kpc_kms": 7.572189596497587e-06,
+    "radial_period_myr": 0.0,
+    "vertical_period_myr": 0.0,
+    "azimuthal_period_myr": 9.180622673382748e-06
+  },
+  "unavailable": [],
+  "maximum_normalized_quantity": "z_now_kpc",
+  "maximum_normalized_difference": 0.0009366953559150739
+}
+Changes are negligible for the mildly eccentric, near-plane prograde disk-orbit conclusions.
+One diagnostic reference-construction test, not a membership test or uncertainty estimate.
+Radial/vertical periods are sampled-extremum estimates: identical values do not imply exact identical frequencies; cadence is 0.25 Myr.
+Relative difference is abs(comparison-baseline)/abs(baseline); zero baselines yield null.
+Instantaneous z has a small denominator; assess its absolute shift relative to the vertical envelope as well.
+Protected files unchanged: 291; canonical 1456 unchanged. No commit or push.
