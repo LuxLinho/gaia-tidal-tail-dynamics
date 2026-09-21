@@ -7,7 +7,7 @@
 ![Python](https://img.shields.io/badge/python-3.x-3776ab)
 ![Astropy](https://img.shields.io/badge/Astropy-8.0.1-e67e22)
 ![Sample](https://img.shields.io/badge/canonical%20sample-1456-6f42c1)
-![Stage](https://img.shields.io/badge/current%20stage-Project%2005-f0ad4e)
+![Stage](https://img.shields.io/badge/current%20stage-Project%2006-f0ad4e)
 
 > **Are the literature-defined extended and tidal-tail candidates around Stock 2 dynamically consistent with the cluster in Gaia 6D phase space and Galactic dynamics?**
 
@@ -211,6 +211,26 @@ See [Project 05 methods and reproduction](docs/project05_stock2_galactic_orbit.m
 
 ---
 
+## ✅ Project 06 — Galactic Tidal Field & Jacobi Radius: COMPLETE
+
+Four auditable stages evaluate the Galactic field, the present Jacobi scale,
+the existing candidates’ geometric extent, and variation along the stored
+Project 05 orbit. The adopted mass is the approximate **4000 solar-mass**
+literature baseline from Ye et al. (2021), not a sum of repository stars.
+
+In the explicit circular-equivalent midplane approximation, **r_J now =
+22.5069 pc**, compared with Ye et al.’s 22.65 pc. At fixed mass the scale ranges
+from **21.7219 to 24.9521 pc** along the stored orbit. All **1456** sources remain;
+spatial zones are descriptive and do not determine membership or escape.
+The 2000–6000 solar-mass sensitivity grid is not an uncertainty interval.
+
+See [Project 06 methods and limitations](docs/project06_tidal_field_jacobi_radius.md),
+[numerical results](results/project06/project06_summary.txt), and
+[verification](results/project06/verification.md). Uncertainty propagation
+remains future work; this stage follows the requested tidal-environment scope.
+
+---
+
 ## 🧠 Sample Philosophy
 
 Three concepts are deliberately kept separate:
@@ -307,7 +327,7 @@ Particular attention is given to:
 | Project 04B | Dynamical comparison | ✅ Complete |
 | Project 04C | Extended dynamical diagnostics | ✅ Complete |
 | Project 05 | Stock 2 Galactic Orbit | ✅ COMPLETE |
-| Project 06 | Uncertainty propagation | ⏳ Planned |
+| Project 06 | Galactic Tidal Field & Jacobi Radius | ✅ COMPLETE |
 | Project 07 | Galactic-potential robustness | ⏳ Planned |
 | Project 08 | Catalogue robustness | ⏳ Planned |
 | Final | Astrophysical interpretation | ⏳ Planned |
@@ -401,7 +421,7 @@ Original catalogue authors retain credit for their published candidate samples. 
 
 ### 🚧 Current status
 
-**Active research · Project 05 — Stock 2 Galactic Orbit: COMPLETE**
+**Active research · Project 06 — Galactic Tidal Field & Jacobi Radius: COMPLETE**
 
 Next major phase:
 

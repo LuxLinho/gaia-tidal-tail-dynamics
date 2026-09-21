@@ -74,7 +74,10 @@ class ReferenceSensitivityTests(unittest.TestCase):
         self.assertEqual(len(set(result['source_ids'])), 594)
         self.assertEqual(result['assessment']['decision'], 'RETAIN_FROZEN_REFERENCE')
         self.assertTrue((s.OUT/'reference_state_sensitivity.txt').is_file())
-        for path in [c.REFERENCE, c.ORBIT, c.ROOT/'README.md', c.POPULATION]:
+        # The historical audit checked README at execution time; later projects
+        # legitimately update its status. Keep scientific baseline hashes frozen.
+        self.assertTrue(result['preservation']['README_unchanged'])
+        for path in [c.REFERENCE, c.ORBIT, c.POPULATION]:
             self.assertEqual(c.sha(path), result['preservation']['protected_sha256'][str(path.relative_to(c.ROOT))])
         diag = s.D.diagnostics(self.orbit)
         for key in s.KEYS:

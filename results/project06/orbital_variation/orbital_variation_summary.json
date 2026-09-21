@@ -1,0 +1,22 @@
+{
+  "min_pc": 21.721921706143778,
+  "max_pc": 24.952077825158856,
+  "median_pc": 23.565541674058462,
+  "now_pc": 22.50688318974245,
+  "peak_to_peak_over_now": 0.14351858903711853,
+  "pericentre": {
+    "time_myr": -402.0,
+    "R_kpc": 7.969363342965023,
+    "r_J_pc": 21.721921706143778
+  },
+  "apocentre": {
+    "time_myr": 438.75,
+    "R_kpc": 9.676913610729205,
+    "r_J_pc": 24.952077825158856
+  },
+  "denominator_min": 1107.390851111317,
+  "denominator_max": 1678.519334327042,
+  "denominator_unit": "km2 / (kpc2 s2)",
+  "strongest_tide_time_myr": -402.0,
+  "strongest_tide_smallest_radius": true
+}

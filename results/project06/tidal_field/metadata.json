@@ -1,0 +1,45 @@
+{
+  "project": "06A",
+  "mass": {
+    "approximate": true,
+    "catalogue": "Gaia DR2",
+    "comparison_role": "22.65 pc is comparison only, never a Jacobi input; same-paper quantities need not be statistically independent.",
+    "comparison_tidal_radius_pc": 22.65,
+    "core_radius_pc": 3.97,
+    "definition": "Present-day cluster mass inferred from present-day mass-function analysis; not a sum of repository stars or an initial mass.",
+    "doi": "10.3847/1538-3881/abc61a",
+    "member_candidates": 1325,
+    "provenance_status": "Adopted from user-specified literature result; primary full text could not be retrieved in this session. Detailed mass-function corrections and tidal-radius derivation not independently audited.",
+    "quoted_uncertainty": null,
+    "reference": "Ye et al. (2021), AJ 161, 8",
+    "role": "literature baseline",
+    "title": "Diagnosing Open Cluster Stock 2: Member Candidates and Mass Distribution with Gaia DR2 and LAMOST",
+    "uncertainty_status": "No formal mass uncertainty supplied in the adopted provenance; none inferred.",
+    "unit": "solMass",
+    "value": 4000.0
+  },
+  "model": {
+    "approximation": "Local circular-equivalent midplane Jacobi scale at instantaneous cylindrical R. Not an exact Jacobi boundary on an eccentric, vertically oscillating orbit.",
+    "formula": "r_J=(G*M/D)^(1/3); D=Omega_c(R,0)^2-Phi_RR(R,0)=4*Omega_c(R,0)^2-kappa(R,0)^2",
+    "galpy_version": "1.12.0",
+    "mass_evolution": "4000 solMass held fixed throughout the stored orbit; no mass loss.",
+    "name": "galpy MWPotential2014",
+    "omega_definition": "Circular equilibrium frequency sqrt(-F_R(R,0)/R), NOT the actual orbit angular rate v_phi/R.",
+    "potential_convention": "Phi is potential per unit test mass; acceleration=-grad(Phi).",
+    "ro_kpc": 8.0,
+    "vertical_treatment": "Actual R,z forces and Phi_RR are auxiliary diagnostics. Jacobi denominator always uses z=0. Stored orbit z is not inserted into midplane frequency identities.",
+    "vo_kms": 220.0
+  },
+  "software": {
+    "astropy": "8.0.1",
+    "galpy": "1.12.0",
+    "numpy": "2.5.2",
+    "python": "3.14.6",
+    "scipy": "1.18.1"
+  },
+  "inputs": {
+    "data/interim/project03/stock2_reference_frame.ecsv": "c8434339c9f53f20f0340580031f28163d8b1001fbb58bed8ec50895d0be66ae",
+    "data/interim/project05/stock2_cluster_reference.ecsv": "b16c046a626c166997274b14dc49fb0d6b748dfb95648f7b11ece705a4baef4e",
+    "data/interim/project05/stock2_galactic_orbit.ecsv": "2a5d98656d0f939dbec98b172687a0a2105187c5102e9ee2c28abd7e3c675cc7"
+  }
+}

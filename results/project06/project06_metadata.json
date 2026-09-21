@@ -1,0 +1,179 @@
+{
+  "project": "06A\u201306D",
+  "mass": {
+    "value": 4000.0,
+    "unit": "solMass",
+    "role": "literature baseline",
+    "approximate": true,
+    "definition": "Present-day cluster mass inferred from present-day mass-function analysis; not a sum of repository stars or an initial mass.",
+    "reference": "Ye et al. (2021), AJ 161, 8",
+    "doi": "10.3847/1538-3881/abc61a",
+    "title": "Diagnosing Open Cluster Stock 2: Member Candidates and Mass Distribution with Gaia DR2 and LAMOST",
+    "member_candidates": 1325,
+    "catalogue": "Gaia DR2",
+    "quoted_uncertainty": null,
+    "uncertainty_status": "No formal mass uncertainty supplied in the adopted provenance; none inferred.",
+    "core_radius_pc": 3.97,
+    "comparison_tidal_radius_pc": 22.65,
+    "provenance_status": "Adopted from user-specified literature result; primary full text could not be retrieved in this session. Detailed mass-function corrections and tidal-radius derivation not independently audited.",
+    "comparison_role": "22.65 pc is comparison only, never a Jacobi input; same-paper quantities need not be statistically independent."
+  },
+  "model": {
+    "name": "galpy MWPotential2014",
+    "galpy_version": "1.12.0",
+    "ro_kpc": 8.0,
+    "vo_kms": 220.0,
+    "potential_convention": "Phi is potential per unit test mass; acceleration=-grad(Phi).",
+    "formula": "r_J=(G*M/D)^(1/3); D=Omega_c(R,0)^2-Phi_RR(R,0)=4*Omega_c(R,0)^2-kappa(R,0)^2",
+    "omega_definition": "Circular equilibrium frequency sqrt(-F_R(R,0)/R), NOT the actual orbit angular rate v_phi/R.",
+    "approximation": "Local circular-equivalent midplane Jacobi scale at instantaneous cylindrical R. Not an exact Jacobi boundary on an eccentric, vertically oscillating orbit.",
+    "vertical_treatment": "Actual R,z forces and Phi_RR are auxiliary diagnostics. Jacobi denominator always uses z=0. Stored orbit z is not inserted into midplane frequency identities.",
+    "mass_evolution": "4000 solMass held fixed throughout the stored orbit; no mass loss."
+  },
+  "software": {
+    "python": "3.14.6",
+    "astropy": "8.0.1",
+    "galpy": "1.12.0",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1"
+  },
+  "inputs": {
+    "data/interim/project05/stock2_cluster_reference.ecsv": "b16c046a626c166997274b14dc49fb0d6b748dfb95648f7b11ece705a4baef4e",
+    "data/interim/project05/stock2_galactic_orbit.ecsv": "2a5d98656d0f939dbec98b172687a0a2105187c5102e9ee2c28abd7e3c675cc7",
+    "data/interim/project03/stock2_cluster_relative_phase_space.ecsv": "048825bf289a4f332dcbb1df0ae6c449eeb61a431eaf480178385abf13bb5c54",
+    "data/interim/project03/stock2_reference_frame.ecsv": "c8434339c9f53f20f0340580031f28163d8b1001fbb58bed8ec50895d0be66ae",
+    "data/processed/stock2_literature_master.ecsv": "29026c40d37864dbb7da213bae86ca0c2ea16dab3680fa00d6f286e13c336444",
+    "data/interim/project06/stock2_tidal_field.ecsv": "b74289dd9749f389fc2067da48c863e890cb3b9441422dea8cc739206fbcffc7",
+    "data/interim/project06/stock2_jacobi_radius.ecsv": "89247fd9957b43893108821d4d569aca8e4fb44e8f414d00c053031ece591dc2"
+  },
+  "orbital_variation": {
+    "min_pc": 21.721921706143778,
+    "max_pc": 24.952077825158856,
+    "median_pc": 23.565541674058462,
+    "now_pc": 22.50688318974245,
+    "peak_to_peak_over_now": 0.14351858903711853,
+    "pericentre": {
+      "time_myr": -402.0,
+      "R_kpc": 7.969363342965023,
+      "r_J_pc": 21.721921706143778
+    },
+    "apocentre": {
+      "time_myr": 438.75,
+      "R_kpc": 9.676913610729205,
+      "r_J_pc": 24.952077825158856
+    },
+    "denominator_min": 1107.390851111317,
+    "denominator_max": 1678.519334327042,
+    "denominator_unit": "km2 / (kpc2 s2)",
+    "strongest_tide_time_myr": -402.0,
+    "strongest_tide_smallest_radius": true
+  },
+  "canonical_sources": 1456,
+  "validation": "PASS",
+  "G": {
+    "value": 0.00430091727003628,
+    "unit": "pc (km/s)^2 / solMass",
+    "source": "astropy.constants.G"
+  },
+  "integration_inherited": {
+    "atol": 1e-11,
+    "initialization": "independent past and future integrations each start from supplied t=0 state",
+    "internal_step": "adaptive; output cadence is not internal solver step",
+    "method": "dop853",
+    "output_step_myr": 0.25,
+    "rtol": 1e-11,
+    "samples": 4001,
+    "start_myr": -500.0,
+    "stop_myr": 500.0
+  },
+  "frame_inherited": {
+    "assumption": "Adopted Galactic modelling assumptions, not measured properties of Stock 2.",
+    "convention": "Astropy v4.0 parameter set, explicitly frozen for Project 04A",
+    "galcen_coord": {
+      "dec": -28.936175,
+      "frame": "icrs",
+      "meaning": "Adopted ICRS direction of Galactic centre",
+      "ra": 266.4051,
+      "source": "https://ui.adsabs.harvard.edu/abs/2004ApJ...616..872R",
+      "unit": "deg"
+    },
+    "galcen_distance": {
+      "meaning": "Distance from the solar-system origin to the Galactic centre, including solar height",
+      "source": "https://ui.adsabs.harvard.edu/abs/2018A%26A...615L..15G",
+      "unit": "kpc",
+      "value": 8.122
+    },
+    "galcen_v_sun": {
+      "meaning": "Solar velocity relative to Galactic centre, in adopted Cartesian X,Y,Z axes; includes total azimuthal motion",
+      "source": [
+        "https://ui.adsabs.harvard.edu/abs/2018RNAAS...2..210D",
+        "https://ui.adsabs.harvard.edu/abs/2018A%26A...615L..15G",
+        "https://ui.adsabs.harvard.edu/abs/2004ApJ...616..872R"
+      ],
+      "unit": "km / s",
+      "value": [
+        12.9,
+        245.6,
+        7.78
+      ]
+    },
+    "roll": {
+      "meaning": "Additional roll relative to Astropy's Galactic-plane orientation",
+      "source": "Astropy v4.0 convention",
+      "unit": "deg",
+      "value": 0.0
+    },
+    "source": "https://docs.astropy.org/en/stable/coordinates/galactocentric.html",
+    "z_sun": {
+      "meaning": "Height of the solar-system origin above the adopted Galactic midplane",
+      "source": "https://ui.adsabs.harvard.edu/abs/2019MNRAS.482.1417B",
+      "unit": "pc",
+      "value": 20.8
+    }
+  },
+  "potential_inherited": {
+    "components": [
+      {
+        "alpha": 1.8,
+        "normalize": 0.05,
+        "rc_over_ro": 0.2375,
+        "type": "PowerSphericalPotentialwCutoff"
+      },
+      {
+        "a_over_ro": 0.375,
+        "b_over_ro": 0.035,
+        "normalize": 0.6,
+        "type": "MiyamotoNagaiPotential"
+      },
+      {
+        "a_over_ro": 2.0,
+        "normalize": 0.35,
+        "type": "NFWPotential"
+      }
+    ],
+    "galpy_docs": "https://docs.galpy.org/en/latest/tutorials/potentials/milky_way_potentials.html",
+    "name": "galpy MWPotential2014",
+    "non_default_parameters": {},
+    "reference": "Bovy 2015, ApJS 216, 29",
+    "ro_kpc": 8.0,
+    "scope": "Project 05 baseline; same model as 04B/04C",
+    "vo_kms": 220.0
+  },
+  "secondary_literature": "Later Stock 2 studies/catalogues may use different tidal-radius definitions. No later numeric radius is adopted; none was independently verified for this project.",
+  "verification": {
+    "full_suite_tests": 80,
+    "new_project06_tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "upstream_files_unchanged": 294,
+    "tracked_project05_files_unchanged": 26,
+    "source_sha256": {
+      "src/project06/support.py": "a1947a562f4458afb620cdaeb630233f4f734476f67314e9c76c9520fa2d14df",
+      "src/project06/04_orbital_variation.py": "2236d3c8eb189e08b6959bccc911b52bef0a11bfb63d4ef031713084de1c167e",
+      "src/project06/02_jacobi_radius.py": "ccb47bdfb8cbb139edab2d6c3fb61c3ed77202a13c0500d2060c7a8ad1ce548f",
+      "src/project06/01_tidal_field.py": "d1ef161e02e0039f8380e3c2aebce2ba9dd75d3acb6ec4179aab97ce231f4de5",
+      "src/project06/03_candidate_extent.py": "1889e0768adee655e8ee7bb0e2a4955aaa2d252eec1eadedc8ebab78925b458d"
+    }
+  }
+}
