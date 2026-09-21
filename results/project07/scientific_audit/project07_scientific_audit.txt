@@ -1,0 +1,21 @@
+Project 07 — Scientific Audit
+============================================================
+
+L/T circularity
+----------------
+Homogenized L and T classes are literature-defined leading/trailing-tail classes based on orbital-coordinate information. Therefore the observed 100% L-leading and 100% T-trailing geometric split is definition-linked and is NOT independent physical evidence.
+
+Orientation method sensitivity
+------------------------------
+C: b/a=0.400, c/a=0.365, radial angle covariance=3.108 deg, spatial-sign=14.216 deg, method shift=11.108 deg
+L: b/a=0.408, c/a=0.182, radial angle covariance=30.949 deg, spatial-sign=18.485 deg, method shift=12.465 deg
+T: b/a=0.454, c/a=0.249, radial angle covariance=34.097 deg, spatial-sign=22.603 deg, method shift=11.494 deg
+extended_LT: b/a=0.511, c/a=0.188, radial angle covariance=51.198 deg, spatial-sign=50.530 deg, method shift=0.669 deg
+inner: b/a=0.825, c/a=0.542, radial angle covariance=31.003 deg, spatial-sign=37.180 deg, method shift=6.177 deg
+intermediate: b/a=0.778, c/a=0.336, radial angle covariance=4.801 deg, spatial-sign=4.534 deg, method shift=0.267 deg
+outer: b/a=0.369, c/a=0.129, radial angle covariance=47.671 deg, spatial-sign=39.028 deg, method shift=8.643 deg
+outside_rJ: b/a=0.526, c/a=0.192, radial angle covariance=45.276 deg, spatial-sign=24.462 deg, method shift=20.813 deg
+
+Interpretation
+--------------
+The extended population is demonstrably non-spherical, but outer-axis orientation is method-sensitive. The intermediate zone is strongly radial, while the outermost morphology rotates away from the local radial stretching axis. Exact outer-tail angles should therefore be treated as descriptive, not as uniquely determined physical tail directions.

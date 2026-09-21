@@ -1,0 +1,142 @@
+{
+  "project": "Project 07 scientific audit",
+  "lt_circularity": {
+    "status": "definition-linked, not independent evidence",
+    "reason": "The homogenized L/T literature classes already encode leading/trailing orbital position. Therefore L/T geometric half-space agreement must not be interpreted as an independent discovery or validation of physical tails."
+  },
+  "orientation_sensitivity": [
+    {
+      "population": "C",
+      "b_a_covariance": 0.40012193349469305,
+      "c_a_covariance": 0.36490679741036663,
+      "major_gap_covariance": 0.8399024383364685,
+      "angle_radial_covariance_deg": 3.10786473139233,
+      "angle_radial_spatial_sign_deg": 14.215830032535415,
+      "orientation_method_shift_radial_deg": 11.107965301143086,
+      "angle_prograde_covariance_deg": 87.18055952185452,
+      "angle_velocity_covariance_deg": 86.54304886861468,
+      "angle_vertical_covariance_deg": 88.69354700033905,
+      "bootstrap_p025_radial_deg": 1.4313412845070697,
+      "bootstrap_p50_radial_deg": 3.3515624459878484,
+      "bootstrap_p975_radial_deg": 5.241570785489433
+    },
+    {
+      "population": "L",
+      "b_a_covariance": 0.4083045990176454,
+      "c_a_covariance": 0.18199132184452246,
+      "major_gap_covariance": 0.83328735442104,
+      "angle_radial_covariance_deg": 30.949435422752543,
+      "angle_radial_spatial_sign_deg": 18.48461645895203,
+      "orientation_method_shift_radial_deg": 12.464818963800514,
+      "angle_prograde_covariance_deg": 59.076696320558135,
+      "angle_velocity_covariance_deg": 65.43849190514987,
+      "angle_vertical_covariance_deg": 88.85082823897064,
+      "bootstrap_p025_radial_deg": 24.91056377683191,
+      "bootstrap_p50_radial_deg": 30.696693750848844,
+      "bootstrap_p975_radial_deg": 36.984843895523596
+    },
+    {
+      "population": "T",
+      "b_a_covariance": 0.4536304502190057,
+      "c_a_covariance": 0.24873488583427886,
+      "major_gap_covariance": 0.7942194146341022,
+      "angle_radial_covariance_deg": 34.09740623556945,
+      "angle_radial_spatial_sign_deg": 22.603206885608664,
+      "orientation_method_shift_radial_deg": 11.494199349960788,
+      "angle_prograde_covariance_deg": 55.911785867257855,
+      "angle_velocity_covariance_deg": 62.262669641924674,
+      "angle_vertical_covariance_deg": 89.30072924158236,
+      "bootstrap_p025_radial_deg": 28.6667436730879,
+      "bootstrap_p50_radial_deg": 34.095402216572054,
+      "bootstrap_p975_radial_deg": 38.428032697565456
+    },
+    {
+      "population": "extended_LT",
+      "b_a_covariance": 0.5109058907096414,
+      "c_a_covariance": 0.18763339737626142,
+      "major_gap_covariance": 0.7389751708381879,
+      "angle_radial_covariance_deg": 51.19840048719673,
+      "angle_radial_spatial_sign_deg": 50.52978882863585,
+      "orientation_method_shift_radial_deg": 0.6686116585608772,
+      "angle_prograde_covariance_deg": 38.80958356134105,
+      "angle_velocity_covariance_deg": 45.175399092329926,
+      "angle_vertical_covariance_deg": 89.33155374203825,
+      "bootstrap_p025_radial_deg": 47.85647579614022,
+      "bootstrap_p50_radial_deg": 51.20019013330399,
+      "bootstrap_p975_radial_deg": 55.28435442943778
+    },
+    {
+      "population": "inner",
+      "b_a_covariance": 0.8250073514069891,
+      "c_a_covariance": 0.5417725047069497,
+      "major_gap_covariance": 0.3193628701244249,
+      "angle_radial_covariance_deg": 31.00312381535841,
+      "angle_radial_spatial_sign_deg": 37.18024588936833,
+      "orientation_method_shift_radial_deg": 6.177122074009919,
+      "angle_prograde_covariance_deg": 59.12241421582758,
+      "angle_velocity_covariance_deg": 52.92224810186117,
+      "angle_vertical_covariance_deg": 87.48049488278586,
+      "bootstrap_p025_radial_deg": 21.89864978410735,
+      "bootstrap_p50_radial_deg": 30.90880373095617,
+      "bootstrap_p975_radial_deg": 40.47601925783483
+    },
+    {
+      "population": "intermediate",
+      "b_a_covariance": 0.7783932832266248,
+      "c_a_covariance": 0.3359189904696972,
+      "major_gap_covariance": 0.3941038966276754,
+      "angle_radial_covariance_deg": 4.800958655735833,
+      "angle_radial_spatial_sign_deg": 4.533746799897811,
+      "orientation_method_shift_radial_deg": 0.2672118558380223,
+      "angle_prograde_covariance_deg": 86.77198148556269,
+      "angle_velocity_covariance_deg": 80.57392265903339,
+      "angle_vertical_covariance_deg": 86.45002181724773,
+      "bootstrap_p025_radial_deg": 2.4746617982473573,
+      "bootstrap_p50_radial_deg": 5.987363001341948,
+      "bootstrap_p975_radial_deg": 14.385666908751913
+    },
+    {
+      "population": "outer",
+      "b_a_covariance": 0.3690544724086811,
+      "c_a_covariance": 0.12876613948736837,
+      "major_gap_covariance": 0.8637987963951501,
+      "angle_radial_covariance_deg": 47.670827923944415,
+      "angle_radial_spatial_sign_deg": 39.027990105187975,
+      "orientation_method_shift_radial_deg": 8.64283781875644,
+      "angle_prograde_covariance_deg": 42.36955661636996,
+      "angle_velocity_covariance_deg": 48.759942665022336,
+      "angle_vertical_covariance_deg": 88.48194021324464,
+      "bootstrap_p025_radial_deg": 44.38758048504069,
+      "bootstrap_p50_radial_deg": 47.53718936273833,
+      "bootstrap_p975_radial_deg": 51.98696673459603
+    },
+    {
+      "population": "outside_rJ",
+      "b_a_covariance": 0.5263477823136069,
+      "c_a_covariance": 0.1922145574425921,
+      "major_gap_covariance": 0.7229580120535478,
+      "angle_radial_covariance_deg": 45.275697993955966,
+      "angle_radial_spatial_sign_deg": 24.462346765087858,
+      "orientation_method_shift_radial_deg": 20.813351228868108,
+      "angle_prograde_covariance_deg": 44.73168949935135,
+      "angle_velocity_covariance_deg": 51.09034066056702,
+      "angle_vertical_covariance_deg": 89.34940696364947,
+      "bootstrap_p025_radial_deg": 41.4008306461415,
+      "bootstrap_p50_radial_deg": 45.10154273637234,
+      "bootstrap_p975_radial_deg": 48.855536815767096
+    }
+  ],
+  "interpretation": {
+    "allowed": [
+      "Outer literature-defined populations are spatially elongated and flattened.",
+      "Intermediate-radius structure is closely aligned with the Galactic radial / tidal stretching direction.",
+      "The outermost morphology rotates away from the instantaneous radial stretching axis.",
+      "Standard PCA orientation for some outer groups is sensitive to radial leverage."
+    ],
+    "not_allowed": [
+      "L/T leading-trailing counts independently confirm tidal tails.",
+      "A single precise outer-tail angle is established.",
+      "Morphology alone proves escape or tidal stripping."
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "project": "07C",
+  "frame": "Basis columns in Astropy GC axes: e_R=(X/R,Y/R,0), e_pro=(Y/R,-X/R,0), e_Z=(0,0,1). B^T B=I, det(B)=-1. Outward/prograde/north is LEFT-HANDED. Coordinates are (r-r_ref) dot each fixed axis, in pc, not differences of cylindrical R or phi.",
+  "software": {
+    "python": "3.14.6",
+    "numpy": "2.5.2",
+    "astropy": "8.0.1",
+    "galpy": "1.12.0"
+  },
+  "inputs": {
+    "data/interim/project05/stock2_cluster_reference.ecsv": "b16c046a626c166997274b14dc49fb0d6b748dfb95648f7b11ece705a4baef4e",
+    "data/interim/project07/stock2_clustercentric_geometry.ecsv": "a1eeb9b82038a566a3817e63f94f3b4b1600f991556fc729799a0b962fc2155a"
+  },
+  "gc_direction": "True 3D direction to Galactic origin is -r_ref/|r_ref|; radial_inward is the in-plane -e_R. Both reported, not silently equated.",
+  "tangent_vs_velocity_angle_deg": 6.523601107390924
+}

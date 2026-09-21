@@ -1,0 +1,46 @@
+{
+  "project": "07A",
+  "frame": "Basis columns in Astropy GC axes: e_R=(X/R,Y/R,0), e_pro=(Y/R,-X/R,0), e_Z=(0,0,1). B^T B=I, det(B)=-1. Outward/prograde/north is LEFT-HANDED. Coordinates are (r-r_ref) dot each fixed axis, in pc, not differences of cylindrical R or phi.",
+  "software": {
+    "astropy": "8.0.1",
+    "galpy": "1.12.0",
+    "numpy": "2.5.2",
+    "python": "3.14.6"
+  },
+  "inputs": {
+    "data/interim/project04/stock2_galactocentric_phase_space.ecsv": "fb8102d84b45f12c6e00fdcc031801706ee9c9d811b73f24ea4a21f2ccd3c1c5",
+    "data/interim/project05/stock2_cluster_reference.ecsv": "b16c046a626c166997274b14dc49fb0d6b748dfb95648f7b11ece705a4baef4e",
+    "data/interim/project06/stock2_candidate_tidal_zones.ecsv": "aeb5d3867ee17ecc0ed8a316cf36e437bf01dbf4e6a643991b9aa8548f96c4e9",
+    "data/interim/project06/stock2_jacobi_radius.ecsv": "89247fd9957b43893108821d4d569aca8e4fb44e8f414d00c053031ece591dc2"
+  },
+  "basis_columns_in_astropy": [
+    [
+      -0.9994746733580632,
+      0.03240952507817239,
+      0.0
+    ],
+    [
+      0.03240952507817239,
+      0.9994746733580632,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "basis_determinant": -1.0,
+  "reference_position_kpc": [
+    -8.37905712113331,
+    0.27170399524623245,
+    0.011059882891974826
+  ],
+  "reference_velocity_kms": [
+    -17.788099849086187,
+    228.08034536358127,
+    -6.522222958250226
+  ],
+  "r_J_pc": 22.506883189742442,
+  "max_radius_residual_pc": 1.70174985214544e-12
+}

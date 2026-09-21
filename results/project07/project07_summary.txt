@@ -1,0 +1,167 @@
+Project 07 — Cluster-centric Morphology & Tidal Geometry
+=================================================================
+Basis columns in Astropy GC axes: e_R=(X/R,Y/R,0), e_pro=(Y/R,-X/R,0), e_Z=(0,0,1). B^T B=I, det(B)=-1. Outward/prograde/north is LEFT-HANDED. Coordinates are (r-r_ref) dot each fixed axis, in pc, not differences of cylindrical R or phi.
+Frozen 03C→04A reference; no parallax recalculation. All canonical 1456 sources retained.
+Inherited r_J=22.506883190 pc; zones descriptive only.
+Standard PCA: mean-centred covariance, ddof=1, all positions unweighted; axis scales are RMS widths.
+Spatial-sign scatter: component-median centring and unit displacement vectors, no clipping; dimensionless shape only.
+Group means/medians do not replace the frozen frame centre.
+Bootstrap: 1000 replicates per group; base seed 20260921; empirical axial sampling stability, no Gaia uncertainty propagation.
+Angles are arccos(abs(dot)), 0–90 deg. True 3D GC direction and planar radial direction are distinguished.
+
+Shape and leverage results:
+full N=1456: RMS axes=[25.780619805898414, 15.191355694979368, 6.000076810904921] pc; b/a=0.589255, c/a=0.232736; major gap=0.65278
+  major(local R,prograde,Z)=[-0.6853539682386474, 0.7281330964853087, 0.010589240872481722]
+  bootstrap deviation median/p68/p95=1.522/2.101/3.811 deg; robust axis shift=66.864 deg
+  max leave-one-out shift=1.171 deg; top 15 objects contribute 21.958% of centred covariance trace.
+C N=940: RMS axes=[12.824185194263436, 5.131237775422702, 4.679632348636111] pc; b/a=0.400122, c/a=0.364907; major gap=0.83990
+  major(local R,prograde,Z)=[0.9985292377661085, -0.04918866225098318, 0.02279993053046074]
+  bootstrap deviation median/p68/p95=1.292/1.708/2.767 deg; robust axis shift=16.814 deg
+  max leave-one-out shift=0.383 deg; top 10 objects contribute 15.381% of centred covariance trace.
+L N=184: RMS axes=[36.619695812934175, 14.951990215048236, 6.664466846540215] pc; b/a=0.408305, c/a=0.181991; major gap=0.83329
+  major(local R,prograde,Z)=[0.8576214974017189, -0.5138902068223048, -0.020055486196109695]
+  bootstrap deviation median/p68/p95=2.180/3.073/6.087 deg; robust axis shift=12.824 deg
+  max leave-one-out shift=1.692 deg; top 2 objects contribute 10.854% of centred covariance trace.
+T N=332: RMS axes=[32.510151548239634, 14.74759468351605, 8.08640883380649] pc; b/a=0.453630, c/a=0.248735; major gap=0.79422
+  major(local R,prograde,Z)=[0.8280857137495315, -0.5604686488798407, -0.012204274117473367]
+  bootstrap deviation median/p68/p95=2.061/2.655/5.280 deg; robust axis shift=11.605 deg
+  max leave-one-out shift=1.134 deg; top 4 objects contribute 16.007% of centred covariance trace.
+extended_LT N=516: RMS axes=[41.02379425642118, 20.959298144865937, 7.697433889597066] pc; b/a=0.510906, c/a=0.187633; major gap=0.73898
+  major(local R,prograde,Z)=[-0.626625567714989, 0.7792331453318136, 0.011666323420723818]
+  bootstrap deviation median/p68/p95=1.337/1.907/3.721 deg; robust axis shift=2.378 deg
+  max leave-one-out shift=1.253 deg; top 6 objects contribute 12.920% of centred covariance trace.
+inner N=1005: RMS axes=[8.013718344040162, 6.611376545938177, 4.341612259266668] pc; b/a=0.825007, c/a=0.541773; major gap=0.31936
+  major(local R,prograde,Z)=[0.857139219107711, 0.5132055361790473, 0.04395948933506635]
+  bootstrap deviation median/p68/p95=3.476/5.058/9.557 deg; robust axis shift=6.188 deg
+  max leave-one-out shift=0.673 deg; top 11 objects contribute 4.325% of centred covariance trace.
+intermediate N=290: RMS axes=[24.354093729597377, 18.957062978190258, 8.181002579450734] pc; b/a=0.778393, c/a=0.335919; major gap=0.39410
+  major(local R,prograde,Z)=[0.9964914590375342, 0.05630975113747159, 0.061919173057158154]
+  bootstrap deviation median/p68/p95=3.699/5.414/10.982 deg; robust axis shift=0.654 deg
+  max leave-one-out shift=1.059 deg; top 3 objects contribute 2.565% of centred covariance trace.
+outer N=161: RMS axes=[68.99725773218533, 25.463746549997452, 8.884510513388483] pc; b/a=0.369054, c/a=0.128766; major gap=0.86380
+  major(local R,prograde,Z)=[-0.6733890085274549, 0.7388135183653045, 0.02649204173126136]
+  bootstrap deviation median/p68/p95=1.418/1.924/3.849 deg; robust axis shift=8.677 deg
+  max leave-one-out shift=1.360 deg; top 2 objects contribute 6.471% of centred covariance trace.
+outside_rJ N=451: RMS axes=[44.787777595551226, 23.57394741217344, 8.60886284936612] pc; b/a=0.526348, c/a=0.192215; major gap=0.72296
+  major(local R,prograde,Z)=[-0.7036961251412504, 0.7104103273402073, 0.011354746565617142]
+  bootstrap deviation median/p68/p95=1.439/2.045/3.874 deg; robust axis shift=21.018 deg
+  max leave-one-out shift=1.244 deg; top 5 objects contribute 10.470% of centred covariance trace.
+
+Major-axis direction angles (point estimate; bootstrap 2.5–97.5 percentiles):
+full -> radial_outward: 46.737 deg [42.847, 50.316]; spatial-sign=20.199
+full -> galactic_centre_toward: 46.738 deg [42.847, 50.316]; spatial-sign=20.191
+full -> prograde: 43.270 deg [39.686, 47.154]; spatial-sign=69.928
+full -> orbital_velocity: 49.628 deg [46.034, 53.499]; spatial-sign=63.698
+full -> vertical: 89.393 deg [88.367, 89.971]; spatial-sign=87.826
+C -> radial_outward: 3.108 deg [1.431, 5.242]; spatial-sign=14.216
+C -> galactic_centre_toward: 3.077 deg [1.391, 5.192]; spatial-sign=14.201
+C -> prograde: 87.181 deg [85.362, 89.316]; spatial-sign=76.082
+C -> orbital_velocity: 86.543 deg [84.418, 88.355]; spatial-sign=69.869
+C -> vertical: 88.694 deg [85.999, 89.929]; spatial-sign=87.160
+L -> radial_outward: 30.949 deg [24.911, 36.985]; spatial-sign=18.485
+L -> galactic_centre_toward: 30.952 deg [24.914, 36.986]; spatial-sign=18.478
+L -> prograde: 59.077 deg [53.023, 65.117]; spatial-sign=71.594
+L -> orbital_velocity: 65.438 deg [59.370, 71.473]; spatial-sign=77.865
+L -> vertical: 88.851 deg [87.182, 89.905]; spatial-sign=88.351
+T -> radial_outward: 34.097 deg [28.667, 38.428]; spatial-sign=22.603
+T -> galactic_centre_toward: 34.099 deg [28.670, 38.431]; spatial-sign=22.600
+T -> prograde: 55.912 deg [51.578, 61.365]; spatial-sign=67.414
+T -> orbital_velocity: 62.263 deg [57.937, 67.726]; spatial-sign=73.712
+T -> vertical: 89.301 deg [87.704, 89.956]; spatial-sign=89.160
+extended_LT -> radial_outward: 51.198 deg [47.856, 55.284]; spatial-sign=50.530
+extended_LT -> galactic_centre_toward: 51.200 deg [47.860, 55.285]; spatial-sign=50.527
+extended_LT -> prograde: 38.810 deg [34.717, 42.161]; spatial-sign=39.516
+extended_LT -> orbital_velocity: 45.175 deg [41.074, 48.508]; spatial-sign=45.786
+extended_LT -> vertical: 89.332 deg [88.266, 89.970]; spatial-sign=88.391
+inner -> radial_outward: 31.003 deg [21.899, 40.476]; spatial-sign=37.180
+inner -> galactic_centre_toward: 30.997 deg [21.893, 40.474]; spatial-sign=37.175
+inner -> prograde: 59.122 deg [49.549, 68.485]; spatial-sign=52.938
+inner -> orbital_velocity: 52.922 deg [43.279, 62.293]; spatial-sign=46.754
+inner -> vertical: 87.480 deg [84.432, 89.801]; spatial-sign=87.443
+intermediate -> radial_outward: 4.801 deg [2.475, 14.386]; spatial-sign=4.534
+intermediate -> galactic_centre_toward: 4.745 deg [2.404, 14.356]; spatial-sign=4.472
+intermediate -> prograde: 86.772 deg [75.942, 89.805]; spatial-sign=87.405
+intermediate -> orbital_velocity: 80.574 deg [69.983, 89.109]; spatial-sign=81.212
+intermediate -> vertical: 86.450 deg [84.078, 88.889]; spatial-sign=86.285
+outer -> radial_outward: 47.671 deg [44.388, 51.987]; spatial-sign=39.028
+outer -> galactic_centre_toward: 47.674 deg [44.391, 51.989]; spatial-sign=39.032
+outer -> prograde: 42.370 deg [38.036, 45.690]; spatial-sign=51.044
+outer -> orbital_velocity: 48.760 deg [44.424, 52.072]; spatial-sign=57.437
+outer -> vertical: 88.482 deg [87.363, 89.650]; spatial-sign=87.994
+outside_rJ -> radial_outward: 45.276 deg [41.401, 48.856]; spatial-sign=24.462
+outside_rJ -> galactic_centre_toward: 45.277 deg [41.400, 48.856]; spatial-sign=24.457
+outside_rJ -> prograde: 44.732 deg [41.145, 48.607]; spatial-sign=65.615
+outside_rJ -> orbital_velocity: 51.090 deg [47.488, 54.966]; spatial-sign=71.881
+outside_rJ -> vertical: 89.349 deg [88.289, 89.955]; spatial-sign=88.173
+
+T_ij=partial a_i/partial x_j=-partial_i partial_j Phi. INERTIAL gravitational differential acceleration at actual (R,z); positive eigenvalue stretches, negative compresses. No centrifugal/Coriolis terms.
+Project06 Jacobi denominator is an effective midplane circular approximation. It is not an eigenvalue of this actual-position inertial tensor.
+Tidal eigenpairs, local (R,prograde,Z), (km/s/kpc)^2:
+1: 826.965206966; vector=(0.999995832,0.000000000,0.002887200); stretching
+2: -681.986068726; vector=(-0.000000000,1.000000000,-0.000000000); compression
+3: -4978.998355112; vector=(-0.002887200,-0.000000000,0.999995832); compression
+
+Major morphology vs tidal axes (point estimate; bootstrap 2.5–97.5 percentiles):
+full -> tidal 1: 46.739 deg [42.847, 50.317]
+full -> tidal 2: 43.270 deg [39.686, 47.154]
+full -> tidal 3: 89.280 deg [88.247, 89.946]
+C -> tidal 1: 3.042 deg [1.361, 5.122]
+C -> tidal 2: 87.181 deg [85.362, 89.316]
+C -> tidal 3: 88.859 deg [86.165, 89.940]
+L -> tidal 1: 30.956 deg [24.919, 36.988]
+L -> tidal 2: 59.077 deg [53.023, 65.117]
+L -> tidal 3: 88.709 deg [87.036, 89.905]
+T -> tidal 1: 34.101 deg [28.674, 38.435]
+T -> tidal 2: 55.912 deg [51.578, 61.365]
+T -> tidal 3: 89.164 deg [87.569, 89.964]
+extended_LT -> tidal 1: 51.201 deg [47.863, 55.286]
+extended_LT -> tidal 2: 38.810 deg [34.717, 42.161]
+extended_LT -> tidal 3: 89.228 deg [88.153, 89.949]
+inner -> tidal 1: 30.989 deg [21.889, 40.472]
+inner -> tidal 2: 59.122 deg [49.549, 68.485]
+inner -> tidal 3: 87.622 deg [84.577, 89.830]
+intermediate -> tidal 1: 4.680 deg [2.321, 14.333]
+intermediate -> tidal 2: 86.772 deg [75.942, 89.805]
+intermediate -> tidal 3: 86.615 deg [84.243, 89.048]
+outer -> tidal 1: 47.677 deg [44.394, 51.991]
+outer -> tidal 2: 42.370 deg [38.036, 45.690]
+outer -> tidal 3: 88.371 deg [87.248, 89.549]
+outside_rJ -> tidal 1: 45.279 deg [41.400, 48.856]
+outside_rJ -> tidal 2: 44.732 deg [41.145, 48.607]
+outside_rJ -> tidal 3: 89.233 deg [88.170, 89.962]
+
+Geometric half-space counts (no tail membership inference):
+full leading_side: 659/1456
+full trailing_side: 797/1456
+full on_plane: 0/1456
+full inward_side: 725/1456
+full outward_side: 731/1456
+full on_plane: 0/1456
+C leading_side: 475/940
+C trailing_side: 465/940
+C on_plane: 0/940
+C inward_side: 469/940
+C outward_side: 471/940
+C on_plane: 0/940
+L leading_side: 184/184
+L trailing_side: 0/184
+L on_plane: 0/184
+L inward_side: 97/184
+L outward_side: 87/184
+L on_plane: 0/184
+T leading_side: 0/332
+T trailing_side: 332/332
+T on_plane: 0/332
+T inward_side: 159/332
+T outward_side: 173/332
+T on_plane: 0/332
+
+Interpretation boundaries:
+Bootstrap dispersion measures conditional catalogue sampling, not statistical significance of an alignment or astrometric uncertainty.
+Spatial-sign orientation changes probe radial leverage and shape-definition sensitivity; they do not alone prove a small number of objects dominates.
+Leave-one-out influence and top-1% variance fractions quantify extreme-point leverage without deleting sources from any scientific product.
+A small angle must be interpreted with its bootstrap interval, eigenvalue gap, robust comparison and shell dependence.
+Morphology, geometric hemispheres and local tensor alignment do not confirm escaped/unbound stars, tidal tails, or a unique stripping mechanism.
+The local tensor is evaluated at one point; it is not assumed spatially constant over the entire extended population.
+Galactic potential, mass, reference, candidate positions and labels are inherited without error propagation or new membership cuts.
+NUMERICAL VALIDATION PASS; full tests and interpretation review recorded in verification.md.

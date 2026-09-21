@@ -44,8 +44,25 @@ class ReferenceSensitivityTests(unittest.TestCase):
             np.testing.assert_array_equal(baseline[q], self.ref[q])
         self.assertEqual(s.B.validate(self.ref, self.orbit)['status'], 'PASS')
         original = c.read(c.ORBIT)
-        for key in ('integration', 'potential', 'adopted_parameters', 'software'):
+
+        # Scientific configuration must remain identical between the frozen
+        # baseline orbit and the sensitivity orbit.
+        for key in ('integration', 'potential', 'adopted_parameters'):
             self.assertEqual(original.meta[key], self.orbit.meta[key])
+
+        # Software metadata records the environment used to generate each
+        # product. Historical products may legitimately have been generated
+        # under different Python/Astropy/NumPy/SciPy versions, so exact
+        # dictionary equality is not a scientific invariant.
+        for meta in (original.meta, self.orbit.meta):
+            self.assertIn('software', meta)
+            self.assertIn('galpy', meta['software'])
+
+        # The dynamics package itself is part of the frozen Project 05 setup.
+        self.assertEqual(
+            original.meta['software']['galpy'],
+            self.orbit.meta['software']['galpy'],
+        )
 
     def test_handedness_and_native_galpy_prograde(self):
         audit = s.convention_audit(self.ref, self.orbit)

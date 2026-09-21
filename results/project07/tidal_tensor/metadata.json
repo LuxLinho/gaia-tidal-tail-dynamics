@@ -1,0 +1,53 @@
+{
+  "project": "07D",
+  "frame": "Basis columns in Astropy GC axes: e_R=(X/R,Y/R,0), e_pro=(Y/R,-X/R,0), e_Z=(0,0,1). B^T B=I, det(B)=-1. Outward/prograde/north is LEFT-HANDED. Coordinates are (r-r_ref) dot each fixed axis, in pc, not differences of cylindrical R or phi.",
+  "software": {
+    "python": "3.14.6",
+    "numpy": "2.5.2",
+    "astropy": "8.0.1",
+    "galpy": "1.12.0"
+  },
+  "inputs": {
+    "data/interim/project05/stock2_cluster_reference.ecsv": "b16c046a626c166997274b14dc49fb0d6b748dfb95648f7b11ece705a4baef4e",
+    "data/interim/project06/stock2_jacobi_radius.ecsv": "89247fd9957b43893108821d4d569aca8e4fb44e8f414d00c053031ece591dc2",
+    "src/project04/03_local_tidal_field.py": "96d533a12e246a5148ef31f5f323aeb3cdd71595b3ced7382d537d929512fc5a"
+  },
+  "definition": "T_ij=partial a_i/partial x_j=-partial_i partial_j Phi. INERTIAL gravitational differential acceleration at actual (R,z); positive eigenvalue stretches, negative compresses. No centrifugal/Coriolis terms.",
+  "tensor_local": [
+    [
+      826.9168089092292,
+      1.3754879696336165e-15,
+      16.762905907014282
+    ],
+    [
+      2.0419956951086873e-15,
+      -681.9860687262052,
+      -3.3078041053719236e-17
+    ],
+    [
+      16.762905907014282,
+      0.0,
+      -4978.949957054802
+    ]
+  ],
+  "tensor_astropy": [
+    [
+      825.3318915548269,
+      -48.877135696070475,
+      -16.75409990594505
+    ],
+    [
+      -48.877135696070475,
+      -680.4011513718028,
+      0.5432778193764235
+    ],
+    [
+      -16.75409990594505,
+      0.5432778193764235,
+      -4978.949957054802
+    ]
+  ],
+  "basis": "Fixed local outward/prograde/north; symmetric rank-2 tensor transforms B^T T B even though det(B)=-1.",
+  "potential": "galpy 1.12.0 MWPotential2014; ro=8 kpc, vo=220 km/s",
+  "distinction_from06": "Project06 Jacobi denominator is an effective midplane circular approximation. It is not an eigenvalue of this actual-position inertial tensor."
+}
